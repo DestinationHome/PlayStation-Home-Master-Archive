@@ -1,0 +1,21 @@
+<XML>
+  <SCREEN ID="FortBellamy_Video">
+    <TYPE>VIDEO</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/09_03_2014/Prehistoric_Canyon_030914_Home.mp4</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/10_09_2014/Secrets_ThighHighBoots_100914_Home.mp4</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/17_09_2014/DanceCraze_170914_Home.mp4</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/24_09_2014/Secrets_Corsets_Burlesque_GAP_240914_Home.mp4</SOURCE>
+  </SCREEN>
+  <SCREEN ID="FortBellamy_Poster1">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/Lockwood/TeamLKWD_Clothing_130814_256x368.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="FortBellamy_Poster2">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/Lockwood/FoalPhotoCrazePosePack_130814_256x368.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="FortBellamy_Poster3">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/Lockwood/SecretsSwimwear_130814_256x368.dds</SOURCE>
+  </SCREEN>
+</XML>

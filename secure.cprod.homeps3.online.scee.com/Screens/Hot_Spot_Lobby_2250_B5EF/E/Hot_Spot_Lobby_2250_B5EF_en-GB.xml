@@ -1,0 +1,28 @@
+<XML>
+  <SCREEN ID="Screen_HotZone_Center">
+    <TYPE>VIDEO</TYPE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Movies/HBS_Midway3_v03.1-_640x352_900kbps.mp4 </SOURCE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Movies/Midway2_60sec-AppleProRes422-_640x352_900kbps.mp4 </SOURCE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Movies/HOMEgenCarnivalv10_HOME-_640x352_900kbps.mp4 </SOURCE>
+  </SCREEN>
+  <SCREEN ID="Screen_HotZone_Left ">
+    <TYPE>IMAGES</TYPE>
+  </SCREEN>
+  <SCREEN ID="Screen_HotZone_Right">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/M1_HR.dds </SOURCE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/M2_KC.dds </SOURCE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/M3_PF.dds </SOURCE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/M1_TH.dds </SOURCE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/M2_SW.dds </SOURCE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/M3_PI.dds </SOURCE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/M1_MD.dds </SOURCE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/M2_TO.dds </SOURCE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/M3_PP.dds </SOURCE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/M1_MF.dds </SOURCE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/M2_WW.dds </SOURCE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/M3_SS.dds </SOURCE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/M1_SM.dds </SOURCE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/M1_SM.dds </SOURCE>
+  </SCREEN>
+</XML>
