@@ -2,7 +2,27 @@
 
 ![SHOT07](https://user-images.githubusercontent.com/67494727/114958999-2a4a5500-9e32-11eb-8043-8ce833fdd6af.PNG)
 
-This archive is based on Home's CDN Servers from April 1st, 2015. Additionally this archive is a mirror of JohnDrinkWater's snapshot from Home & will be updated whenever the Destination Home Team obtains more data via cache donations from ex-Home users. All of the main CDN contents will be posted in the main branch.
+This archive is based on Home's CDN Servers from April 1st, 2015. Additionally this archive is a mirror of JohnDrinkWater's snapshot from Home & will be updated whenever the Destination Home Team obtains more data via cache donations from ex-Home users. All of the main CDN contents will be posted in the main branch. 
+
+Here are the following domains that have been analyzed/documented in this archive:
+
+* https://31.media.tumblr.com
+* http://72.32.10.222 `Red Bull Illume screenlinks`
+* http://75.101.185.187 `inFamous & Uncharted2 screenlinks`
+* http://81.4.102.224 `configs`
+* http://210.175.78.115 `HUDSON Screenlinks`
+* a0.twimg.com
+* https://a0.ww.np.dl.playstation.net `eula`
+* a2.twimg.com
+* alpha.lootgear.com
+* https://api.crackle.com/
+* http://b0.ww.np.dl.playstation.net/
+* https://bb.watch.impress.co.jp/
+* blog.playstation.com
+* buzzps3.svo.online.scee.com
+* capcom.co.jp 
+* cdn.alphazone4.com
+* cdn.bdlivenetwork.sonypictures.com
 
 Additionally, this archive will also preserve any PlayStation Home websites & 3rd Party Companies that made content within Home. As of current here are the following sites that will be preserved. **Note more sites will be preseved at a later time**.
 
