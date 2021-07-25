@@ -2,7 +2,7 @@
 
 ![SHOT07](https://user-images.githubusercontent.com/67494727/114958999-2a4a5500-9e32-11eb-8043-8ce833fdd6af.PNG)
 
-This archive is based on Home's CDN Servers from April 1st, 2015. Additionally this archive is a mirror of JohnDrinkWater's snapshot from Home & will be updated whenever the Destination Home Team obtains more data via cache donations from ex-Home users. All of the main CDN contents will be posted in the main branch. 
+This archive is based on Home's CDN Servers from April 1st, 2015. Additionally this archive is a mirror of JohnDrinkWater's snapshot from Home & will be updated whenever the Destination Home Team obtains more data via cache donations from ex-Home users. All of the main CDN contents will be posted in the main branch. If you want to see the directory tree archive for this repo you can click [here]( https://gist.github.com/NagatoDEV/161fd1cd5e91a20936bc35a0bf1e80a4) for more details. 
 
 Here are the following domains that have been analyzed/documented in this archive:
 
