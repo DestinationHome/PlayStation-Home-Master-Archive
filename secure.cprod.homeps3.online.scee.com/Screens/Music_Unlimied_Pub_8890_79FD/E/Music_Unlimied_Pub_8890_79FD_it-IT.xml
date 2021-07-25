@@ -1,0 +1,58 @@
+<XML>
+  <SCREEN ID="VideoScreen">
+    <TYPE>VIDEO</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content//MusicUnlimited/MusicUnlimited_PSHomeClub_FINAL.mp4</SOURCE>
+  </SCREEN>
+  <SCREEN ID="StandardScreen01">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/MusicUnlimited/itIT__Posterv3.jpg</SOURCE>
+  </SCREEN>
+  <SCREEN ID="StandardScreen02">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/MusicUnlimited/itIT__Posterv3.jpg</SOURCE>
+  </SCREEN>
+  <SCREEN ID="StandardScreen03">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/MusicUnlimited/itIT__Posterv3.jpg</SOURCE>
+  </SCREEN>
+  <SCREEN ID="StandardScreen04">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/MusicUnlimited/itIT__Posterv3.jpg</SOURCE>
+  </SCREEN>
+  <SCREEN ID="StandardScreen05">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/MusicUnlimited/itIT__Posterv3.jpg</SOURCE>
+  </SCREEN>
+  <SCREEN ID="StandardScreen06">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/MusicUnlimited/itIT__Posterv3.jpg</SOURCE>
+  </SCREEN>
+  <SCREEN ID="StandardScreen07">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/MusicUnlimited/itIT__Posterv3.jpg</SOURCE>
+  </SCREEN>
+  <SCREEN ID="StandardScreen08">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/MusicUnlimited/itIT__Posterv3.jpg</SOURCE>
+  </SCREEN>
+  <SCREEN ID="BillboardScreen01">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/MusicUnlimited/itIT__Billboardv2.jpg</SOURCE>
+  </SCREEN>
+  <SCREEN ID="BillboardScreen02">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/MusicUnlimited/itIT__Billboardv2.jpg</SOURCE>
+  </SCREEN>
+  <SCREEN ID="BillboardScreen03">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/MusicUnlimited/itIT__Billboardv2.jpg</SOURCE>
+  </SCREEN>
+  <SCREEN ID="BillboardScreen04">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/MusicUnlimited/itIT__Billboardv2.jpg</SOURCE>
+  </SCREEN>
+  <SCREEN ID="BillboardScreen05">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/MusicUnlimited/itIT__Billboardv2.jpg</SOURCE>
+  </SCREEN>
+</XML>

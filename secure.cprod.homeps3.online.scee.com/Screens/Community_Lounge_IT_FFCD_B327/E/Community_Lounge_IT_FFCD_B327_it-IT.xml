@@ -1,0 +1,47 @@
+<XML>
+  <SCREEN ID="Shop1Poster1ID">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/16_07_2014/Figment_Raceday_160714_256x368.dds</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/16_07_2014/VeemeeRollingSales_Batch023_B_2014-07-16_256x368.dds</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/16_07_2014/Pig_Poster_256x368.DDS</SOURCE>
+  </SCREEN>
+  <SCREEN ID="Shop1Poster2ID">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/16_07_2014/Paradise_Tour_Bus_03_256x368.dds</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/16_07_2014/Ostrich_Poster_256x368.DDS</SOURCE>
+  </SCREEN>
+  <SCREEN ID="Shop1Poster3ID">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/16_07_2014/Kawaii_Poster03_256x368.dds</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/16_07_2014/Fridge_01_256x368.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="Shop1Poster4ID">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/16_07_2014/FashionableHair_Batch002_256x368_F_2014-07-16.dds</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/16_07_2014/Boutique_Poster_256.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="Shop1Poster5ID">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/16_07_2014/aurora_1-85_poster_256.dds</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/16_07_2014/Secrets_Bodycon_160714_256x368.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="Shop1Poster6ID">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/16_07_2014/Billabong_Batch013_M_2014-07-16_256x368.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="Shop1Poster7ID">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/Logos/home_logo_billboard.jpg</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/18_06_2014/Community_Lounge/14_02_14_WINNER.dds</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/18_06_2014/Community_Lounge/05_03_14_WINNER.dds</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/18_06_2014/Community_Lounge/05_02_14_WINNER.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="MainVideoScreenID">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/18_06_2014/Community_Billboard_IT.dds</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/18_06_2014/Community_Lounge/26_02_14_WINNER.dds</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/18_06_2014/Community_Lounge/19_03_14_WINNER.dds</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/18_06_2014/Community_Lounge/19_02_14_WINNER.dds</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/18_06_2014/Community_Lounge/14_05_14_WINNER.dds</SOURCE>
+  </SCREEN>
+</XML>
