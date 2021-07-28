@@ -2,7 +2,13 @@
 
 ![SHOT07](https://user-images.githubusercontent.com/67494727/114958999-2a4a5500-9e32-11eb-8043-8ce833fdd6af.PNG)
 
-This archive is based on Home's CDN Servers from April 1st, 2015. Additionally, this archive is a mirror of JohnDrinkWater's snapshot from Home & will be updated whenever the Destination Home Team obtains more data via cache donations from ex-Home users. All of the main CDN contents will be posted in the main branch. If you want to see the directory tree archive for this repo you can click [here]( https://gist.github.com/NagatoDEV/161fd1cd5e91a20936bc35a0bf1e80a4) for more details. 
+## Welcome to the PlayStation Home Preservation Project!
+
+This archive is based on Home's CDN Servers from April 1st, 2015. Additionally, this archive is a [mirror](https://github.com/johndrinkwater/ps-home-archive) of JohnDrinkWater's snapshot from Home & will be updated whenever the [Destination Home Team](http://destinationho.me/) obtains more data via cache donations from ex-Home users. All of the main CDN contents will be posted in the main branch. If you want to see the directory tree archive for this repo you can click [here]( https://gist.github.com/NagatoDEV/161fd1cd5e91a20936bc35a0bf1e80a4) for more details. 
+
+For more information about the origin of this archive of PlayStation Home, you can refer to the original source [here](https://archive.org/details/psm_home_archive_2015_04_01) at archive.org.
+
+## Observed Domains/URL's:
 
 Here are the following domains that have been analyzed/documented in this archive:
 
@@ -146,9 +152,7 @@ Additionally, this archive will also preserve any PlayStation Home websites & 3r
 * http://playstationhome.jp/
 * https://www.jp.playstation.com
 
-For more information about the origin of this archive of PlayStation Home, you can refer to the original source [here](https://archive.org/details/psm_home_archive_2015_04_01) at archive.org.
-
-## Information about this archive:
+## General information about this archive:
 
 As of 7/19/2021, this archive/repo contains 188GB's `202,593,148,213 bytes` worth of Home Data. This archive contains the following data information:
 
@@ -161,19 +165,20 @@ As of 7/19/2021, this archive/repo contains 188GB's `202,593,148,213 bytes` wort
 * Screenlinks: Various media content. This includes audio files in .MP3/.BNK format, video's in MP4 format usually encoded MPEG-4.
 * XML, RSS Files.
 
-However, this archive isn't a 100% complete snapshot of Home CDN servers. Regions such as SCEJ and SCEAsia Home data are currently a WIP in terms of archiving scenes (spaces), .SDC information, screenlinks, etc.
+However, this archive isn't a 100% complete snapshot of Home CDN servers. Regions such as SCEJ and SCEAsia Home data are currently a WIP in terms of archiving scenes (spaces), .SDC information, screenlinks, objects, etc.
 
-**P.S:** If you want to see our current progress of what spaces `scenes` have been archived by the Destination Home Team, you can check out the Destination Home Scene List Spreadsheet [here.](https://github.com/NagatoDEV/PlayStation-Home-Scene-List-Spreadsheet)
+**P.S:** If you want to see our current progress of what spaces `scenes` have been archived by the Destination Home Team, you can check out the Destination Home Scene List Spreadsheet [here](https://github.com/NagatoDEV/PlayStation-Home-Scene-List-Spreadsheet).
 
 ## How can you help out with the project?
 
 Currently, our development team is looking for anyone who still has PlayStation Home on their PS3 console, any data we can obtain can help the preservation of home. Our primary goal is to get Home back running online. So our team has been working on trying to emulate Sony's Medius server via using the PlayStation 3 CFW & RPCS3.
 
-For more information on how to donate cache data please refer to this [guide.](https://www.youtube.com/watch?v=BppPWh49ROU&feature=youtu.be) Alternatively, you can check out my written version of this guide [here.](https://gist.github.com/NagatoDEV/587b5a76a1789a9d91c48e87c634771b)
+For more information on how to donate cache data please refer to this [guide](https://www.youtube.com/watch?v=BppPWh49ROU&feature=youtu.be). Alternatively, you can check out my written version of this guide [here](https://gist.github.com/NagatoDEV/587b5a76a1789a9d91c48e87c634771b).
 
-## Our team is also looking for any Development/PROD-QA/Alpha-Beta/Retail builds of PlayStation Home which included's:
+## Our team is also looking for any Development/PROD-QA/Alpha-Beta/Retail builds of PlayStation Home and the following other data:
 
 * CDN Snapshots
+* Documentation
 * EBOOTS/Selfs
 * HDK's
 * Home .RAP `activation files` for `alpha/beta/debug` builds.
@@ -188,11 +193,12 @@ For more information on how to donate cache data please refer to this [guide.](h
 * Proxy Cache Data.
 * Save-data
 
-## Contact Me
+## Contact Me!
 
 Have any questions about this archive? Feel free to contact me at the following methods:
 
-My Twitter: [@NagatoRevenge](https://twitter.com/NagatoRevenge)
+* My Twitter: [NagatoRevenge](https://twitter.com/NagatoRevenge)
+* My Youtube Channel: [Nagato's Revenge](https://www.youtube.com/channel/UCXgz1g5ET8Un9gax-nGMjMw)
 
 # ❤️ Join/Check out our social platforms:
 
@@ -208,6 +214,8 @@ My Twitter: [@NagatoRevenge](https://twitter.com/NagatoRevenge)
 
 * [Destination Home 1.86 Dev Offline Client Patches](https://github.com/NagatoDEV/Destination-Home-1.86-Offline-Client-Patches)
 
-**Disclaimer: This repository is purely for preservation and educational purposes.**
+## Legal Information:
 
+We are not affiliated with Sony Interactive Entertainment (SIE) or any other game developers licensed by SIE. This project is purely for preservation/educational purposes, and our team doesn't accept ANY forms of donations.
 
+All rights are reserved by Sony Interactive Entertainment Europe Limited, as well as the respective third-party companies responsible for implementing content into PlayStation®Home. Destination Home is working on PlayStation®Home as the adaptation of publicly leaked software, the usage of this software falling under abandonware due to the lack of copyright enforcement involving the tools. The online section of PlayStation®Home is protected by the laws implied by the Digital Millennium Copyright Act 17 U.S. Code § 1201 for the purpose of preservation, education and public viewing as a museum effort. That the teams focus is to reproduce the functionality once accessible and hosted by Sony, PlayStation®Home. Tools that are provided to us will be to our best ability given the utmost protection unless stated otherwise by the provider. Our focus is the protection of Sony copyright and intellectual property while following the goal of reproduction of online functionality, and do not claim any of this as our own.
