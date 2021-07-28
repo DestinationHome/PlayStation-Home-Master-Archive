@@ -2,7 +2,7 @@
 
 ![SHOT07](https://user-images.githubusercontent.com/67494727/114958999-2a4a5500-9e32-11eb-8043-8ce833fdd6af.PNG)
 
-This archive is based on Home's CDN Servers from April 1st, 2015. Additionally this archive is a mirror of JohnDrinkWater's snapshot from Home & will be updated whenever the Destination Home Team obtains more data via cache donations from ex-Home users. All of the main CDN contents will be posted in the main branch. If you want to see the directory tree archive for this repo you can click [here]( https://gist.github.com/NagatoDEV/161fd1cd5e91a20936bc35a0bf1e80a4) for more details. 
+This archive is based on Home's CDN Servers from April 1st, 2015. Additionally, this archive is a mirror of JohnDrinkWater's snapshot from Home & will be updated whenever the Destination Home Team obtains more data via cache donations from ex-Home users. All of the main CDN contents will be posted in the main branch. If you want to see the directory tree archive for this repo you can click [here]( https://gist.github.com/NagatoDEV/161fd1cd5e91a20936bc35a0bf1e80a4) for more details. 
 
 Here are the following domains that have been analyzed/documented in this archive:
 
@@ -44,7 +44,7 @@ Here are the following domains that have been analyzed/documented in this archiv
 * http://81.4.102.224 `configs`
 * http://b0.ww.np.dl.playstation.net/
 * https://31.media.tumblr.com
-* https://a0.ww.np.dl.playstation.net `eula`
+* https://a0.ww.np.dl.playstation.net `EULA`
 * https://api.crackle.com/
 * https://bb.watch.impress.co.jp/
 * i.imgur.com
@@ -138,7 +138,7 @@ Here are the following domains that have been analyzed/documented in this archiv
 * xmb-e.dl.playstation.net
 * www.uniquez-home.com
 
-Additionally, this archive will also preserve any PlayStation Home websites & 3rd Party Companies that made content within Home. As of current here are the following sites that will be preserved. **Note more sites will be preseved at a later time**.
+Additionally, this archive will also preserve any PlayStation Home websites & 3rd Party Companies that made content within Home. As of current here are the following sites that will be preserved. **Note more sites will be preserved at a later time**.
 
 * https://blog.playstation.com/
 * http://blog.eu.playstation.com/
@@ -146,7 +146,7 @@ Additionally, this archive will also preserve any PlayStation Home websites & 3r
 * http://playstationhome.jp/
 * https://www.jp.playstation.com
 
-For more information about the origin of this archive of PlayStation Home you can refer to the original source [here](https://archive.org/details/psm_home_archive_2015_04_01) at archive.org.
+For more information about the origin of this archive of PlayStation Home, you can refer to the original source [here](https://archive.org/details/psm_home_archive_2015_04_01) at archive.org.
 
 ## Information about this archive:
 
@@ -161,15 +161,15 @@ As of 7/19/2021, this archive/repo contains 188GB's `202,593,148,213 bytes` wort
 * Screenlinks: Various media content. This includes audio files in .MP3/.BNK format, video's in MP4 format usually encoded MPEG-4.
 * XML, RSS Files.
 
-However this archive isn't 100% complete snapshot of Home CDN servers. Regions such as, SCEJ and SCEAsia Home data is currently a WIP in terms of archiving scenes (spaces), .SDC information, screenlinks etc.
+However, this archive isn't a 100% complete snapshot of Home CDN servers. Regions such as SCEJ and SCEAsia Home data are currently a WIP in terms of archiving scenes (spaces), .SDC information, screenlinks, etc.
 
 **P.S:** If you want to see our current progress of what spaces `scenes` have been archived by the Destination Home Team, you can check out the Destination Home Scene List Spreadsheet [here.](https://github.com/NagatoDEV/PlayStation-Home-Scene-List-Spreadsheet)
 
-## How can you help out the project?
+## How can you help out with the project?
 
-Currently our development team is looking for anyone who still has PlayStation Home on there PS3 console, any data we can obtain can help the preservation for home. Our primary goal is to get Home back running online. So our team has been working on trying to emulate Sony's Medius server via using the PlayStation 3 CFW & RPCS3.
+Currently, our development team is looking for anyone who still has PlayStation Home on their PS3 console, any data we can obtain can help the preservation of home. Our primary goal is to get Home back running online. So our team has been working on trying to emulate Sony's Medius server via using the PlayStation 3 CFW & RPCS3.
 
-For more information on how to donate cache data please refer to this [guide.](https://www.youtube.com/watch?v=BppPWh49ROU&feature=youtu.be) Alternatively you can check out my written version of this guide [here.](https://gist.github.com/NagatoDEV/587b5a76a1789a9d91c48e87c634771b)
+For more information on how to donate cache data please refer to this [guide.](https://www.youtube.com/watch?v=BppPWh49ROU&feature=youtu.be) Alternatively, you can check out my written version of this guide [here.](https://gist.github.com/NagatoDEV/587b5a76a1789a9d91c48e87c634771b)
 
 ## Our team is also looking for any Development/PROD-QA/Alpha-Beta/Retail builds of PlayStation Home which included's:
 
@@ -209,3 +209,5 @@ My Twitter: [@NagatoRevenge](https://twitter.com/NagatoRevenge)
 * [Destination Home 1.86 Dev Offline Client Patches](https://github.com/NagatoDEV/Destination-Home-1.86-Offline-Client-Patches)
 
 **Disclaimer: This repository is purely for preservation and educational purposes.**
+
+
