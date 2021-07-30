@@ -1,0 +1,14 @@
+<XML>
+  <SCREEN ID="GRN_0006_201">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/GRN_0006_201_poster_seaside1_20140326.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="GRN_0006_202">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/GRN_0006_202_poster_seaside2_20140521.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="GRN_0006_203">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/GRN_0006_203_poster_seaside3_20140129.dds</SOURCE>
+  </SCREEN>
+</XML>

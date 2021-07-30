@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<commerce_point>
+	<node type="products"> <!-- PS Classics -->
+      <header>
+        <name lang="en-US" default="true">PS Classics</name>
+		<background>http://scea-home.playstation.net/a.home/hosted/CommercePoints/Thumbnails/onestopshop_bg_scea.dds</background> 
+      </header>
+		<product category="UP9000-NPUJ94163_00">UP9000-NPUJ94163_00-0000000000000001</product>			
+		<product category="UP9000-NPUD20946_00">UP9000-NPUD20946_00-0000000000000000</product>
+		<product category="UP9000-NPUJ00892_00">UP9000-NPUJ00892_00-0000000000000001</product>
+		<product category="UP9000-NPUJ01251_00">UP9000-NPUJ01251_00-0000000000000001</product>
+		<product category="UP9000-NPUJ00594_00">UP9000-NPUJ00594_00-0000000000000001</product>
+		<product category="UP9000-NPUJ00067_00">UP9000-NPUJ00067_00-0000000000000001</product>
+		<product category="UP9000-NPUI94900_00">UP9000-NPUI94900_00-COMBINED00000001</product>
+		<product category="UP9000-NPUJ94221_00">UP9000-NPUJ94221_00-0000000000000001</product>
+		<product category="UP9000-NPUI94244_00">UP9000-NPUI94244_00-0000000000000001</product>
+		<product category="UP9000-NPUI94306_00">UP9000-NPUI94306_00-COMBINED00000001</product>
+		<product category="UP9000-NPUI94154_00">UP9000-NPUI94154_00-0000000000000001</product>
+		<product category="UP9000-NPUI94228_00">UP9000-NPUI94228_00-0000000000000001</product>
+		<product category="UP9000-NPUJ00900_00">UP9000-NPUJ00900_00-0000000000000001</product>
+		<product category="UP9000-NPUJ00664_00">UP9000-NPUJ00664_00-0000000000000001</product>
+		<product category="UP9000-NPUD21269_00">UP9000-NPUD21269_00-0000000000000000</product>
+		<product category="UP9000-NPUD20552_00">UP9000-NPUD20552_00-0000000000000000</product>
+		<product category="UP9000-NPUI94426_00">UP9000-NPUI94426_00-0000000000000001</product>
+		<product category="UP9000-NPUJ01041_00">UP9000-NPUJ01041_00-0000000000000001</product>
+		<product category="UP9000-NPUJ01363_00">UP9000-NPUJ01363_00-0000000000000001</product>		
+		<product category="UP9000-NPUJ00707_00">UP9000-NPUJ00707_00-0000000000000001</product>	
+		<product category="UP9000-NPUI94491_00">UP9000-NPUI94491_00-0000000000000001</product>
+		<product category="UP9000-NPUI94467_00">UP9000-NPUI94467_00-0000000000000001</product>
+		<product category="UP9000-NPUD21621_00">UP9000-NPUD21621_00-0000000000000000</product>
+		<product category="UP9000-NPUI94425_00">UP9000-NPUI94425_00-0000000000000001</product>
+		<product category="UP9000-NPUJ00113_00">UP9000-NPUJ00113_00-0000000000000001</product>
+		<product category="UP9000-NPUI94227_00">UP9000-NPUI94227_00-COMBINED00000001</product>
+		<product category="UP9000-NPUJ00292_00">UP9000-NPUJ00292_00-0000000000000001</product>
+		<product category="UP9000-NPUJ00662_00">UP9000-NPUJ00662_00-0000000000000001</product>
+		<product category="UP9000-NPUD20062_00">UP9000-NPUD20062_00-0000000000000000</product>
+		<product category="UP9000-NPUJ94457_00">UP9000-NPUJ94457_00-0000000000000001</product>	
+		<product category="UP9000-NPUJ00190_00">UP9000-NPUJ00190_00-0000000000000001</product>
+		<product category="UP9000-NPUD21355_00">UP9000-NPUD21355_00-0000000000000000</product>				
+		<product category="UP9000-NPUJ01384_00">UP9000-NPUJ00067_00-0000000000000001</product>	  
+		<product category="UP9000-NPUI94608_00">UP9000-NPUI94608_00-0000000000000001</product>  	  	    					  	 	 		
+</node>
+</commerce_point>

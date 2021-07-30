@@ -1,0 +1,26 @@
+<XML>
+  <SCREEN ID="GRN_0002_205">
+    <TYPE>VIDEO</TYPE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Movies/Teahouse.mp4</SOURCE>
+  </SCREEN>
+  <SCREEN ID="GRN_0002_201">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/GRN_0002_001_poster_edo1.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="GRN_0002_202">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/GRN_0002_202_poster_edo2_20140129.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="GRN_0002_203">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/GRN_0002_203_poster_edo3_20140326.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="GRN_0002_204">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/GRN_0002_204_poster_edo4_20140129.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="GRN_0002_206">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/GRN_0002_202_poster_edo2_20130123.dds</SOURCE>
+  </SCREEN>
+</XML>
