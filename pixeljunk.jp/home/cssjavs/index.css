@@ -1,0 +1,63 @@
+#show_frame {
+	width: 960px;
+	height: 476px;
+}
+.show_frame_class {
+	width: 960px;
+	height: 476px;
+	position: absolute;
+	left:0; top:0;
+	display: none;
+	overflow: hidden;
+}
+#show_frame0 {
+	width: 960px;
+	height: 476px;
+	display: block;
+}
+	#show_frame0 a img {
+		position: absolute;
+	}
+	#shooter_button {
+		left: 736px;
+		top: 269px;
+		opacity: 0;
+		filter: alpha(opacity=0);
+		-ms-filter: "alpha(opacity=0)";
+	}
+	#exhibition_button {
+		left: 527px;
+		top: 269px;
+		opacity: 0;
+		filter: alpha(opacity=0);
+		-ms-filter: "alpha(opacity=0)";
+	}
+#official {
+	position: absolute;
+	left: 818px;
+	top: 20px;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	-ms-filter: "alpha(opacity=0)";
+}
+.bar_left1 {
+	//padding-top: 5px;
+}
+	.bar_left1 img {
+		display: none;
+		padding-top: 5px;
+	}
+	.bar_left1 #back {
+		display: block;
+		padding-top: 0;
+	}
+.bar_right1 {
+	text-align: right;
+}
+	.bar_right1 img {
+		padding-top: 5px;
+		display: none;
+	}
+		#language {
+			display: inline;
+		}
