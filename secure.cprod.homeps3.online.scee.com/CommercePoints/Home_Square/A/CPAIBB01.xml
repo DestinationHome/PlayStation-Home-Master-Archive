@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<commerce_point>
+ 	<node type="products"> <!-- PSN Games -->
+      <header>
+        <name lang="en-US" default="true">PSN Game</name>
+		<background>http://scea-home.playstation.net/a.home/hosted/CommercePoints/Thumbnails/ibbnobb.png</background> 
+      </header>
+		<product category="UP4371-NPUB30958_00">UP4371-NPUB30958_00-IBBANDOBBPACKAGE</product>							
+	</node> 
+</commerce_point>

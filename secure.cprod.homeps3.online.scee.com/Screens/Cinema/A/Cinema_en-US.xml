@@ -1,0 +1,129 @@
+<XML>
+  <SCREEN ID="SCEA_Thr_VideoScreen_01">
+    <TYPE>VIDEO</TYPE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Movies/VIDZONE_TRAILER_GM_640x352.mp4</SOURCE>
+  </SCREEN>
+  <SCREEN ID="SCEA_Thr_PosterXL_01">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/Luge_Control_Banner_3.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="SCEA_Thr_PosterXL_02">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/ReplayGAMECOMPressEvent256x368.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="SCEA_Thr_PosterXL_03">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/MLB42_Poster.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="SCEA_Thr_PosterXL_04">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/GOW_GOBIG_Poster.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="SCEA_Thr_PosterXL_11">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/256x368_homeposter_plusps3bundle.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="SCEA_Thr_PosterXL_12">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/GOW_VIKINGS_Poster.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="SCEA_Thr_PosterXL_13">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/GOW_VIKINGS_Poster.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="SCEA_Thr_PosterXL_14">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/MLB42_Poster.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="SCEA_Thr_PosterXL_15">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/GOW_GOBIG_Poster.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="SCEA_Thr_PosterXL_16">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/Luge_Control_Banner_3.dds</SOURCE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/D514_banner_PSHomeSpace_256x368_EN.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="SCEA_Thr_PosterXL_17">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/GOW_VIKINGS_Poster.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="SCEA_Thr_PosterXL_18">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/256x368_homeposter_12plus3new.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="SCEA_Thr_PosterXL_19">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE> 	http://scea-home.playstation.net/a.home/mfe/content/Posters/c_THEATER3_Crackle_in_PSHome_256x368_REV5.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="SCEA_Thr_Poster_01">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/GRN_0001_203_poster.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="SCEA_Thr_Poster_02">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/communitytheater052213-060513/POSTER1_SCEA256x368.jpg</SOURCE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/Jetpack_A_256x368.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="SCEA_Thr_Poster_03">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/communitytheater052213-060513/POSTER2_SCEA256x368.jpg</SOURCE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/White_pirate_hoverbike_256x368.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="SCEA_Thr_Poster_04">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/communitytheater052213-060513/POSTER3_SCEA256x368.jpg</SOURCE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/PST_TommyGuns_01_23_13_256x368.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="SCEA_Thr_Poster_05">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/communitytheater052213-060513/POSTER4_SCEA256x368.jpg</SOURCE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/ScreenSirenPink_130213_256x368.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="SCEA_Thr_Poster_06">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/communitytheater052213-060513/POSTER5_SCEA256x368.jpg</SOURCE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/standard_poster_polygon.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="SCEA_Thr_Poster_07">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/Desire_promo_256x386.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="SCEA_Thr_Poster_08">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/wraiths_female_closeup_130213_256x368.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="SCEA_Thr_PosterXL_06">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/PST-1.dds</SOURCE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/PST-2.dds</SOURCE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/PST-3.dds</SOURCE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/PST-4.dds</SOURCE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/PST-5.dds</SOURCE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/PST-6.dds</SOURCE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/PST-7.dds</SOURCE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/PST-8.dds</SOURCE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/PST-9.dds</SOURCE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/PST-10.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="SCEA_Thr_PosterXL_07">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/c_THEATER3_Crackle_in_PSHome_256x368_REV5.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="SCEA_Thr_PosterXL_08">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/PlaystationPressEvent256x368.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="SCEA_Thr_PosterXL_09">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/PlayStationBlog_TheaterPoster_256x368.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="SCEA_Thr_PosterXL_10">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/StarHawk_poster.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="SCEA_Thr_PosterXL_05">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/ReplayGAMECOMPressEvent256x368.dds</SOURCE>
+  </SCREEN>
+</XML>
