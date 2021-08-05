@@ -1,0 +1,32 @@
+<XML>
+  <SCREEN ID="GRN_0001_301">
+    <TYPE>VIDEO</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/Granzella/Lagoon_PV_FR2.mp4</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/07_03_2012/Lagoon_02_fossil.mp4</SOURCE>
+  </SCREEN>
+  <SCREEN ID="GRN_0001_302">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/Granzella/GRN_0001_002_poster_mizugi1_720x1024_FR.dds</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/07_03_2012/GRN_0001_002_poster_mizugi1.dds</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/23_05_2012/GRN_0001_002_poster_leotards.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="GRN_0001_303">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/Granzella/GRN_0001_003_poster_bike1_720x1024_FR.dds</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/07_03_2012/GRN_0001_003_poster_bike1.dds</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/16_05_2012/GRN_0001_003_poster_school.dds</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/23_05_2012/GRN_0001_003_poster_MPH.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="GRN_0001_304">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/Granzella/GRN_0001_004_poster_guide1_1024x512_FR.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="GRN_0001_305">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/Granzella/GRN_0001_005_poster_rule1_1024x512_FR.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="GRN_0001_306">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/Granzella/GRN_0001_006_poster_secret1.dds</SOURCE>
+  </SCREEN>
+</XML>

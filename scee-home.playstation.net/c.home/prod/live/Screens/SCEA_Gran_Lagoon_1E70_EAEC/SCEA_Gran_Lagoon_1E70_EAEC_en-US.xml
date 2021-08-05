@@ -1,0 +1,26 @@
+<XML>
+  <SCREEN ID="GRN_0001_201">
+    <TYPE>VIDEO</TYPE>
+    <SOURCE LINK="http://us.playstation.com">http://scea-home.playstation.net/a.home/mfe/content/Movies/Lagoon_PV_EN1-Profile3.mp4</SOURCE>
+  </SCREEN>
+  <SCREEN ID="GRN_0001_202">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/GRN_0001_002_poster_mizugi1_720x1024_EN.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="GRN_0001_203">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/GRN_0001_003_poster_bike1_720x1024_EN.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="GRN_0001_204">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/GRN_0001_004_poster_guide1_1024x512_EN.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="GRN_0001_206">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/GRN_0001_006_poster_secret1.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="GRN_0001_205">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/GRN_0001_005_poster_rule1_1024x512_EN.dds</SOURCE>
+  </SCREEN>
+</XML>

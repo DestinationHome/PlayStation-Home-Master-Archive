@@ -1,0 +1,31 @@
+﻿<XML>
+    <SCREEN ID="GRN_0001_101">
+        <TYPE>VIDEO</TYPE>
+        <SOURCE>http://sceasia-home.playstation.net/asia.home/mfe/120919_ContentUpdate/hs/Granzella_FossilMuseum.mp4</SOURCE>
+    </SCREEN>
+    <SCREEN ID="GRN_0001_102">
+        <TYPE>IMAGES</TYPE>
+        <SOURCE>http://sceasia-home.playstation.net/asia.home/mfe/131023_ContentUpdate/Poster_GRN_KikaiMachine_05_256x368.dds</SOURCE>
+    </SCREEN>
+    <SCREEN ID="GRN_0001_103">
+        <TYPE>IMAGES</TYPE>
+        <SOURCE>http://sceasia-home.playstation.net/asia.home/mfe/131023_ContentUpdate/Poster_GRN_Wolf_256x368.dds</SOURCE>
+    </SCREEN>
+    <SCREEN ID="GRN_0001_104">
+        <TYPE>IMAGES</TYPE>
+        <SOURCE>http://sceasia-home.playstation.net/asia.home/mfe/130227_ContentUpdate/hs/GRN_0001_004_poster_guide1_1024x512_HK.dds</SOURCE>
+    </SCREEN>
+    <SCREEN ID="GRN_0001_105">
+        <TYPE>IMAGES</TYPE>
+        <SOURCE>http://sceasia-home.playstation.net/asia.home/mfe/130227_ContentUpdate/hs/GRN_0001_005_poster_rule1_1024x512_HK.dds</SOURCE>
+    </SCREEN>
+    <SCREEN ID="GRN_0001_106">
+        <TYPE>IMAGES</TYPE>
+        <SOURCE>http://sceasia-home.playstation.net/asia.home/lounge/Lagoon/GRN_0001_006_poster_secret1.dds</SOURCE>
+    </SCREEN>
+    <SCREEN ID="GRN_0001_150">
+        <TYPE>VIDEO</TYPE>
+        <SOURCE>http://sceasia-home.playstation.net/asia.home/lounge/Lagoon/april_ending_asia_2.mp4</SOURCE>
+    </SCREEN>
+</XML>
+
