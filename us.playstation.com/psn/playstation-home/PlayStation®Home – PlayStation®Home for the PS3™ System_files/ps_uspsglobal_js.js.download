@@ -1,0 +1,3260 @@
+var _____WB$wombat$assign$function_____ = function(name) {return (self._wb_wombat && self._wb_wombat.local_init && self._wb_wombat.local_init(name)) || self[name]; };
+if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; return this; } }
+{
+  let window = _____WB$wombat$assign$function_____("window");
+  let self = _____WB$wombat$assign$function_____("self");
+  let document = _____WB$wombat$assign$function_____("document");
+  let location = _____WB$wombat$assign$function_____("location");
+  let top = _____WB$wombat$assign$function_____("top");
+  let parent = _____WB$wombat$assign$function_____("parent");
+  let frames = _____WB$wombat$assign$function_____("frames");
+  let opener = _____WB$wombat$assign$function_____("opener");
+
+/* For mobile redirection to mobi.us.playstation.com  */
+/*
+var browserName=navigator.appName; 
+                 var deviceBB = "blackberry";
+                 var deviceAndroid = "android";
+                 var devicepsp = "psp";
+                var devicepspo = "PLAYSTATION PORTABLE";
+ var uagent = navigator.userAgent.toLowerCase();
+ if (navigator.userAgent && ( navigator.userAgent.indexOf("iPad") > -1 || navigator.userAgent.indexOf("iPhone") > -1 )) {
+}else if ((uagent.search(devicepsp) > -1) || (uagent.search(devicepspo) > -1)){
+	window.location="https://web.archive.org/web/20100826161338/http://mobi.us.playstation.com";
+}else if ((uagent.search(deviceBB) > -1) || screen.width <= 600) {
+	window.location="https://web.archive.org/web/20100826161338/http://mobi.us.playstation.com";
+} 
+*/
+/* END For mobile redirection to mobi.us.playstation.com  */ 
+
+
+
+var agt=navigator.userAgent.toLowerCase();
+var ie  = (agt.indexOf("msie") != -1);
+var ns  = (navigator.appName.indexOf("Netscape") != -1);
+var op  = (navigator.appName.indexOf("Opera") != -1);
+var win = ((agt.indexOf("win")!=-1) || (agt.indexOf("32bit")!=-1));
+var mac = (agt.indexOf("mac")!=-1);
+
+if (ie && win) {    pluginlist = detectIE("ShockwaveFlash.ShockwaveFlash.1","Shockwave Flash"); }
+
+if (ns || op || !win) {
+        nse = ""; for (var i=0;i<navigator.mimeTypes.length;i++) nse += navigator.mimeTypes[i].type.toLowerCase();
+        pluginlist = detectNS("application/x-shockwave-flash","Shockwave Flash") ;
+}
+
+function detectIE(ClassID,name) { result = false; if (result) return name+','; else return ''; }
+function detectNS(ClassID,name) { n = ""; if (nse.indexOf(ClassID) != -1) if (navigator.mimeTypes[ClassID].enabledPlugin != null) n = name+","; return n; }
+
+pluginlist += navigator.javaEnabled() ? "Java," : "";
+if (pluginlist.length > 0) pluginlist = pluginlist.substring(0,pluginlist.length-1);
+
+
+/*ps_jquery.timer_js*/
+ 
+
+jQuery.fn.extend({
+    everyTime: function(interval, label, fn, times, belay) {
+        return this.each(function() {
+            jQuery.timer.add(this, interval, label, fn, times, belay);
+        });
+    },
+    oneTime: function(interval, label, fn) {
+        return this.each(function() {
+            jQuery.timer.add(this, interval, label, fn, 1);
+        });
+    },
+    stopTime: function(label, fn) {
+        return this.each(function() {
+            jQuery.timer.remove(this, label, fn);
+        });
+    }
+});
+
+jQuery.event.special
+
+jQuery.extend({
+    timer: {
+        global: [],
+        guid: 1,
+        dataKey: "jQuery.timer",
+        regex: /^([0-9]+(?:\.[0-9]*)?)\s*(.*s)?$/,
+        powers: {
+            // Yeah this is major overkill...
+            'ms': 1,
+            'cs': 10,
+            'ds': 100,
+            's': 1000,
+            'das': 10000,
+            'hs': 100000,
+            'ks': 1000000
+        },
+        timeParse: function(value) {
+            if (value == undefined || value == null)
+                return null;
+            var result = this.regex.exec(jQuery.trim(value.toString()));
+            if (result[2]) {
+                var num = parseFloat(result[1]);
+                var mult = this.powers[result[2]] || 1;
+                return num * mult;
+            } else {
+                return value;
+            }
+        },
+        add: function(element, interval, label, fn, times, belay) {
+            var counter = 0;
+            
+            if (jQuery.isFunction(label)) {
+                if (!times) 
+                    times = fn;
+                fn = label;
+                label = interval;
+            }
+            
+            interval = jQuery.timer.timeParse(interval);
+
+            if (typeof interval != 'number' || isNaN(interval) || interval <= 0)
+                return;
+
+            if (times && times.constructor != Number) {
+                belay = !!times;
+                times = 0;
+            }
+            
+            times = times || 0;
+            belay = belay || false;
+            
+            var timers = jQuery.data(element, this.dataKey) || jQuery.data(element, this.dataKey, {});
+            
+            if (!timers[label])
+                timers[label] = {};
+            
+            fn.timerID = fn.timerID || this.guid++;
+            
+            var handler = function() {
+                if (belay && this.inProgress) 
+                    return;
+                this.inProgress = true;
+                if ((++counter > times && times !== 0) || fn.call(element, counter) === false)
+                    jQuery.timer.remove(element, label, fn);
+                this.inProgress = false;
+            };
+            
+            handler.timerID = fn.timerID;
+            
+            if (!timers[label][fn.timerID])
+                timers[label][fn.timerID] = window.setInterval(handler,interval);
+            
+            this.global.push( element );
+            
+        },
+        remove: function(element, label, fn) {
+            var timers = jQuery.data(element, this.dataKey), ret;
+            
+            if ( timers ) {
+                
+                if (!label) {
+                    for ( label in timers )
+                        this.remove(element, label, fn);
+                } else if ( timers[label] ) {
+                    if ( fn ) {
+                        if ( fn.timerID ) {
+                            window.clearInterval(timers[label][fn.timerID]);
+                            delete timers[label][fn.timerID];
+                        }
+                    } else {
+                        for ( var fn in timers[label] ) {
+                            window.clearInterval(timers[label][fn]);
+                            delete timers[label][fn];
+                        }
+                    }
+                    
+                    for ( ret in timers[label] ) break;
+                    if ( !ret ) {
+                        ret = null;
+                        delete timers[label];
+                    }
+                }
+                
+                for ( ret in timers ) break;
+                if ( !ret ) 
+                    jQuery.removeData(element, this.dataKey);
+            }
+        }
+    }
+});
+
+jQuery(window).bind("unload", function() {
+    jQuery.each(jQuery.timer.global, function(index, item) {
+        jQuery.timer.remove(item);
+    });
+});
+
+/*ps_jquery.timer_js*/
+
+var isExpanded=false;
+
+
+// Modf for jQuery Slider - End
+// ASR
+$(document).ready(function(){
+ 
+ 
+ 
+ // $("#tickerItemHolder .tickerItems li a:last").css("display","none");
+   //$("#signin-iframe").css("display':'none");
+ //$("#sso-psn-container").html('<span style="margin:0px; float:left; margin-left:-1px; background:#F1F3F5; text-align:left; height:115px; width:450px; padding-top:10px; padding-left:10px;  color:#82848B; "><span style="float:left;padding:10px; border:1px solid #D9D8D8;font-size:14px; line-height:20px; width:419px;   text-align:left;">Parts of PlayStation&reg;Network will be temporarily unavailable today due to scheduled maintenance from 8:05 am - 8:30 pm PDT<br /><a href="https://web.archive.org/web/20100826161338/http://us.playstation.com/support/answer/index.htm?a_id=312" onclick="ClickOmniTrack(this,\'event36\',\'PS/Playstation_Network_Temporary_outage_ticker\'); javascript:pageTracker._trackPageview(\'/CTR/Playstation_Network_Temporary_outage_ticker\')" style="font-weight:bold; color:#82848B;">Find out More</a></span></span>'); $("div#tickerContainer ul.tickerItems li a").attr("onclick","ClickOmniTrack(this,'event36','PS/Playstation_Network_Temporary_outage_ticker');javascript:pageTracker._trackPageview('/CTR/Playstation_Network_Temporary_outage_ticker')"); 
+ //$("#overlayLogin .LoginOuter .inner .login div div").css("height","0px");
+ //$("#overlayLogin .LoginOuter .inner .login div div strong").css("display","none");
+ 
+if((window.location=="https://web.archive.org/web/20100826161338/http://us.playstation.com/psp/index.htm")||(window.location=="https://web.archive.org/web/20100826161338/http://us.playstation.com/psp/"))
+{
+document.getElementById("linkdiv").style.display="block";
+$("#background").attr("onclick","linkdiv1()");
+$("#background").css("cursor","pointer");
+}
+
+ 
+var mainPath = location.pathname ;
+
+var tickerPath = mainPath.toLowerCase().indexOf('/support/') != -1;
+if(tickerPath.toString()=="true")
+{
+
+ $("#newsticker-demo").css("display","block");
+  $(".newsticker-jcarousellite").css("visibility':'visible");
+ 
+}
+ 
+
+var bPS3AccessaryPath = mainPath.toLowerCase().indexOf('ps3/accessories/scph-98048') != -1;
+if(bPS3AccessaryPath.toString()=="true")
+{
+$("ul.accessory li:first").css("background","none");
+}
+
+var bIsIE = navigator.userAgent.toLowerCase().indexOf('msie 6') != -1;
+var bIsPS3 = navigator.userAgent.toLowerCase().indexOf('playstation') != -1;
+var sAssetsPath = ucmroot+"groups/public/documents/webasset/"; /*getAssetPath(); */
+
+if (bIsPS3.toString()=="true"){
+	$('#profile').css('display', 'none');
+	//$('#profile').css('display', 'block');
+}
+
+if((pluginlist.indexOf("Flash")<0)||(bIsPS3.toString()=="true")|| (bIsIE.toString()=="true")){
+// need to add condition here
+
+var bPath = location.pathname ;
+
+var xmlMarqueeFile = sAssetsPath+"sps_home_marquee_images_ss.xml";
+var bPSPPath = bPath.toLowerCase().indexOf('psp/index') != -1;
+var bPSPGMPath = bPath.toLowerCase().indexOf('psp/games-and-media') != -1;
+
+var bPS3HomePath = bPath.toLowerCase().indexOf('ps3/index') != -1;
+var bPS3MLBPath = bPath.toLowerCase().indexOf('ps3/mlbtv') != -1;
+var bPS3ACCPath = bPath.toLowerCase().indexOf('ps3/accessories') != -1;
+
+var bPSNEventPath = bPath.toLowerCase().indexOf('psn') != -1;
+
+var bPS3GMPath = bPath.toLowerCase().indexOf('ps3/games-and-media') != -1;
+var bPS3PSMovePath = bPath.toLowerCase().indexOf('ps3/playstation-move') != -1;
+var bPSNPath = bPath.toLowerCase().indexOf('psn/playstation-store') != -1;
+var bPSNModSweepsPath = bPath.toLowerCase().indexOf('psn/events/keystoyourkartsweeps') != -1;
+var bPSNpspgodigitalPath = bPath.toLowerCase().indexOf('psn/events/pspgodigitalgamepack') != -1;
+var bPSNSubway = bPath.toLowerCase().indexOf('psn/events/subway') != -1;
+
+var bGamesMediaPath = bPath.toLowerCase().indexOf('games-and-media') != -1;
+var bGamesMediaAddonPath = bPath.toLowerCase().indexOf('games-and-media/add-ons') != -1;
+var bGamesMediagreatesthitsPath = bPath.toLowerCase().indexOf('games-and-media/greatest-hits') != -1;
+var bGamesMediagamesPath = bPath.toLowerCase().indexOf('games-and-media/games') != -1;
+var bGamesMediahotshotPath = bPath.toLowerCase().indexOf('games-and-media/franchise/hot-shots-franchise') != -1;
+var bGamesMediamlbtvPath = bPath.toLowerCase().indexOf('games-and-media/franchise/mlb-franchise') != -1;
+var bGamesMediapataponPath = bPath.toLowerCase().indexOf('games-and-media/franchise/patapon-franchise') != -1;
+var bGamesMediagtfranchisePath = bPath.toLowerCase().indexOf('games-and-media/franchise/gran-turismo-franchise') != -1;
+var bps3gamingPath = bPath.toLowerCase().indexOf('ps3/gaming') != -1;
+var bPS2gnmPath = bPath.toLowerCase().indexOf('ps2/games-and-media/') != -1;
+var bPS2Path = bPath.toLowerCase().indexOf('ps2') != -1;
+var bPS2ACCPath = bPath.toLowerCase().indexOf('ps2/accessories') != -1;
+var bPSPSYSPath = bPath.toLowerCase().indexOf('psp/systems') != -1;
+var bPSPFEATPath = bPath.toLowerCase().indexOf('psp/features') != -1;
+var bPSPtwoPath = bPath.toLowerCase().indexOf('psp/twopsps') != -1;
+var bPSPenterPath = bPath.toLowerCase().indexOf('psp/entertainment') != -1;
+var bPSPfavoritesPath = bPath.toLowerCase().indexOf('psp/games-and-media/psp-favorites') != -1;
+if(bPSPSYSPath.toString()=="true")
+{
+    xmlMarqueeFile = sAssetsPath+"sps_psp_sys_marquee_images_ss.xml"
+}
+if(bPSPFEATPath.toString()=="true")
+{
+    xmlMarqueeFile = sAssetsPath+"sps_psp_feat_marquee_images_ss.xml"
+}
+
+if(bPSPPath.toString()=="true")
+{
+    xmlMarqueeFile = sAssetsPath+"sps_psp_marquee_images_ss.xml"
+}
+
+if(bPS3HomePath.toString()=="true")
+{
+    xmlMarqueeFile = sAssetsPath+"sps_ps3_home_marquee_images_ss.xml"
+}
+if(bPS3MLBPath.toString()=="true")
+{
+    xmlMarqueeFile = sAssetsPath+"sps_ps3_mlbtv_images.xml"
+}
+if(bPS3ACCPath.toString()=="true")
+{
+    xmlMarqueeFile = sAssetsPath+"sps_ps3_marquee_images_ss.xml"
+}
+
+if(bPS2Path.toString()=="true")
+{
+    xmlMarqueeFile = sAssetsPath+"sps_ps2_marquee_images_ss.xml"
+}
+
+if(bPS2ACCPath.toString()=="true")
+{
+    xmlMarqueeFile = sAssetsPath+"sps_ps2_accessories_images_ss.xml"
+}
+
+if(bps3gamingPath.toString()=="true")
+{
+    xmlMarqueeFile = sAssetsPath+"sps_ps3_gaming_images.xml"
+}
+
+if(bPSNEventPath.toString()=="true")
+{
+    xmlMarqueeFile = sAssetsPath+"sps_psn_homemarquee_images_ss.xml"
+}
+
+if(bPSNPath.toString()=="true")
+{
+    xmlMarqueeFile = sAssetsPath+"sps_psn_storemarquee_images_ss.xml"
+}
+
+if(bPSNModSweepsPath.toString()=="true")
+{
+    xmlMarqueeFile = sAssetsPath+"sps_psn_modmarquee_images_ss.xml"
+}
+
+if(bPSNpspgodigitalPath.toString()=="true")
+{
+    xmlMarqueeFile = sAssetsPath+"sps_psn_pspgodigital_images_ss.xml"
+}
+
+if(bGamesMediaPath.toString()=="true")
+{
+    xmlMarqueeFile = sAssetsPath+"sps_gnm_marquee_images_ss.xml"
+}
+if(bPS2gnmPath.toString()=="true")
+{
+    xmlMarqueeFile = sAssetsPath+"sps_ps2_gnm_marquee_images_ss.xml"
+}
+if(bGamesMediaAddonPath.toString()=="true")
+{
+    xmlMarqueeFile = sAssetsPath+"sps_gnm_addonmarquee_images_ss.xml"
+}
+
+if(bGamesMediagreatesthitsPath.toString()=="true")
+{
+    xmlMarqueeFile = sAssetsPath+"sps_gnm_gh_marquee_images_ss.xml"
+}
+
+if(bPS3GMPath.toString()=="true")
+{
+    xmlMarqueeFile = sAssetsPath+"sps_ps3_gnm_marquee_images_ss.xml"
+}
+
+if(bPS3PSMovePath.toString()=="true")
+{
+    xmlMarqueeFile = sAssetsPath+"sps_ps3_psmove_images_ss.xml"
+}
+
+if(bGamesMediagamesPath.toString()=="true")
+{
+    xmlMarqueeFile = sAssetsPath+"sps_gnm_games_data_images.xml"
+}
+
+if(bGamesMediahotshotPath.toString()=="true")
+{
+    xmlMarqueeFile = sAssetsPath+"sps_gnm_hotshot_images.xml"
+}
+
+if(bGamesMediamlbtvPath.toString()=="true")
+{
+    xmlMarqueeFile = sAssetsPath+"sps_gnm_mlbtv_images.xml"
+}
+
+if(bGamesMediapataponPath.toString()=="true")
+{
+    xmlMarqueeFile = sAssetsPath+"sps_gnm_patapon_images_ss.xml"
+}
+
+if(bGamesMediagtfranchisePath.toString()=="true")
+{
+    xmlMarqueeFile = sAssetsPath+"sps_gnm_gtfranchise_images_ss.xml"
+}
+
+if(bPSPGMPath.toString()=="true")
+{
+    xmlMarqueeFile = sAssetsPath+"sps_psp_gnm_data_images.xml"
+}
+
+if(bPSPtwoPath.toString()=="true")
+{
+    xmlMarqueeFile = sAssetsPath+"sps_psp_twopsp_marquee.xml"
+}
+if(bPSPenterPath.toString()=="true")
+{
+    xmlMarqueeFile = sAssetsPath+"sps_psp_entertainment_marquee.xml"
+}
+
+if(bPSPfavoritesPath.toString()=="true")
+{
+    xmlMarqueeFile = sAssetsPath+"sps_psp_favorites_marquee.xml"
+}
+if(bPSNSubway.toString()=="true")
+{
+    xmlMarqueeFile = sAssetsPath+"sps_psn_subway_marquee.xml"
+}
+
+
+//Build path to xml feed
+xmlMarqueeFile = window.location.protocol+"//"+ location.hostname + xmlMarqueeFile;
+
+//New XML Marquee Starts
+            $.ajax({
+                type: "GET",
+                url: xmlMarqueeFile,
+                dataType: "xml",
+                success: function(xml) {
+                    
+                    $(xml).find('item').each(function(){
+                        var id = $(this).attr('id');
+                        var title = $(this).find('title').text();
+                        var link = $(this).find('link').text();
+                        var image = $(this).find('src').text();
+                        var sAltAttrib = $(this).find('alttag').text();
+                        var sLinkUrlAttrib = $(this).find('linkurl').text();
+                        var sTarget = $(this).find('linktarget').text();
+                       //$("<div class='items' id='link_"+id+"'></div>").html("<img src='https://web.archive.org/web/20100826161338/http://webassets.scea.com"+ucmroot+image+"' id='src_"+id+"' />").appendTo("#page-wrap");
+                       
+                        var locationObj = window.location.host.toString();
+                        var bLocation = location.pathname;
+						//if (locationObj=="pscom-auth-ucm.playstation.sony.com"){
+						/* Above line Commented and link logic modf by ASR */
+						var bFlag = bLocation.toLowerCase().indexOf('/usplaystation/') != -1;
+						if(sTarget=="_new"){
+						$("<div class='items' id='link_"+id+"'></div>").html("<a href='"+sLinkUrlAttrib+"' target='"+sTarget+"' style='margin-top:0;'><img src='https://web.archive.org/web/20100826161338/http://webassets.scea.com"+ucmroot+image+"' alt='"+sAltAttrib+"' title='"+sAltAttrib+"' id='src_"+id+"' /></a>").appendTo("#page-wrap");
+						}
+						else{
+						if (bFlag){
+                      		if(sLinkUrlAttrib!=""){
+                      		$("<div class='items' id='link_"+id+"'></div>").html("<a href='"+sLinkUrlAttrib+"' target='"+sTarget+"' style='margin-top:0;'><img src='"+ucmroot+image+"' alt='"+sAltAttrib+"' title='"+sAltAttrib+"' id='src_"+id+"' /></a>").appendTo("#page-wrap");
+                      		}else{
+                      		$("<div class='items' id='link_"+id+"'></div>").html("<img src='"+ucmroot+image+"' alt='"+sAltAttrib+"' title='"+sAltAttrib+"' id='src_"+id+"' />").appendTo("#page-wrap");
+							}
+						}
+						else 
+						{
+							if(sLinkUrlAttrib!=""){
+							$("<div class='items' id='link_"+id+"'></div>").html("<a href='"+sLinkUrlAttrib+"' target='"+sTarget+"' style='margin-top:0;'><img src='https://web.archive.org/web/20100826161338/http://webassets.scea.com"+ucmroot+image+"' alt='"+sAltAttrib+"' title='"+sAltAttrib+"' id='src_"+id+"' /></a>").appendTo("#page-wrap");
+							}else{
+							$("<div class='items' id='link_"+id+"'></div>").html("<img src='https://web.archive.org/web/20100826161338/http://webassets.scea.com"+ucmroot+image+"' alt='"+sAltAttrib+"' title='"+sAltAttrib+"' id='src_"+id+"' />").appendTo("#page-wrap");
+							}
+						}
+						}
+						
+                        $(this).find('desc').each(function(){
+
+                        });
+
+                    });
+                }
+            });
+
+//New XML Marquee Ends
+
+
+}
+
+
+
+
+
+var ucmWebRoot  = ucmroot;
+
+    
+    if($(window).width() > 960) {
+            $('html').css('overflow-x', 'hidden');
+        }
+        
+        $(window).resize(function(){
+            if($(window).width() < 960) {
+                $('html').css('overflow-x', 'auto');            
+            }
+            else {
+                $('html').css('overflow-x', 'hidden');
+            }
+        });
+    
+    
+    
+  
+    registerFeaturesAccordion();
+    
+    
+    //News items
+    $('#main .browser.news .grid .item .top').hover(function(){
+            $(this).parents('.item').addClass('active'); 
+        },
+        function(){
+            $(this).parents('.item').removeClass('active');         
+        });
+    
+
+    
+    
+    //System box
+    $('#main #system .box').hover(function(){
+            $(this).addClass('active').css('cursor','pointer');
+        },
+        function(){
+            $(this).removeClass('active');      
+        });
+    $('#main #system .box').click(function(){
+        window.location = $(this).find('a').attr('href');
+        return false;
+    });
+    
+    //Horizontal news items
+    $('#main #content .newsDiscussions .item .comment').hover(function(){
+            $(this).addClass('active');
+            $(this).siblings().find('.link').addClass('active');
+        },
+        function(){
+            $(this).removeClass('active');      
+            $(this).siblings().find('.link').removeClass('active');
+        });
+    $('#main #content .newsDiscussions .item .comment').click(function(){
+        window.location = $(this).siblings('.location').find('a').attr('href');
+        return false;
+    });
+    $('#main #content .newsDiscussions .item .location .link').hover(function(){
+            $(this).parents('.location').siblings().addClass('active');
+        },
+        function(){
+            $(this).parents('.location').siblings().removeClass('active');
+        }); 
+    
+    //Game details inside the friends module
+    $('.gameplay .games .friends .gameDetails a').hover(function(){
+            $(this).parents('.gameDetails').find('a').addClass('active');
+        },
+        function(){
+            $(this).parents('.gameDetails').find('a').removeClass('active');
+        })
+        
+    //Hide/show review form
+    $('.user_reviews .review_form').hide();
+    $('.user_reviews .write_a_review').click(function(){
+        $('.user_reviews .review_form').show();
+        return false;
+    });
+    $('.user_reviews .review_form .cancel').click(function(){
+        $('.user_reviews .review_form').hide();
+        $('.user_reviews .my_review').show();
+        
+        return false;
+    });
+    $('.user_reviews .edit_review a').click(function(){
+        $('.user_reviews .review_form').show();
+        $('.user_reviews .my_review').hide();
+        
+        var title = $('.review.edit .review_title').text();
+        var comment = $('.review.edit .review_title').siblings('p').text();
+        
+        $('.user_reviews .review_form #title').val(title);
+        $('.user_reviews .review_form #comment').val(comment);
+        
+        return false;
+    });
+
+    
+    //Star bar on review form
+    $('.starbar li a').hover(function(){
+            var className = $(this).parent().attr('class');
+            var stars = 0;
+            switch(className) {
+                case "one":
+                    stars = 1;
+                    break;
+                case "two":
+                    stars = 2;
+                    break;
+                case "three":
+                    stars = 3;
+                    break;
+                case "four":
+                    stars = 4;
+                    break;
+                case "five":
+                    stars = 5;
+                    break;
+                default:
+                    stars = 0;
+                    break;
+            }
+            pos = stars * 14;
+            $(this).parents('.starbar').css('background-position', "left " + -pos + "px");
+        },
+        function(){
+            $(this).parents('.starbar').css('background-posiiton', '0 0'); 
+        });
+        
+    //custom radio button in user reviews
+    $('.user_reviews .terms').hover(function(){
+            $(this).css('background-position', '0 -15px');
+        },
+        function(){
+            if($(this).attr('class').indexOf('down') < 0) {
+                $(this).css('background-position', '0 0');                      
+            }
+        });
+    $('.user_reviews .terms').click(function(){
+        $(this).toggleClass('down');
+    });
+    //custom radio buttons in overlays
+    $('#overlay .addRadio').hover(function(){
+            $(this).css('background-position', '0 -15px');
+        },
+        function(){
+            if($(this).attr('class').indexOf('down') < 0) {
+                $(this).css('background-position', '0 0');                      
+            }
+        });
+    $('#overlay .addRadio').click(function(){
+        $(this).toggleClass('down');
+    });
+    //Overlay close
+    $('#overlay .close').click(function(){
+
+        $('#off_rule_giveaway').scrollTop(0);
+
+        $(this).parents('#overlay').hide();
+         
+        $('#black_overlay').hide();
+         $('#nameValidationMessage').remove();
+          $('#toValidationMessage').remove();
+        $('span').removeClass('error');
+    $('#black_overlay1').hide();
+    });
+    
+
+    
+    $('#overlay .cancel').click(function(){
+        $(this).parents('#overlay').hide();
+     $('#black_overlay1').hide();
+        $('#black_overlay').hide();
+    });
+   
+    //Remove the guide test from all input fields
+    removeGuideText();
+    
+    
+    /* Primary Navigation */
+    var isOpen = false;
+    var time = 500;
+    var open = '';
+    var searchFocus = false;
+    
+    /* reset timer upon mouse out */
+    $('#navigation').hover(function(){
+        },
+        function(){
+            time = 500;
+        });
+        
+    /* change the z-index upon hover, show the extended nav after (time) */
+    $('#navigation li:not(".open") a').hover(function(){
+            $(this).css('z-index',999);
+            $(this).oneTime(time, function(){               
+                $(this).addClass('active');
+                time = 1;
+            });
+            if(!searchFocus){
+                $('#search').removeClass('expanded');
+                $('#search').css('z-index', 9);
+            }
+        },
+        function(){
+            $(this).stopTime();
+            $(this).css('z-index',9);
+            $(this).removeClass('active');              
+    });
+    
+    /* change z-index and show the search extended panel after (time) */
+    $('#navigation #search').hover(function(){
+            $(this).css('z-index',999);
+            $(this).parents('ul').children('li:not(".open")').children('ul').hide();            
+            $(this).parents('ul').children('li').children('a').removeClass('active');           
+            $(this).oneTime(time, function(){
+                $(this).addClass('expanded');
+                time = 1;
+            });
+            $('#navigation li a').stopTime();
+            $('#navigation li:not("#search")').stopTime();
+        },
+        function(){
+            $(this).removeClass('expanded');
+        });
+        
+    /* stop the timer on the anchors and containers when you hover the search input box */
+    $('#navigation #search input').hover(function(){
+            $('#navigation li a').stopTime();
+            $('#navigation li:not("#search")').stopTime();
+        },
+        function(){
+        });
+        
+    /* show the expanded nav items after (time) */
+    $('#navigation li:not(".open")').hover(function(){
+            $(this).oneTime(time, function(timer){
+                $(this).children('ul').show();
+            });
+        },
+        function(){
+            $(this).stopTime();
+            $(this).children('ul').hide();          
+        });
+    
+    
+    /* add the active class to the appropriate anchor when hovering the expanded nav */
+    $('#navigation li:not(".open") ul').hover(function(){
+            $(this).parents('li').children('a').addClass('active');
+            $(this).parents('li').children('a').css('z-index',999);
+            // $(this).css('z-index',999);              
+        },
+        function(){
+            $(this).stopTime();
+            $(this).parents('li').children('a').removeClass('active');          
+            $(this).parents('li').children('a').css('z-index',1);
+        });
+        
+    /* if this nav item is open, find out which one */
+    $('#navigation ul li').each(function(){
+        if($(this).attr('class').indexOf('open') > -1) {
+            open = $(this).attr('id');
+        }
+    });
+    
+    /* if the nav item is open, set the appropriate class to the other nav items */
+    if(open == "ps3") {
+        $('#navigation #psp').addClass('alt');
+        $('#navigation #ps2').addClass('alt');
+        $('#navigation #psn').addClass('alt');
+        $('#navigation #games_and_media').addClass('alt');
+        $('#navigation #search').addClass('alt');
+    }
+    else if (open == "psp") {
+        $('#navigation #ps2').addClass('alt');
+        $('#navigation #psn').addClass('alt');
+        $('#navigation #games_and_media').addClass('alt');
+        $('#navigation #search').addClass('alt');       
+    }
+    else if (open == "ps2") {
+        $('#navigation #psn').addClass('alt');
+        $('#navigation #games_and_media').addClass('alt');
+        $('#navigation #search').addClass('alt');       
+    }
+    else if (open == "psn") {
+        $('#navigation #games_and_media').addClass('alt2');
+        $('#navigation #search').addClass('alt2');      
+    }
+    else if (open == "games_and_media") {
+        $('#navigation #search').addClass('alt3');      
+    }
+    
+    $('#navigation #search input').bind('focus', function(){
+        searchFocus = true;
+    });
+    
+    $('#navigation #search input').bind('blur', function(){
+        $(this).parents('#search').css('z-index',9);
+        $(this).parents('#search').removeClass('expanded'); 
+        searchFocus = false;    
+    });
+    
+    
+  // faq page
+  $('.faq_section .qa_group .answer').hide();
+
+  $('.faq_section .qa_group .question').click(function()
+  {
+    element = $(this).next();
+    if(element.css('display') == 'none')
+    {
+      element.slideDown();
+    }
+    else
+    {
+      element.slideUp();
+    }
+    return false;
+  });
+
+    //Tab button hovers
+    $('ul.tabs li, ul.subnav li').hover(function(){
+            $(this).addClass('hover');
+        },
+        function(){
+            $(this).removeClass('hover');       
+        });
+
+    var browseAll = $('#main .browser.all ul.tabs li a');
+    var dropdowns = $('#main .browser.all .dropdown');
+
+    if (browseAll.length && dropdowns.length) {
+        browseAll.click(function(e) {
+            e.preventDefault();
+            var index = browseAll.index(this);
+            dropdowns.hide();
+            browseAll.parent().css('visibility', 'visible');    
+
+            dropdowns.eq(index).show();
+            browseAll.parent().eq(index).css('visibility', 'hidden');           
+        });
+
+        dropdowns.find('a.close').click(function(e) {
+            e.preventDefault();
+            var index = dropdowns.index($(this).parent().parent());
+            browseAll.parent().eq(index).css('visibility', 'visible');          
+            dropdowns.eq(index).hide(); 
+        });         
+    }
+
+
+    //expandos
+    registerExpandos();
+    
+    // This should automatically setup the carousels:
+
+    $('.browser').each(function() {
+        new SliderTrack({
+            container: $(this),
+            lastClass: 'last'
+        });        
+    });
+
+/* Added by ASR */
+    $('.browsernew').each(function() {
+        new SliderTrack({
+            container: $(this),
+            lastClass: 'last'
+        });        
+    });
+
+
+    /* Friends Accordion */     
+    registerFriendsAccordion();
+});
+
+function registerFriendsAccordion() {
+    var i = 0;
+    $('.gameplay .games div h4').each(function(){
+        //Add alt class to every other item
+        if(i % 2 == 0) {
+            $(this).addClass('alt');
+            $(this).parent('div').children('ul').addClass('alt');
+        }
+        //Hide the friends lists on load if its doesn't start open
+        if($(this).attr('class').indexOf('open') < 0) $(this).parent('div').children('.friends').hide(); 
+
+        i++;
+
+    });
+
+    window.friendsHalt = false;
+
+    $('.gameplay .games .friends li').click(function(){
+        window.location = $(this).find('a').attr('href');
+        return false;
+    });
+
+    $('.gameplay .games div h4').click(function(e){
+        if (window.friendsHalt) return;
+        window.friendsHalt = true;
+
+        //If the clicked item was already open
+        if($(this).attr('class').indexOf('open') > -1) {
+            $(this).addClass('justClosed');
+        }
+
+        var effects = [];
+
+        //Close the other open lists
+        $(this).parents('.games').children('div').children('h4').each(function(){                       
+            if($(this).attr('class').indexOf('open') > -1) {
+                $(this).removeClass('open');
+
+                var friends = $(this).parent('div').children('.friends').get();
+                for (var i=0; i<friends.length; i++) {
+                    effects.push(new Effect.BlindUp(friends[i], {sync:true, duration:0.25}));
+                }               
+            }
+        }); 
+        //If the clicked item wasn't open or wasn't just closed
+        if($(this).attr('class').indexOf('open') < 0 && $(this).attr('class').indexOf('justClosed') < 0) {
+            $(this).addClass('open');
+            $(this).siblings('.friends').addClass('open');
+
+            var friends = $(this).siblings('.friends').get();
+            for (var i=0; i<friends.length; i++) {
+                effects.push(new Effect.BlindDown(friends[i], {sync:true, duration:0.25}));
+            }               
+        }
+        else {
+            $(this).removeClass('open');
+            $(this).siblings('.friends').removeClass('open');
+            $(this).removeClass('justClosed');
+        }
+
+        new Effect.Parallel(effects, { 
+            duration: 0.25,
+            afterFinish: function() {
+                window.friendsHalt = false;
+            }.bind(this)
+        });
+    }); 
+
+    $('#main .browser.news .grid .item .top').mouseenter(function() {
+        $(this).addClass('hover');
+    });
+    
+    $('#main .browser.news .grid .item .top').mouseleave(function() {
+        $(this).removeClass('hover');
+    }); 
+}
+
+
+
+function registerExpandos() {
+    var expandoHovers = $('.browser .grid .item .expando, .trophy.item');
+
+    if (expandoHovers.length) {
+
+        var halt = false;
+
+        //For non multi-row items
+        $('.browser:not(".news") .grid:not(".multiRow") .item, .trophy.item').each(function() {
+            var item = $(this);
+            createExpandos(item);
+        });
+
+        //For multi-row items
+        $('.browser:not(".news") .grid .item .thumb').each(function() {
+            var item = $(this);         
+            createExpandos(item);   
+        });
+    }   
+    
+}
+
+function createExpandos(item) {
+    var expando = item.find('.expando');
+    if (!expando.length) return;
+    item.find('a.bg').bind('mouseenter', {item: item, expando: expando}, function(e) {
+        
+        var item = e.data.item;
+        var image = item.children('a.bg');
+        var headline = item.children('h4');
+        var links = item.children('p');             
+        var expando = e.data.expando;
+        var expandoClone = expando.clone().prependTo('body');
+        
+              
+        headline.addClass('active');
+        if(expandoClone.find('.system').length) {
+            image.clone().insertAfter(expandoClone.find('.system'));    
+        }
+        else {
+            image.clone().prependTo(expandoClone);
+        }
+        headline.clone().insertAfter(expandoClone.find('a.bg'));
+        links.clone().insertAfter(expandoClone.find('h4'));
+
+        expandoClone.attr('id', 'expando');
+        
+        //var left = Math.ceil(item.offset().left - 17);
+        var left = Math.ceil(item.offset().left - 19);                  
+        var top = Math.ceil(item.offset().top - 27);
+        //if($.browser.mozilla) top -= 1;
+        //if($.browser.mozilla) left += 1;
+
+
+        expandoClone.css({
+            'position' : 'absolute',
+            'left' : left,
+            'top' : top,
+            'z-index' : 999
+        });
+        
+        item.mouseleave(function(){ 
+            headline.removeClass('active');
+            $(this).stopTime();             
+            $('#expando').fadeOut(1, function(){ $('#expando').remove(); });
+        });
+        
+        item.oneTime(1, function(){
+            item.unbind('mouseleave');
+            expandoClone.fadeIn(1);
+        });
+        
+        expandoClone.mouseleave(function() {
+            headline.removeClass('active');
+            $(this).stopTime();             
+            $('#expando').fadeOut(0, function(){ expandoClone.remove(); });
+        }); 
+
+    }); 
+}
+
+function removeGuideText() {
+    
+    //For inputs
+    $('input.text').each(function(){
+        input = $(this);
+        if(input.val() != '') {
+            
+            input.defaultValue = input.val();
+            
+            input.bind('focus', function(e){
+                
+                if($(e.target).val() == e.target.defaultValue) {
+                    $(e.target).val('');
+                }
+            });
+            input.bind('blur', function(e){
+                
+                if($(e.target).val() == '' && e.target.defaultValue) {
+                    $(e.target).val(e.target.defaultValue);
+                }
+                
+            });
+            
+        }
+    });
+    
+    //For textareas
+    $('textarea').each(function(){
+        textarea = $(this);
+        if(textarea.text() != '') {
+            
+            textarea.defaultValue = textarea.val();
+            
+            textarea.bind('focus', function(e){
+                
+                if($(e.target).val() == e.target.defaultValue) {
+                    $(e.target).val('');
+                }
+            });
+            textarea.bind('blur', function(e){
+                
+                if($(e.target).val() == '' && e.target.defaultValue) {
+                    $(e.target).val(e.target.defaultValue);
+                }
+                
+            });
+            
+        }
+    });
+}
+
+// SliderTrack
+function SliderTrack(x)
+{
+	
+    var self = this;
+    
+    this.c = $(x.container);
+    if (this.c.length == 0) return;
+    this.c = this.c.eq(0);
+
+    this.items = this.c.find(x.item || '.item');
+    this.thumbs = this.c.find(x.thumb || '.thumb');
+    
+    this.prevButton = this.c.find(x.prev || 'a.previous');
+    this.nextButton = this.c.find(x.next || 'a.next');
+    this.track = this.c.find(x.track || '.track');
+    if (this.track.length == 0) return;
+    
+    this.paging = this.c.find(x.paging || '.paging');
+    this.pages = this.c.find(x.page || 'a.page');   
+    
+    var pageCopy = this.pages.eq(0).clone();
+    this.pages.remove();
+    
+    if (this.items.length == 0)
+    {
+     this.paging.css({'visibility': 'hidden'});
+     pageCopy.insertBefore(this.nextButton).clone(); // paging add line.
+     return;
+    }
+    
+    this.items.removeClass('last');
+
+    this.bounds = this.c.find(x.bounds || '.gridInner');
+    this.itemWidth = (parseInt(this.items.css('width'),10) + parseInt(this.items.css('marginRight'),10));
+    this.display = this.display || Math.ceil(this.bounds.width() / this.itemWidth);
+    this.perclick = x.perclick || this.display;
+
+    if (this.thumbs.length) {
+        this.thumbWidth = (parseInt(this.thumbs.css('width'),10) + parseInt(this.thumbs.css('marginRight'),10));    
+        this.perrow = Math.ceil(this.bounds.width() / this.thumbWidth);     
+    }
+
+    this.items.css({
+        'width': this.itemWidth + 'px', 
+        'marginRight': 0
+    });
+    
+    // if the slider is grid/page structured        
+    if (this.thumbs.length) {
+
+        for (var i=0; i<this.thumbs.length; i++)
+        {
+            if ((i+1) % this.perrow == 0) {
+                if (x.lastClass)
+                    this.thumbs.eq(i).addClass(x.lastClass);        
+            }
+            // for .expando hovers
+            if (i % this.perrow == 0 || i % this.perrow == 1) {
+                this.thumbs.eq(i).find('.expando').addClass('left');
+            }                                   
+        }           
+        
+    // else the slider is item structured               
+    } else {
+    
+        for (var i=0; i<this.items.length; i++)
+        {
+            if ((i+1) % this.display == 0) {
+                if (x.lastClass)
+                    this.items.eq(i).addClass(x.lastClass);     
+            }
+            // for .expando hovers
+            if (i % this.display == 0 || i % this.display == 1) {
+                this.items.eq(i).find('.expando').addClass('left');
+            }       
+        }   
+    }
+
+    for (var i=0; i<Math.ceil(this.items.length/this.perclick); i++)
+    {
+        pageCopy.find('span').html(i+1);
+        pageCopy = pageCopy.insertBefore(this.nextButton).clone();              
+    }
+   
+    this.pages = this.c.find(x.page || 'a.page');   
+    if (this.pages.length <= 1) {
+        this.paging.css({'visibility': 'hidden'});
+
+/* Check for the new browser grid and bypass by ASR/RJV */    
+        if($(".browsernew")){
+        	$(".browsernew .footer .paging").css({'visibility': 'visible'});        
+        	$(".browsernew .footer #moreLinks").css({'display': 'none'});        
+        }
+
+
+    }else{
+    
+        this.paging.css({'visibility': 'visible'});
+    }
+    
+    
+    
+    
+     //this.width = this.items.width(); // Change for Games and media movies page double grid
+    this.width = this.itemWidth;
+    this.track.width(this.items.length * this.width);
+    
+    this.prevButton.addClass('off');
+    if (this.items.length <= this.display)
+        this.nextButton.addClass('off');
+    
+    this.first = 0;
+    this.currentPage = 0;
+    this.setPage();
+    
+    this.prevButton.unbind("click");
+    this.nextButton.unbind("click");
+    
+    this.prevButton.click(function(event) { self.prev(event); });
+    this.nextButton.click(function(event) { self.next(event); });       
+    this.pages.click(function(event) {self.page(event); });
+    
+    this.move(0);
+
+    this.nextButton.removeClass('off'); 
+    this.prevButton.removeClass('off');         
+    
+    if (this.first + this.display >= this.items.length)
+        this.nextButton.addClass('off');
+
+    if (this.first == 0)
+        this.prevButton.addClass('off');
+}
+
+SliderTrack.prototype.prev = function(event)
+{
+    var self = this;
+    
+    event.preventDefault();
+    event.stopPropagation();    
+
+    if (this.prevButton.hasClass('off')) return;
+    if (this.halt) return;
+
+    this.nextButton.removeClass('off');
+
+    this.currentPage--;
+    this.setPage();
+    
+    this.first -= this.perclick;
+    this.move(this.first * this.width);
+    
+    if (this.first == 0)
+        this.prevButton.addClass('off');
+}
+
+SliderTrack.prototype.next = function(event)
+{
+    var self = this;
+    
+    event.preventDefault();
+    event.stopPropagation();    
+    
+    if (this.nextButton.hasClass('off')) return;
+    if (this.halt) return;
+    
+    this.prevButton.removeClass('off');
+
+    this.currentPage++;             
+    this.setPage();
+
+    this.first += this.perclick;
+    this.move(this.first * this.width);
+
+    if (this.first + this.display >= this.items.length)
+        this.nextButton.addClass('off');
+}
+
+SliderTrack.prototype.page = function(event)
+{
+    var self = this;
+    event.preventDefault();
+    event.stopPropagation();    
+
+    var thisPage = this.pages.index(event.target);
+    if (thisPage == this.currentPage) return;
+    if (this.halt) return;
+    
+    this.first += (thisPage - this.currentPage) * this.perclick;    
+    
+    this.currentPage = thisPage;        
+    this.setPage();
+    
+    this.move(this.first * this.width);
+
+    this.nextButton.removeClass('off'); 
+    this.prevButton.removeClass('off');         
+    
+    if (this.first + this.display >= this.items.length)
+        this.nextButton.addClass('off');
+
+    if (this.first == 0)
+        this.prevButton.addClass('off');            
+}
+
+SliderTrack.prototype.setPage = function()
+{
+    this.paging.find('.on').removeClass('on');
+    this.pages.eq(this.currentPage).addClass('on');
+}
+
+SliderTrack.prototype.move = function(pos)
+{
+    var self = this;
+
+    this.halt = true;
+    
+    this.items.parent().animate({left: -pos}, 'normal', false, function() {
+        self.items.parent().css({left: -pos+'px'}); // jQuery won't take us there so force the position
+        self.halt = false;
+    }); 
+}
+
+function registerFeaturesAccordion() {
+    window.featuresHalt = false;
+
+    $(".systems_section .section_content").each(function() { // on page load the content sections should not be seen
+
+        if(location.hash.indexOf($(this).parent().attr("id")) > -1) {
+            $(this).show();
+            $(this).parent().removeClass("closed");
+            $(this).parent().addClass("open");
+            $(this).parent().find('.section_header').children("a").text("Close");
+            if(location.hash) window.location.href = window.location;
+        }
+        
+    });
+    
+    $('.systems_section .section_header').click(function(e){
+        onFeatureClick(this);   
+    });
+    $('.systems_section .section_header a').click(function(e){
+        onFeatureClick($(this).parent('.section_header')[0]);
+        return false;
+    });
+    
+}
+function onFeatureClick(element) {
+    if (window.featuresHalt) return;
+    if ($('.systems_section').length <= 1) return;
+    window.featuresHalt = true;
+
+    var effects = [];
+    
+    if($(element).parent().hasClass('closed')) {
+        var feature = $(element).siblings('.section_content')[0];
+        effects.push(new Effect.BlindDown(feature, {sync:true, duration:0.25}));
+    }
+    else {          
+        var feature = $(element).siblings('.section_content')[0];
+        effects.push(new Effect.BlindUp(feature, {sync:true, duration:0.25}));
+    }
+ 
+    new Effect.Parallel(effects, { 
+        duration: 0.25,
+        afterFinish: function() {
+            if($(element).parent().hasClass('open')) {
+                $(element).children("a").text("Open");
+                $(element).parent().removeClass('open');
+                $(element).parent().addClass('closed'); 
+                $(".systems_section.closed .section_header"); /*.attr("title", "Click to Expand");*/
+            }
+            else {
+                $(element).children("a").text("Close");
+                $(element).parent().removeClass('closed');
+                $(element).parent().addClass('open');
+                $(".systems_section.open .section_header"); /*.attr("title", "Click to Collapse");*/
+                $(".systems_section.closed .section_header"); /*.attr("title", "Click to Expand");*/
+                
+            }
+            window.featuresHalt = false;
+        }.bind(element)
+    });
+}
+
+// done by snlg (dec,22, 2009)
+var getBrowser=navigator.appName;
+var b_version=navigator.appVersion;
+var getVersion=parseFloat(b_version);
+var getBrowserVersion = getBrowser + " "+ getVersion;
+
+
+
+// managing flash nav width at runtime to make underneath links visible
+function onNavigationOut(){
+    getMovieName("navswf").width=140;   
+    
+}
+function onNavigationOver(){
+    getMovieName("navswf").width=267;  
+         
+    if (getBrowserVersion.toLowerCase()  == "opera 9.1"){   
+        getMovieName("navswf").style.width=267;
+    }
+    
+    if(getBrowserVersion.toLowerCase()  == "netscape 5") {
+        getMovieName("navswf").width=267;
+    }
+}
+
+function getMovieName(movieName) {
+ if (navigator.appName.indexOf("Microsoft") != -1) { 
+	return window[movieName];
+ } 
+ else {
+	return document[movieName];
+ }
+}
+ function playSelectedMovie(movieId)
+ {
+    getMovieName("PSMediaPlayer").playSelectedId(movieId);
+ }
+
+
+
+function onProfileOver(){
+    getMovieName("profile_login").style.height=400; 
+    
+    if (getBrowserVersion.toLowerCase()  == "opera 9.1"){       
+        getMovieName("profile_login").style.height=400;
+    }
+    
+    if(getBrowserVersion.toLowerCase()  == "netscape 5") {
+        getMovieName("profile_login").height=400;
+    }
+}
+
+function onProfileOut(){
+    getMovieName("profile_login").height=50;
+}
+//Function to redirect to a page with some parameters
+function redirectTo(pageURL,paramText)
+{
+overwriteCookie("movieName",paramText);
+    window.location=location.protocol +"//" + window.location.host +pageURL;
+}
+//Function to add animation to "main" content
+
+$(function() {
+    $("#moduleSpace").toggle(function(){
+            $("#moduleSpace").animate({height:heightnew}, 300);
+        },
+        function(){
+            $("#moduleSpace").animate({height:heightold}, 300);
+        }
+    );
+
+});
+
+/* New added for Flash functionality */
+function initialIncrMarqueeHeight() {
+    if(isExpanded==true)
+    {   
+        $("#moduleSpace").animate({height:600}, 500);
+        //holdPause();
+    }
+}
+function incrMarqueeHeight() {
+    $("#moduleSpace").animate({height:600}, 500);
+    isExpanded=true;   
+}
+function decrMarqueeHeight() {  
+    $("#moduleSpace").animate({height:446}, 500);
+    isExpanded=false;
+  
+}
+function holdPause(){   
+    getMovieName("marquee").holdPause();
+}
+function releasePause(){   
+    getMovieName("marquee").releasePause();
+}
+
+function isAgeGateRated(esrbRating,isAgeGated){
+
+    esrbRating=esrbRating.toLowerCase();
+    if(isAgeGated=='Yes' || esrbRating == 'mature' || esrbRating == 'adults only' || esrbRating == 'rp-m' ||  esrbRating == 't')  {    
+        return true;    
+    }
+    else {
+        return false;
+    }
+}
+function createAgeGateCookie(ageLevel){
+    xmlstorehttp=GetXmlHttpObject();
+    if (xmlstorehttp==null){
+        alert ("Your browser does not support AJAX!");
+        return;
+    }
+    var storeurl="/uwps/CreateAgeGateCookie";
+    storeurl=storeurl+"?op.anValue="+ageLevel;
+    storeurl=storeurl+"&sid="+Math.random();
+    xmlstorehttp.onreadystatechange=getAgeGateDetail
+    xmlstorehttp.open("GET",storeurl,true);
+    xmlstorehttp.send(null);
+}
+function getAgeGateDetail(){
+    if (xmlstorehttp.readyState==4) {
+        var returnStoreStr = xmlstorehttp.responseText;
+    }
+}
+function isUserAllowedAgeGate(){  
+
+    var cookieValue="";
+    var valueNow="";
+
+    var serverName=window.location.host;
+
+    ageGateCook = readCookie("op.an");                            
+    if(ageGateCook)
+    {
+        if(ageGateCook == "false")
+        {
+            valueNow= "nc";
+        }
+        else if(ageGateCook == "bD7YHksGRXI=")
+        {
+            valueNow= "true";
+        }
+        else if(ageGateCook == "3VvAmD195zs=")
+        {
+            valueNow= "false";
+        }
+    }
+    else
+    {
+        valueNow= "nc";
+    }
+    
+return valueNow;
+                }
+function isUserAllowedAgeGate1(){
+    var ageGateCook=readCookie("op.an");
+    if(ageGateCook)   {
+        if(ageGateCook == "false"){
+            return "nc";
+        }
+        else if(ageGateCook == "m"){
+            return "true";
+        }
+        else   {
+            return "false";
+        }
+    }
+    else{
+        return "nc";
+    }
+}
+function isInteger(s){
+   var i;
+    for (i = 0; i < s.length; i++){  
+      
+        var c = s.charAt(i);
+        if (((c < "0") || (c > "9"))) return false;
+    }
+    // All characters are numbers.
+    return true;
+}
+function trimString(stringToTrim){
+if(stringToTrim=='undefined')
+    return "";
+    return stringToTrim.replace(/^\s\s*/, '').replace(/\s\s*$/, '');
+}
+var globalSiteName="/usplaystation/";
+if(window.location.toString().indexOf("usplaystation")==-1)
+    globalSiteName="/";
+    
+    
+$(document).ready(function(){
+    $("a.effect").mouseover(
+    function()
+    {
+     $(this).parent().children(':first').addClass("toggleclass");
+    }).mouseout(
+    function()
+    {
+     $(this).parent().children(':first').removeClass("toggleclass");
+    });
+    
+ 
+});
+/* FAQ Question hover effect */
+
+$(".question a").mouseover(
+function()
+{
+ $(this).css('color','#D12127'); 
+}).mouseout(
+function()
+{
+  $(this).css('color','#000'); 
+});
+
+/*PNG FIX*/
+ 
+/* FAQ Question hover effect */
+$(document).ready(function(){      
+
+ 
+$('#VistLocal table tr td table tr:even td').css("background","#f2f2f2");
+$('#VistLocal table tr td table tr:odd td').css("background","#f9f9f9");
+$('img#psnstoreaboutimg').click(function() 
+{ 
+    writeGSVideo();
+    $('#overlay1').toggle();
+    $('#black_overlay').toggle();
+});
+$(".systems_section.closed .section_header"); /*.attr("title", "Click to Expand");*/
+$(".systems_section.open .section_header"); /*.attr("title", "Click to Collapse");*/
+});
+
+
+
+// Netwok card
+ 
+$(document).ready(function() {
+$("a.networkcardtoggle").click(function() 
+{ 
+    if($("#VistLocal").css('display') == 'none')
+    {
+      $("#VistLocal").slideDown();
+    }
+    else
+    {
+      $("#VistLocal").slideUp();
+    }
+    return false;
+    
+});
+}); 
+
+
+/*ps_ajax_js*/
+var tier2Category="";
+var tier1Category="";
+
+$('document').ready(function(){
+    
+    //Initially we want to register the click events for the conditions
+    registerConditions();
+    
+    //For each option in the dropdowns we register a function to add them to the conditions list
+    $('.browser .dropdown .body a').click(function(){
+        var condition = $(this).text();
+        var html = "<div class=\"condition\"><p>" + condition + "<a href=\"#\"><span>REMOVE CONDITION</span></a></p></div>";
+        $('.browser .conditions').append(html);
+        registerConditions();
+        
+        //The AJAX call
+        $.ajax({
+            type: 'POST',
+            url: '#',
+            data: 'example=true&save=something',
+            dataType: 'xml'
+        });
+                
+        return false;
+    });
+    
+    //For each view option we want to make a call to the server and resort the list, also add an on class to display the on state.
+    $('.browser.all .view a').click(function(){
+        $(this).parent('.view').find('a').removeClass('on');
+        $(this).addClass('on');
+        
+        $.ajax({
+            type: "POST",
+            url: "#",
+            data: 'example=true&save=some',
+            dataType: "html",
+            success: function(html){
+                //do somehting with our returned html. probably updated our pages list
+                // $('.browser.all .list').html(html);
+            }
+        });
+        return false;
+    });
+    
+    //When the user changes a option in the drop down we want to make an ajax call and resort the list with the returned html.
+    $('.browser.all select').change(function(event){
+        $.ajax({
+            type: "POST",
+            url: "#",
+            data: event.target.value,
+            dataType: "html",
+            success: function(html){
+                //do somehting with our returned html. probably updated our pages list
+                // $('.browser.all .list').html(html);
+            }
+        });
+    });
+    
+    //To hide and show different subnav groups, other instances for other tabs need to be added
+    $('.browser .tabs li a').click(function(){
+        //var linkText = $(this).text().toLowerCase();
+        var linkText = $(this).attr('id');
+        
+        if(linkText.indexOf('games3') > -1) {    
+            $('.browser .subnav').hide();
+            $("#subnavgames3").show();           
+        }
+        else if(linkText.indexOf('gamesp') > -1) {
+            $('.browser .subnav').hide();
+            $("#subnavgamesp").show();
+        }
+        else if(linkText.indexOf('games2') > -1) {        
+            $('.browser .subnav').hide();
+            $("#subnavgames2").show();           
+        }
+        else if(linkText.indexOf('games') > -1) {
+            $('.browser .subnav').hide();
+            $("#subnavgames").show();           
+        }
+        else if(linkText.indexOf('newmovie') > -1) {
+            $('.browser .subnav').hide();
+            $("#subnavnewmovie").show();         
+        }           
+        else if(linkText.indexOf('newtvseries') > -1) {
+            $('.browser .subnav').hide();
+            $("#subnavnewtvseries").show();          
+        }
+        else if(linkText.indexOf('moviesnew') > -1) {
+            $('.browser .subnav').hide();
+            $("#subnavmoviesnew").show();           
+        }
+        else if(linkText.indexOf('moviesbuy') > -1) {
+            $('.browser .subnav').hide();
+            $("#subnavmoviesbuy").show();           
+        }
+        else if(linkText.indexOf('moviesrent') > -1) {
+            $('.browser .subnav').hide();
+            $("#subnavmoviesrent").show();          
+        }
+        else if(linkText.indexOf('movies1') > -1) {
+            $('.browser .subnav').hide();
+            $("#subnavmovies1").show();          
+        }
+        else if(linkText.indexOf('movies2') > -1) {
+            $('.browser .subnav').hide();
+            $("#subnavmovies2").show();          
+        }
+        else if(linkText.indexOf('movies') > -1) {
+            $('.browser .subnav').hide();
+            $("#subnavmovies").show();           
+        }
+        
+        else if(linkText.indexOf('add-ons') > -1) {
+            $('.browser .subnav').hide();
+            $("#subnavaddons").show();          
+        }
+        
+        else if(linkText.indexOf('demos') > -1) {
+            $('.browser .subnav').hide();
+            $("#subnavdemos").show();           
+        }
+        else if(linkText.indexOf('tv-show') > -1) {
+            $('.browser .subnav').hide();
+            $("#subnavtvshow").show();          
+        }
+        else if(linkText.indexOf('playstation3') > -1) {
+            $('.browser .subnav').hide();
+            $("#subnavplaystation3").show();          
+        }
+        else if(linkText.indexOf('psp') > -1) {
+            $('.browser .subnav').hide();
+            $("#subnavpsp").show();          
+        }
+        else if(linkText.indexOf('playstation2') > -1) {
+            $('.browser .subnav').hide();
+            $("#subnavplaystation2").show();          
+        }       
+        else if(linkText.indexOf('op') > -1) {
+            $('.browser .subnav').hide();
+            $("#subnavop").show();           
+        }
+        else if(linkText.indexOf('system') > -1) {
+            $('.browser .subnav').hide();
+            $("#subnavsystem").show();         
+        }
+        else if(linkText.indexOf('accessory') > -1) {
+            $('.browser .subnav').hide();
+            $("#subnavaccessory").show();           
+        }
+
+    });
+});
+
+//------------------ footer --------------------
+        
+function loadFooter() {
+
+    $(document).ready(function() {
+
+        var url=window.location;
+        var root="";
+        if(url.toString().indexOf("usplaystation")==-1){
+            root="";
+        }else{
+            root="/usplaystation";
+        }
+        $("#footercontainer").load(root+"/footer/index.htm #footer", function(data){
+            var innerString = $("#footercontainer").get(0).innerHTML;
+        	
+        	//$("#footercontainer").get(0).innerHTML = innerString.replace("..","");
+        	$("#footercontainer").get(0).innerHTML = replaceAll(innerString,"..","");
+        });
+    });
+
+}
+
+
+//------------------ Share This --------------------
+        
+function loadShareThis() {
+    $(document).ready(function() {
+
+        var url=window.location;
+        var root="";
+        if(url.toString().indexOf("usplaystation")==-1){
+            root="";
+        }else{
+            root="/usplaystation";
+        }
+        $("#shareThiscontainer").load(root+"/sharethis/index.htm #shareThisId", function(){
+       
+			//document.getElementById('myspace').href="https://web.archive.org/web/20100826161338/http://www.myspace.com/index.cfm?fuseaction=postto&t="+document.title+"<br/>"+encodeURIComponent('Explore the official website of Sony PlayStation 3')+" &u="+encodeURIComponent(window.location); 
+			
+			if(document.getElementById('reddit')!=null){
+   document.getElementById('reddit').href="https://web.archive.org/web/20100826161338/http://www.reddit.com/submit?url="+encodeURIComponent(window.location)+"&title="+encodeURIComponent(document.title); 
+   }
+   if(document.getElementById('twitter')!=null){
+   document.getElementById('twitter').href="https://web.archive.org/web/20100826161338/http://twitter.com/home?status="+encodeURIComponent(window.location); 
+   }
+   if(document.getElementById('delicious')!=null){
+   document.getElementById('delicious').href="https://web.archive.org/web/20100826161338/http://del.icio.us/post?v=2&amp;url="+encodeURIComponent(window.location)+"&amp;notes="+encodeURIComponent('Explore the official website of Sony PlayStation.')+"&amp;tags=&amp;title="+encodeURIComponent(document.title); 
+   }
+   if(document.getElementById('stumbled')!=null){
+   document.getElementById('stumbled').href="https://web.archive.org/web/20100826161338/http://www.stumbleupon.com/submit?url="+encodeURIComponent(window.location)+"&amp;title="+encodeURIComponent(document.title) 
+   }
+   if(document.getElementById('linkedIn')!=null){
+   document.getElementById('linkedIn').href="https://web.archive.org/web/20100826161338/http://www.linkedin.com/shareArticle?mini=true&url="+encodeURIComponent(window.location)+"&title="+encodeURIComponent(document.title) }    
+   if(document.getElementById('digg')!=null){
+   document.getElementById('digg').href="https://web.archive.org/web/20100826161338/http://digg.com/submit?phase=2&amp;url="+window.location+"&amp;bodytext="+encodeURIComponent('Explore the official website of Sony PlayStation')+"&amp;tags=&amp;title="+encodeURIComponent(document.title) 
+   }
+   if(document.getElementById('facebook')!=null){
+   document.getElementById('facebook').href="https://web.archive.org/web/20100826161338/http://www.facebook.com/share.php?u="+encodeURIComponent(window.location)+"&amp;d=&amp;tag=&amp;"
+   } 
+   if(document.getElementById('myspace')!=null){
+   var myspaceurl="https://web.archive.org/web/20100826161338/http://www.myspace.com/index.cfm?fuseaction=postto&t="+encodeURIComponent(document.title);
+   myspaceurl=myspaceurl+encodeURIComponent("<br/>");
+   myspaceurl=myspaceurl+encodeURIComponent('Explore the official website of SonyPlayStation3')+"&u=";
+   myspaceurl=myspaceurl+encodeURIComponent(window.location);  
+   document.getElementById('myspace').href=myspaceurl;  
+   }
+
+            
+            var sceaUserInfo=getCookieValueFromServer("userinfo");
+			var email =  getUserInfoKeyValue(sceaUserInfo,"email");
+			var firstName = getUserInfoKeyValue(sceaUserInfo,"firstName");
+			var lastName = getUserInfoKeyValue(sceaUserInfo,"lastName");
+			if(typeof(email) != "undefined"){
+				//document.frm.Uremail.value=email;
+			} else {
+				//document.frm.Uremail.value="";
+			}
+			if(typeof(firstName) != "undefined"){
+				//document.frm.sname.value=firstName + " " +lastName;
+			} else {
+				//document.frm.sname.value="";
+			} 
+        		
+        });
+    });
+
+}
+
+
+function replaceAll(Source,stringToFind,stringToReplace){
+
+  var temp = Source;
+    var index = temp.indexOf(stringToFind);
+        while(index != -1){
+            temp = temp.replace(stringToFind,stringToReplace);
+            index = temp.indexOf(stringToFind);
+        }
+        
+	return temp;
+}
+
+//------------------ No Flash Left Navigation --------------------
+ 
+
+//This is the function that registers the click event for all the conditions, it needs to be called after the conditions are resorted so new conditions have the click event.
+function registerConditions() {
+    $('.browser .conditions a').click(function(){
+        $(this).parents('.condition').remove();        
+        //The AJAX call
+        $.ajax({
+            type: 'POST',
+            url: '#',
+            data: 'example=true&save=something',
+            dataType: 'xml'
+        });
+        return false;
+    }); 
+
+}
+
+//This function is called from the gameplay module and asynchronously pulls an html file based on the type of data needed, which is passed into the function
+function loadGameplayData(object, section, type) {
+    $(object).parent('li').siblings('li').removeClass('on');
+    $(object).parent('li').addClass('on');
+    
+    var dataUrl = "/assets/data/gameplay_" + type + ".html";
+    
+    $(object).parents('.gameplay').find('.games').load(dataUrl, {}, registerFriendsAccordion);
+}
+
+function loadLinkData(type,platform,linkText){  
+ 
+     	showViewLink(linkText);
+    
+        $("#hiddenType").get(0).innerHTML=type;
+        $("#hiddenPlatform").get(0).innerHTML=platform;
+        $("#moreHyperLink").get(0).innerHTML =  linkText;
+       
+       	hideViewLink(linkText);
+        
+        
+}
+
+function loadStoreLinkData(type,platform,linkText,numRecords){  
+ 
+
+     	showViewLink(linkText);
+    
+        $("#hiddenType").get(0).innerHTML=type;
+        $("#hiddenPlatform").get(0).innerHTML=platform;
+       
+       	 $("#moreHyperLink").get(0).innerHTML =  linkText;
+       
+        
+       
+       	hideViewLink(linkText);
+       	hideStoreViewLink(linkText,numRecords)
+        
+        
+}
+
+function hideViewLink(linkText)
+{
+	if(linkText == "")
+        {
+        
+       		 document.getElementById("moreHyperLink").style.display="none";
+           
+        }
+}
+
+function hideStoreViewLink(linkText,numRecords)
+{
+	if(numRecords <= 8)
+        {
+        
+       		 document.getElementById("moreHyperLink").style.display="none";
+           
+        }
+}
+
+function showViewLink(linkText)
+{
+    document.getElementById("moreHyperLink").style.display="block";
+       
+}
+
+//This funciton is called from them browser grid, it returns the appropriate html based on what section and type is passed in (ie: games and playstation 3)
+function loadBrowserData(object, section, platform) {
+tier2Category= platform;
+tier1Category = section;
+
+    $(object).parent('li').siblings('li').removeClass('on');
+    $(object).parent('li').addClass('on');
+    if($(object).parents('.tabs').length > 0) {
+        $(object).parents('.browser').find('.subnav li').removeClass('on');
+        $(object).parents('.browser').find('.subnav li:first-child').addClass('on');
+    }
+        
+    $(document).ready(function() {
+
+		
+        $("#trackValue").get(0).innerHTML = $("#"+platform+""+section).get(0).innerHTML;
+        $(".moreLink").hide();
+        $("#games3link").hide();
+        $("#demoslinks").hide();
+        $("#accessorylink").hide();
+        $("#games2link").hide();
+        $("#gamesplink").hide();
+        $("#gameslink").hide(); 
+        $("#gamesdatalink").hide(); 
+        $("#movieslink").hide();
+        $("#moviesnewlink").hide();
+        $("#moviesbuylink").hide();
+        $("#moviesrentlink").hide();
+        $("#newmovielink").hide();
+        $("#addonslink").hide();
+        $("#addons3link").hide();
+        $("#addonsplink").hide();
+        $("#addonlink").hide();
+        $("#tvshowlink").hide();
+        $("#tvshowseasonlink").hide();
+        $("#tvshowseasonepisodelink").hide();
+        $("#tvshowlatestlink").hide();
+        $("#tvshowhdlink").hide();
+        $("#newtvserieslink").hide();
+        $("#games1link").hide();
+        $("#games2link").hide();
+        $("#"+section+"link").show();
+        $("#more"+section).show();
+        
+    });
+
+ //Check for the new browser grid and bypass by ASR/RJV     
+ var mainPath1 = location.pathname ;
+
+var bplayMovePath = mainPath1.toLowerCase().indexOf('ps3/playstation-move') != -1;
+
+if(bplayMovePath.toString()=="true"){
+		if($(".browsernew")){
+		resetSlider();
+		$(".browsernew .footer #moreLinks").css({'display': 'none'});
+	}
+	
+}else{
+		resetSlider(); 
+	} 
+}
+
+
+
+function loadDynamicAjaxData(object, section, platform) {
+
+
+
+    $(object).parent('li').siblings('li').removeClass('on');
+    $(object).parent('li').addClass('on');
+    if($(object).parents('.tabs').length > 0) {
+        $(object).parents('.browser').find('.subnav li').removeClass('on');
+        $(object).parents('.browser').find('.subnav li:first-child').addClass('on');
+    }
+    var getUrl="section=landing&noOfRecords=10&type="+section+"&platform="+platform;
+    
+   $("#gridData").get(0).innerHTML = $("#overlayLoader").get(0).innerHTML;
+	$.ajax({
+	type: "POST",
+	url: "/uwps/GetDetailPageGrid",
+	data: getUrl,
+	cache: false,
+	success: function(html){
+	//alert('vikas-'+html);
+	
+	document.getElementById('gridData').innerHTML=html;
+	resetSlider();
+	}
+	});
+}
+function loadDynamicStoreData(object, section, skuid) {
+
+
+
+    $(object).parent('li').siblings('li').removeClass('on');
+    $(object).parent('li').addClass('on');
+    if($(object).parents('.tabs').length > 0) {
+        $(object).parents('.browser').find('.subnav li').removeClass('on');
+        $(object).parents('.browser').find('.subnav li:first-child').addClass('on');
+    }
+    var getUrl="section="+section+"&noOfRecords=10&skuid="+skuid;
+     $("#gridData").get(0).innerHTML = $("#overlayLoader").get(0).innerHTML;
+	$.ajax({
+	type: "POST",
+	url: "/uwps/GetDetailPageGrid",
+	data: getUrl,
+	cache: false,
+	success: function(html){
+	//alert('vikas-'+html);
+	
+	document.getElementById('gridData').innerHTML=html;
+	resetSlider();
+	}
+	});
+}
+
+
+function loadAjaxData(object, section, platform) {
+    $(object).parent('li').siblings('li').removeClass('on');
+    $(object).parent('li').addClass('on');
+    if($(object).parents('.tabs').length > 0) {
+        $(object).parents('.browser').find('.subnav li').removeClass('on');
+        $(object).parents('.browser').find('.subnav li:first-child').addClass('on');
+    }
+    $(document).ready(function() {
+    
+    
+        $.ajaxSetup ({
+            cache: true
+        });
+
+        var url=window.location;
+        var root="";
+        if(url.toString().indexOf("usplaystation")==-1){
+            root="";
+        }else{
+            root="/usplaystation";
+        }
+        $("#gridData").get(0).innerHTML = $("#overlayLoader").get(0).innerHTML;
+        //document.getElementById("girdData").innerHTML=document.getElementById("overlayLoader").innerHTML;
+
+        $(object).parents('.browser').find('.gridInner').load(root+"/grid/"+section+"_"+platform+"/index.htm #trackValue", function(){
+            resetSlider();
+        });
+
+        $(object).parents('.browsernew').find('.gridInner').load(root+"/grid/"+section+"_"+platform+"/index.htm #trackValue", function(){
+            resetSlider();
+        });
+
+    });
+
+}
+
+
+function loadAjaxDataPSP(section, platform) {              
+    $(document).ready(function() {
+        $.ajaxSetup ({
+            cache: true
+        });
+
+        var url=window.location;
+        var root="";
+        if(url.toString().indexOf("usplaystation")==-1){
+            root="";
+        }else{
+            root="/usplaystation";
+        }
+        $("#gridData").get(0).innerHTML = $("#overlayLoader").get(0).innerHTML;
+        //document.getElementById("girdData").innerHTML=document.getElementById("overlayLoader").innerHTML;
+
+        $('#gridData').load(root+"/grid/"+section+"_"+platform+"/"+section+"_"+platform+"/index.htm #trackValue", function(){
+            resetSlider();
+        });
+
+
+    });
+}
+
+
+//This function is called in PSP Games & media for gettin parameter from URL
+
+function loadURLDataPSP(section, platform) {
+    $(document).ready(function() {
+    
+        $.ajaxSetup ({
+            cache: true
+        });
+
+        var url=window.location;
+        var root="";
+        if(url.toString().indexOf("usplaystation")==-1){
+            root="";
+        }else{
+            root="/usplaystation";
+        }
+        $("#girdData").get(0).innerHTML = $("#overlayLoader").get(0).innerHTML;
+        //document.getElementById("girdData").innerHTML=document.getElementById("overlayLoader").innerHTML;
+        
+        $('.gridInner').load(root+"/grid/"+section+"_"+platform+"/index.htm #trackValue", function(){
+            resetSlider();
+        });
+    });
+}
+
+
+//This funciton is called from Event landing page used for pagination
+function getEventData(object, divname, count, sort) {
+
+    $(object).parent('li').siblings('li').removeClass('on');
+    $(object).parent('li').addClass('on');
+
+    $(document).ready(function() {  
+        
+        try{
+            $("#events").get(0).innerHTML = $("#"+divname+count+sort).get(0).innerHTML;
+            $("#cat1").get(0).innerHTML = $("#"+divname+"Cat").get(0).innerHTML;
+            $("#"+divname+(count-1)).siblings('li').removeClass('on');
+            $("#"+divname+(count-1)).addClass('on');
+        }catch(err){
+            //alert("No Event exist in this category");
+            $("#events").get(0).innerHTML = "There are no events currently available";
+            $("#cat1").get(0).innerHTML = "";
+        }
+
+    });
+    
+}
+
+
+//This funciton is called from Event landing page used for pagination
+function eventPaging(object, divname, eventPage) {
+
+    $(document).ready(function() {
+        var count = $("#pageno").val();
+        for(index=0; index<eventPage; index++){
+            $("#"+divname+index).hide();
+        }
+        $("#"+divname+count).show();
+    });
+}
+
+
+//This funciton is called from them browser grid, it returns the appropriate html based on what section and type is passed in (ie: accessories and playstation 3)
+function loadSystemBrowserData(object, section, platform) {
+
+    $(object).parent('li').siblings('li').removeClass('on');
+    $(object).parent('li').addClass('on');
+    if($(object).parents('.tabs').length > 0) {
+        $(object).parents('.browser').find('.subnav li').removeClass('on');
+        $(object).parents('.browser').find('.subnav li:first-child').addClass('on');
+    }
+    
+    $(document).ready(function() {
+        $("#accsys").removeClass('systems');
+        $("#accsys").removeClass('accessories');
+        $("#ps3accessory").hide();
+        $("#ps2accessory").hide();
+        $("#pspaccessory").hide();
+        $("#pspgame").hide();
+        $("#ps3system").hide();
+        $("#ps2system").hide();
+        $("#pspsystem").hide();
+        $("#ps2game").hide();
+        $("#allaccessory").hide();
+        $("#pspgoaccessory").hide();
+        $("#psp3000accessory").hide();
+        $("#game").hide();
+        $("#accessory").hide();
+        $("#bundle").hide();
+        $("#"+platform+""+section).show();
+        $("#"+section).show();
+        if(section == "accessory"){
+            section = "accessories";
+            $("#accsys").addClass(section);
+        }
+        else if(section == "system"){
+            section = "systems";
+        }
+        
+    });
+
+}
+
+//Activate related content fragment
+function loadRetaledBrowserData(object, section) {
+
+    $(object).parent('li').siblings('li').removeClass('on');
+    $(object).parent('li').addClass('on');
+    if($(object).parents('.tabs').length > 0) {
+        $(object).parents('.browser').find('.subnav li').removeClass('on');
+        $(object).parents('.browser').find('.subnav li:first-child').addClass('on');
+        
+    }
+    $(document).ready(function() {
+        $("#bundle").hide();
+        $("#game").hide();
+        $("#morebundle").hide();
+        $("#moregame").hide();
+        $("#"+section).show();
+        $("#more"+section).show();
+
+   });
+    //resetSlider();
+
+}
+
+
+
+function resetSlider() {
+    $('.browser').each(function() {
+        new SliderTrack({
+            container: $(this),
+            lastClass: 'last'
+        });
+    });
+
+/* Added by ASR */
+    $('.browsernew').each(function() {
+        new SliderTrack({
+            container: $(this),
+            lastClass: 'last'
+        });
+    });
+
+    registerExpandos();
+    
+}
+
+//This function is needed for XML Static Marquee by ASR
+/*function slideSwitch() {
+    var $active = $('#page-wrap DIV.active'); */
+    
+	/*document.getElementById('moduleLink').href =  $('#page-wrap DIV.active a').attr('href');*/
+     /*Single node check by ASR*/
+/*    if($('#page-wrap').children('div').size()>1)
+	{
+    
+		if ( $active.length == 0 ) 
+		{
+			$active = $('#page-wrap DIV:last');				    	
+		 	}
+    
+   		var $next =  $active.next().length ? $active.next() : $('#page-wrap DIV:first');
+    	$active.addClass('last-active');
+   		
+		
+    	$next.css({opacity: 0.0})
+        .addClass('active')		
+        .animate({opacity: 1.0}, 1000, function() {$active.removeClass('active last-active');
+	     });
+        
+    }
+	else
+	{
+    	$('#page-wrap DIV:first').addClass('active');
+	  }
+}
+*/
+
+//New modf code for slide switch
+//This function is needed for XML Static Marquee by ASR
+function slideSwitch() 
+{
+    
+	var $active = $('#page-wrap DIV.active');  	
+	
+	if($('#page-wrap DIV.active a').attr('href') != undefined)
+	{		
+		resetModuleLink();
+		document.getElementById('moduleLink').href =  $('#page-wrap DIV.active a').attr('href');
+	}
+	
+	
+	/*Single node check by ASR*/
+    if($('#page-wrap').children('div').size()>1)
+	{
+    
+		if ( $active.length == 0 ) 
+		{
+			$active = $('#page-wrap DIV:last');
+								
+			if($('#page-wrap DIV:last a').attr('href') != undefined)
+			{
+				resetModuleLink();
+				document.getElementById('moduleLink').href =  $('#page-wrap DIV:last a').attr('href');
+			}
+		}
+    
+   		var $next =  $active.next().length ? $active.next() : $('#page-wrap DIV:first');
+    	$active.addClass('last-active');
+   		
+		
+    	$next.css({opacity: 0.0})
+        .addClass('active')		
+        .animate({opacity: 1.0}, 1000, function() {$active.removeClass('active last-active');
+		
+						
+		if($('#page-wrap DIV.active a').attr('href') != undefined )
+		{	
+			resetModuleLink();								
+			document.getElementById('moduleLink').href =  $('#page-wrap DIV.active a').attr('href');
+		}
+        });
+    }
+	else
+	{
+    	$('#page-wrap DIV:first').addClass('active');
+			
+		if($('#page-wrap DIV:first a').attr('href') != undefined)
+		{		
+			resetModuleLink();			
+			document.getElementById('moduleLink').href =  $('#page-wrap DIV:first a').attr('href');
+		}
+	}
+
+
+	if ($('#moduleLink').attr('href') == "#") 
+	{	
+		$('#moduleLink').remove();
+	}
+
+}
+
+
+function resetModuleLink()
+{
+    
+    if ($('#moduleSpace').length > 0 ) 
+	{
+		if ($('#moduleLink').length == 0 ) 
+		{
+			$('<a id="moduleLink" href="#" style="cursor:default; display:block; height:100%; width:100%">&nbsp;</a>').appendTo("#moduleSpace");	
+		}
+	}
+    
+}
+
+/*New Line added to force sequence by ASR*/
+$(function() {
+    $('#page-wrap DIV img').css('display','block');
+});
+
+$(function() {
+    setInterval( "slideSwitch()", 5000 );
+});
+
+    $(document).ready(function() {
+
+            if ($.browser.msie && $.browser.version.substr(0,1)<7) {
+            $("#overlaybuynow").css("position","absolute"); }
+            $("#black_overlay11").height($(document).height()+400+"px");
+             
+    });
+    
+ 
+if (screen.width == 1024) {
+	document.write("<style>#blackHeader_bar .toplogo{width:960px;}</style>")
+}
+else{document.write("<style>#blackHeader_bar .toplogo{width:1160px;}</style>")}
+
+
+
+function loadRelatedGames(object,section,skuid,platform,genre)
+{
+ $(object).parent('li').siblings('li').removeClass('on');
+    $(object).parent('li').addClass('on');
+    if($(object).parents('.tabs').length > 0) {
+        $(object).parents('.browser').find('.subnav li').removeClass('on');
+        $(object).parents('.browser').find('.subnav li:first-child').addClass('on');
+    }
+
+var getUrl="section="+section+"&skuid="+escape(skuid)+"&platform="+escape(platform)+"&genre="+escape(genre);
+
+	$.ajax({
+	type: "POST",
+	url: "/uwps/GetDetailPageGrid",
+	data: getUrl,
+	cache: false,
+	success: function(html){
+	
+	document.getElementById('gridData').innerHTML=html;
+	resetSlider();
+	}
+	});
+
+/*
+$(object).parents('.browser').find('.gridInner').load("/uwps/GetDetailPageGrid?skuid="+escape(skuid)+"&platform="+escape(platform)+"&genre="+escape(genre) , function(){
+            resetSlider();
+        });*/
+}
+
+//@@@ Added For Recommendation Same Genre Games Starts
+
+function loadRelatedGamesForSameGenre(object,section,skuid,platform,genre)
+{
+
+var getUrl="section="+section+"&skuid="+escape(skuid)+"&platform="+escape(platform)+"&genre="+escape(genre);
+
+
+
+	$.ajax({
+	type: "POST",
+	url: "/uwps/GetDetailPageGrid",
+	data: getUrl,
+	cache: false,
+	success: function(html){
+	
+	document.getElementById('mboxDefault').innerHTML=html;
+	resetSlider();
+	}
+	});
+
+
+
+/*
+$(object).parents('.browser').find('.gridInner').load("/uwps/GetDetailPageGrid?skuid="+escape(skuid)+"&platform="+escape(platform)+"&genre="+escape(genre) , function(){
+            resetSlider();
+        });*/
+}
+
+//@@@ Added For Recommendation Same Genre Games default
+
+function loadRelatedGamesForSameGenreByDefault(object,section,skuid,platform,genre)
+{
+
+var getUrl="section="+section+"&skuid="+escape(skuid)+"&platform="+escape(platform)+"&genre="+escape(genre);
+
+
+
+	$.ajax({
+	type: "POST",
+	url: "/uwps/GetDetailPageGrid",
+	data: getUrl,
+	cache: false,
+	success: function(html){
+	
+	document.getElementById('default').innerHTML=html;
+	resetSlider();
+	}
+	});
+
+
+
+/*
+$(object).parents('.browser').find('.gridInner').load("/uwps/GetDetailPageGrid?skuid="+escape(skuid)+"&platform="+escape(platform)+"&genre="+escape(genre) , function(){
+            resetSlider();
+        });*/
+}
+//@@@ Added For Recommendation Same Genre Games Ends
+
+
+
+function loadRelatedAddon(object,section,skuid,relatedgame,platform,genre)
+{
+
+var getUrl="section="+section+"&skuid="+escape(skuid)+"&relatedgame="+relatedgame+"&platform="+escape(platform)+"&genre="+escape(genre);
+	$.ajax({
+	type: "POST",
+	url: "/uwps/GetDetailPageGrid",
+	data: getUrl,
+	cache: false,
+	success: function(html){
+	document.getElementById('gridData').innerHTML=html;
+	resetSlider();
+	}
+	});
+
+/*
+$(object).parents('.browser').find('.gridInner').load("/uwps/GetDetailPageGrid?skuid="+escape(skuid)+"&platform="+escape(platform)+"&genre="+escape(genre) , function(){
+            resetSlider();
+        });*/
+}
+  
+  
+function loadRelatedDemos(object,section,skuid,relatedgame,platform,genre)
+{
+
+var getUrl="section="+section+"&skuid="+escape(skuid)+"&relatedgame="+relatedgame+"&platform="+escape(platform)+"&genre="+escape(genre);
+	$.ajax({
+	type: "POST",
+	url: "/uwps/GetDetailPageGrid",
+	data: getUrl,
+	cache: false,
+	success: function(html){
+	document.getElementById('gridData').innerHTML=html;
+	resetSlider();
+	}
+	});
+}
+  
+  
+function loadRelatedMovie(object,section,skuid,genre)
+{
+
+
+    $(object).parent('li').siblings('li').removeClass('on');
+    $(object).parent('li').addClass('on');
+    if($(object).parents('.tabs').length > 0) {
+        $(object).parents('.browser').find('.subnav li').removeClass('on');
+        $(object).parents('.browser').find('.subnav li:first-child').addClass('on');
+    }
+
+var getUrl="section="+section+"&skuid="+escape(skuid)+"&genre="+escape(genre);
+	$.ajax({
+	type: "POST",
+	url: "/uwps/GetDetailPageGrid",
+	data: getUrl,
+	cache: false,
+	success: function(html){
+	document.getElementById('gridData').innerHTML=html;
+	resetSlider();
+	}
+	});
+}
+
+//@@@ Added Method For Recommendation For Same Genre Starts
+function loadRelatedMovieForSameGenre(object,section,skuid,genre)
+{
+
+var getUrl="section="+section+"&skuid="+escape(skuid)+"&genre="+escape(genre);
+
+
+	$.ajax({
+	type: "POST",
+	url: "/uwps/GetDetailPageGrid",
+	data: getUrl,
+	cache: false,
+	success: function(html){
+	document.getElementById('mboxDefault').innerHTML=html;
+	resetSlider();
+	}
+	});
+}
+
+
+//@@@ Added Method For Recommendation For Same Genre By Default
+function loadRelatedMovieForSameGenreByDefault(object,section,skuid,genre)
+{
+
+var getUrl="section="+section+"&skuid="+escape(skuid)+"&genre="+escape(genre);
+
+
+	$.ajax({
+	type: "POST",
+	url: "/uwps/GetDetailPageGrid",
+	data: getUrl,
+	cache: false,
+	success: function(html){
+	document.getElementById('default').innerHTML=html;
+	resetSlider();
+	}
+	});
+}
+
+
+//@@@ Added Method For Recommendation For Same Genre Ends
+function backtosharediv(){
+	$(document).ready(function() {
+	
+    	$("#black_overlay").show();
+      	$("#shareDetails").toggle();
+       	$("#shareDetails_msg").toggle();
+  	$("#divCont1").toggle();
+        	
+	});
+    
+    var sceaUserInfo=getCookieValueFromServer("userinfo");
+		var email =  getUserInfoKeyValue(sceaUserInfo,"email");
+		var firstName = getUserInfoKeyValue(sceaUserInfo,"firstName");
+		var lastName = getUserInfoKeyValue(sceaUserInfo,"lastName");
+		if(typeof(email) != "undefined"){
+			document.frm.Uremail.value=email;
+		} else {
+			document.frm.Uremail.value="";
+		}
+		if(typeof(firstName) != "undefined"){
+			document.frm.sname.value=firstName + " " + lastName;
+		} else {
+			document.frm.sname.value="";
+		}
+
+}
+function getBaseURL(){
+	var siteName="/usplaystation";
+	
+	var urlString = "";
+	urlString = window.location.toString();
+	if(urlString.indexOf(siteName)==-1){
+    	siteName="";
+	}
+	
+	return window.location.protocol+"//"+window.location.host+siteName;
+}
+
+function hideShare()
+	{	
+		$('.share-this').css("display","none");		 
+	 	$('.share-this2').css("display","none");
+		document.getElementById('overlay').style.display="none"; 
+		document.getElementById('black_overlay').style.display='none';	
+		//document.getElementById('bdiv1').style.display="none";
+		//document.getElementById('bdiv2').style.display="none";
+		//document.frm.frd.value="";
+		 var sceaUserInfo=getCookieValueFromServer("userinfo");
+			var email =  getUserInfoKeyValue(sceaUserInfo,"email");
+			var firstName = getUserInfoKeyValue(sceaUserInfo,"firstName");
+			var lastName = getUserInfoKeyValue(sceaUserInfo,"lastName");
+			if(typeof(email) != "undefined"){
+				//document.frm.Uremail.value=email;
+			} else {
+				//document.frm.Uremail.value="";
+			}
+			if(typeof(firstName) != "undefined"){
+				//document.frm.sname.value=firstName + " " +lastName;
+			} else {
+				//document.frm.sname.value="";
+			}
+		if(document.getElementById('overlay').style.display=="block"){
+			$('.share-this').toggle();
+			$('.black_overlay').toggle();
+		}
+        
+	}
+	
+$(document).ready(function(){
+//$('#sidebar').css('padding-top','10px');
+$('.hasSupport #main p.innerbreadcrum a').css('font-size','12px');
+});
+
+
+
+
+//****** CUSTOM ALERT BOX **********//
+
+window.onload=function(){
+var ALERT_TITLE = "PlayStation.com";
+
+var ALERT_BUTTON_TEXT = "Ok";
+if(document.getElementById) {
+
+window.alert = function(txt1) {
+createCustomAlert(txt1);
+ 
+}
+
+} 
+function createCustomAlert(txt1) {
+	//document.getElementById('black_overlay').style.display="block";
+
+d = document;
+if(d.getElementById("modalContainer")) return;
+var mObj = document.getElementsByTagName("body")[0].appendChild(document.createElement("div")); 
+mObj.id = "modalContainer";   
+mObj.style.height = document.documentElement.scrollHeight + "px";
+alertObj = mObj.appendChild(document.createElement("div"));
+alertObj.id = "alertBox";
+//if(d.all && !window.opera) alertObj.style.top = document.documentElement.scrollTop + "px";
+if(d.all && !window.opera) alertObj;
+alertObj.style.left = (d.documentElement.scrollWidth - alertObj.offsetWidth)/2 + "px"; 
+
+alertObj.style.visiblity="visible";
+
+h1 = alertObj.appendChild(d.createElement("h1"));
+h1.appendChild(d.createTextNode(ALERT_TITLE));
+msg1 = alertObj.appendChild(d.createElement("p"));
+//msg1.appendChild(d.createTextNode(txt1));
+msg1.innerHTML = txt1;
+btn = alertObj.appendChild(d.createElement("a"));
+btn.id = "closeBtn";
+btn.appendChild(d.createTextNode(ALERT_BUTTON_TEXT) );
+btn.href = "javascript:void(0);";
+btn.focus();
+
+btn.onclick = function() { removeCustomAlert(); }
+alertObj.style.display = "block";
+btn1 = alertObj.appendChild(d.createElement("a"));
+btn1.id = "closeBtn1";
+btn1.appendChild(d.createTextNode(ALERT_BUTTON_TEXT) );
+btn1.href = "javascript:void(0);";
+btn1.focus();
+btn1.onclick = function() { removeCustomAlert(); }
+}}
+function removeCustomAlert() {
+	//document.getElementById('black_overlay').style.display="none";
+document.getElementsByTagName("body")[0].removeChild(document.getElementById("modalContainer"));
+}
+
+//BuildNav by ASR
+function BuildNav(){
+
+	document.getElementById('navdiv').innerHTML="";
+
+	var navdiv = document.getElementById('navdiv');
+
+	var sHElem = document.createElement('h1');
+	sHElem.setAttribute("id", "logo");
+
+	var sHALink = document.createElement('a');
+	sHALink.setAttribute("href",websiteName+"/index.htm");
+
+	navdiv.appendChild(sHElem);
+	sHElem.appendChild(sHALink);
+
+	var sElem = document.createElement('ul');
+	sElem.setAttribute("class", "alt");
+
+//First Element of Navigation - PlayStation&reg; Network
+	var sLiPsn = document.createElement('li');
+	sLiPsn.setAttribute("id", "psn");
+	
+		var sAPsnLink = document.createElement('a');
+		sAPsnLink.setAttribute("href",websiteName+"/psn/index.htm");
+		sAPsnLink.setAttribute("text","PlayStation&reg; Network");
+
+		sLiPsn.appendChild(sAPsnLink);
+
+		var sPSNElem = document.createElement('ul');
+
+			var sPSNElemLi = document.createElement('li');
+	
+			var sPSNElemA = document.createElement('a');
+			sPSNElemA.setAttribute("href",websiteName+"/psn/playstation-store/index.htm");
+			sPSNElemA.setAttribute("class","");
+			sPSNElemA.innerHTML="PlayStation<span>&reg;</span><br/>Store";
+			
+			sPSNElemLi.appendChild(sPSNElemA);
+
+//PlayStation Plus
+			var sPSNPPElemLi = document.createElement('li');
+	
+			var sPSNPPElemA = document.createElement('a');
+			sPSNPPElemA.setAttribute("href",websiteName+"/psn/playstation-plus/index.htm");
+			sPSNPPElemA.setAttribute("class","");
+			sPSNPPElemA.innerHTML="PlayStation<span>&reg;</span>Plus";
+			
+			sPSNPPElemLi.appendChild(sPSNPPElemA);
+
+//PlayStation Plus
+
+			var sPSNElemLi2 = document.createElement('li');
+	
+			var sPSNElemA2 = document.createElement('a');
+			sPSNElemA2.setAttribute("href",websiteName+"/psn/playstation-home/index.htm");
+			sPSNElemA2.setAttribute("class","");
+			sPSNElemA2.innerHTML="PlayStation<span>&reg;</span><br/>Home";
+			
+			sPSNElemLi2.appendChild(sPSNElemA2);
+	
+			var sPSNElemLi3 = document.createElement('li');
+	
+			var sPSNElemA3 = document.createElement('a');
+			sPSNElemA3.setAttribute("href",websiteName+"/psn/original-programming/index.htm");
+			sPSNElemA3.setAttribute("class","");
+			sPSNElemA3.innerHTML="Original Programming";
+			
+			sPSNElemLi3.appendChild(sPSNElemA3);
+	
+			var sPSNElemLi4 = document.createElement('li');
+	
+			var sPSNElemA4 = document.createElement('a');
+			sPSNElemA4.setAttribute("href",websiteName+"/psn/gaming/index.htm");
+			sPSNElemA4.setAttribute("class","");
+			sPSNElemA4.innerHTML="Gaming";
+			
+			sPSNElemLi4.appendChild(sPSNElemA4);
+	
+			var sPSNElemLi5 = document.createElement('li');
+	
+			var sPSNElemA5 = document.createElement('a');
+			sPSNElemA5.setAttribute("href",websiteName+"/psn/community/index.htm");
+			sPSNElemA5.setAttribute("class","");
+			sPSNElemA5.innerHTML="Community";
+			
+			sPSNElemLi5.appendChild(sPSNElemA5);
+	
+			var sPSNElemLi6 = document.createElement('li');
+	
+			var sPSNElemA6 = document.createElement('a');
+			sPSNElemA6.setAttribute("href",websiteName+"/psn/events/index.htm");
+	
+			sPSNElemA6.setAttribute("class","");
+			sPSNElemA6.innerHTML="Events";
+			
+			sPSNElemLi6.appendChild(sPSNElemA6);
+	
+			sPSNElem.appendChild(sPSNElemLi);
+			sPSNElem.appendChild(sPSNPPElemLi);
+			sPSNElem.appendChild(sPSNElemLi2);
+			sPSNElem.appendChild(sPSNElemLi3);
+			sPSNElem.appendChild(sPSNElemLi4);
+			sPSNElem.appendChild(sPSNElemLi5);
+			sPSNElem.appendChild(sPSNElemLi6);
+
+		sLiPsn.appendChild(sPSNElem);
+
+//Second Element of Navigation - Games n Media
+	var sLiGNM = document.createElement('li');
+	sLiGNM.setAttribute("id", "games_and_media");
+	
+		var sAGnmLink = document.createElement('a');
+		sAGnmLink.setAttribute("href",websiteName+"/games-and-media/index.htm");
+		sAGnmLink.setAttribute("text","Games &amp; Media");
+
+		sLiGNM.appendChild(sAGnmLink);
+
+		var sGNMElem = document.createElement('ul');
+
+			var sGNMElemLi = document.createElement('li');
+	
+			var sGNMElemA = document.createElement('a');
+			sGNMElemA.setAttribute("href",websiteName+"/games-and-media/games/index.htm");
+			sGNMElemA.setAttribute("class","");
+			sGNMElemA.innerHTML="Games";
+			
+			sGNMElemLi.appendChild(sGNMElemA);
+	
+			var sGNMElemLi2 = document.createElement('li');
+	
+			var sGNMElemA2 = document.createElement('a');
+			sGNMElemA2.setAttribute("href",websiteName+"/games-and-media/add-ons/index.htm");
+			sGNMElemA2.setAttribute("class","");
+			sGNMElemA2.innerHTML="Add-Ons";
+			
+			sGNMElemLi2.appendChild(sGNMElemA2);
+	
+			var sGNMElemLi3 = document.createElement('li');
+	
+			var sGNMElemA3 = document.createElement('a');
+			sGNMElemA3.setAttribute("href",websiteName+"/games-and-media/movies/index.htm");
+			sGNMElemA3.setAttribute("class","");
+			sGNMElemA3.innerHTML="Movies";
+			
+			sGNMElemLi3.appendChild(sGNMElemA3);
+	
+			var sGNMElemLi4 = document.createElement('li');
+	
+			var sGNMElemA4 = document.createElement('a');
+			sGNMElemA4.setAttribute("href",websiteName+"/games-and-media/shows-and-tv-series/index.htm");
+			sGNMElemA4.setAttribute("class","");
+			sGNMElemA4.innerHTML="Shows &amp; <br />TV Series";
+			
+			sGNMElemLi4.appendChild(sGNMElemA4);
+	
+	
+			sGNMElem.appendChild(sGNMElemLi);
+			sGNMElem.appendChild(sGNMElemLi2);
+			sGNMElem.appendChild(sGNMElemLi3);
+			sGNMElem.appendChild(sGNMElemLi4);
+			
+		sLiGNM.appendChild(sGNMElem);
+
+//Third Element of Navigation - PlayStation&reg; 3
+	var sLiPS3 = document.createElement('li');
+	sLiPS3.setAttribute("id", "ps3");
+	
+		var sAPs3Link = document.createElement('a');
+		sAPs3Link.setAttribute("href",websiteName+"/ps3/index.htm");
+		sAPs3Link.setAttribute("text","PLAYSTATION<span class='reg'>&reg;</span>3");
+
+		sLiPS3.appendChild(sAPs3Link);
+
+		var sPs3Elem = document.createElement('ul');
+
+			var sPs3ElemLi = document.createElement('li');
+	
+			var sPs3ElemA = document.createElement('a');
+			sPs3ElemA.setAttribute("href",websiteName+"/ps3/features/index.htm");
+			sPs3ElemA.setAttribute("class","");
+			sPs3ElemA.innerHTML="Features";
+			
+			sPs3ElemLi.appendChild(sPs3ElemA);
+	
+			var sPs3ElemLi2 = document.createElement('li');
+	
+			var sPs3ElemA2 = document.createElement('a');
+			sPs3ElemA2.setAttribute("href",websiteName+"/ps3/systems/index.htm");
+			sPs3ElemA2.setAttribute("class","");
+			sPs3ElemA2.innerHTML="Systems";
+			
+			sPs3ElemLi2.appendChild(sPs3ElemA2);
+	
+			var sPs3ElemLi3 = document.createElement('li');
+	
+			var sPs3ElemA3 = document.createElement('a');
+			sPs3ElemA3.setAttribute("href",websiteName+"/ps3/playstation-move/index.htm");
+			sPs3ElemA3.setAttribute("class","");
+			sPs3ElemA3.innerHTML="PlayStation&reg;<br />Move";
+			
+			sPs3ElemLi3.appendChild(sPs3ElemA3);
+	
+			var sPs3ElemLi4 = document.createElement('li');
+	
+			var sPs3ElemA4 = document.createElement('a');
+			sPs3ElemA4.setAttribute("href",websiteName+"/ps3/accessories/index.htm");
+			sPs3ElemA4.setAttribute("class","");
+			sPs3ElemA4.innerHTML="Accessories";
+			
+			sPs3ElemLi4.appendChild(sPs3ElemA4);
+	
+			var sPs3ElemLi5 = document.createElement('li');
+	
+			var sPs3ElemA5 = document.createElement('a');
+			sPs3ElemA5.setAttribute("href",websiteName+"/ps3/games-and-media/index.htm");
+			sPs3ElemA5.setAttribute("class","");
+			sPs3ElemA5.innerHTML="Games &amp; Media";
+			
+			sPs3ElemLi5.appendChild(sPs3ElemA5);
+	
+			var sPs3ElemLi6 = document.createElement('li');
+	
+			var sPs3ElemA6 = document.createElement('a');
+			sPs3ElemA6.setAttribute("href",websiteName+"/support/index.htm?s=ps3#ps3");
+			sPs3ElemA6.setAttribute("class","");
+			sPs3ElemA6.innerHTML="Support";
+			
+			sPs3ElemLi6.appendChild(sPs3ElemA6);
+	
+	
+			sPs3Elem.appendChild(sPs3ElemLi);
+			sPs3Elem.appendChild(sPs3ElemLi2);
+			sPs3Elem.appendChild(sPs3ElemLi3);
+			sPs3Elem.appendChild(sPs3ElemLi4);
+			sPs3Elem.appendChild(sPs3ElemLi5);
+			sPs3Elem.appendChild(sPs3ElemLi6);
+			
+		sLiPS3.appendChild(sPs3Elem);
+
+//Fourth Element of Navigation - PSP
+	var sLiPSP = document.createElement('li');
+	sLiPSP.setAttribute("id", "psp");
+	
+		var sAPspLink = document.createElement('a');
+		sAPspLink.setAttribute("href",websiteName+"/psp/index.htm");
+		sAPspLink.setAttribute("text","PSP&reg;");
+
+		sLiPSP.appendChild(sAPspLink);
+
+		var sPspElem = document.createElement('ul');
+
+			var sPspElemLi = document.createElement('li');
+	
+			var sPspElemA = document.createElement('a');
+			sPspElemA.setAttribute("href",websiteName+"/psp/features/index.htm");
+			sPspElemA.setAttribute("class","");
+			sPspElemA.innerHTML="Features";
+			
+			sPspElemLi.appendChild(sPspElemA);
+	
+			var sPspElemLi2 = document.createElement('li');
+	
+			var sPspElemA2 = document.createElement('a');
+			sPspElemA2.setAttribute("href",websiteName+"/psp/systems/index.htm");
+			sPspElemA2.setAttribute("class","");
+			sPspElemA2.innerHTML="Systems";
+			
+			sPspElemLi2.appendChild(sPspElemA2);
+		
+			var sPspElemLi3 = document.createElement('li');
+	
+			var sPspElemA3 = document.createElement('a');
+			sPspElemA3.setAttribute("href",websiteName+"/psp/accessories/index.htm");
+			sPspElemA3.setAttribute("class","");
+			sPspElemA3.innerHTML="Accessories";
+			
+			sPspElemLi3.appendChild(sPspElemA3);
+	
+			var sPspElemLi4 = document.createElement('li');
+	
+			var sPspElemA4 = document.createElement('a');
+			sPspElemA4.setAttribute("href",websiteName+"/psp/games-and-media/index.htm");
+			sPspElemA4.setAttribute("class","");
+			sPspElemA4.innerHTML="Games &amp; Media";
+			
+			sPspElemLi4.appendChild(sPspElemA4);
+	
+			var sPspElemLi5 = document.createElement('li');
+	
+			var sPspElemA5 = document.createElement('a');
+			sPspElemA5.setAttribute("href",websiteName+"/support/index.htm?s=psp#psp");
+			sPspElemA5.setAttribute("class","");
+			sPspElemA5.innerHTML="Support";
+			
+			sPspElemLi5.appendChild(sPspElemA5);
+	
+	
+			sPspElem.appendChild(sPspElemLi);
+			sPspElem.appendChild(sPspElemLi2);
+			sPspElem.appendChild(sPspElemLi3);
+			sPspElem.appendChild(sPspElemLi4);
+			sPspElem.appendChild(sPspElemLi5);
+			
+		sLiPSP.appendChild(sPspElem);
+
+//Fifth Element of Navigation - PlayStation&reg; 2
+	var sLiPS2 = document.createElement('li');
+	sLiPS2.setAttribute("id", "ps2");
+	
+		var sAPs2Link = document.createElement('a');
+		sAPs2Link.setAttribute("href",websiteName+"/ps2/index.htm");
+		sAPs2Link.setAttribute("text","PlayStation&reg;2");
+
+		sLiPS2.appendChild(sAPs2Link);
+
+		var sPs2Elem = document.createElement('ul');
+
+			var sPs2ElemLi = document.createElement('li');
+	
+			var sPs2ElemA = document.createElement('a');
+			sPs2ElemA.setAttribute("href",websiteName+"/ps2/features/index.htm");
+			sPs2ElemA.setAttribute("class","");
+			sPs2ElemA.innerHTML="Features";
+			
+			sPs2ElemLi.appendChild(sPs2ElemA);
+	
+			var sPs2ElemLi2 = document.createElement('li');
+	
+			var sPs2ElemA2 = document.createElement('a');
+			sPs2ElemA2.setAttribute("href",websiteName+"/ps2/systems/index.htm");
+			sPs2ElemA2.setAttribute("class","");
+			sPs2ElemA2.innerHTML="Systems";
+			
+			sPs2ElemLi2.appendChild(sPs2ElemA2);
+	
+			var sPs2ElemLi3 = document.createElement('li');
+	
+			var sPs2ElemA3 = document.createElement('a');
+			sPs2ElemA3.setAttribute("href",websiteName+"/ps2/accessories/index.htm");
+			sPs2ElemA3.setAttribute("class","");
+			sPs2ElemA3.innerHTML="Accessories";
+			
+			sPs2ElemLi3.appendChild(sPs2ElemA3);
+	
+			var sPs2ElemLi4 = document.createElement('li');
+	
+			var sPs2ElemA4 = document.createElement('a');
+			sPs2ElemA4.setAttribute("href",websiteName+"/ps2/games-and-media/index.htm");
+			sPs2ElemA4.setAttribute("class","");
+			sPs2ElemA4.innerHTML="Games &amp; Media";
+			
+			sPs2ElemLi4.appendChild(sPs2ElemA4);
+	
+			var sPs2ElemLi5 = document.createElement('li');
+	
+			var sPs2ElemA5 = document.createElement('a');
+			sPs2ElemA5.setAttribute("href",websiteName+"/support/index.htm?s=ps2#ps2");
+			sPs2ElemA5.setAttribute("class","");
+			sPs2ElemA5.innerHTML="Support";
+			
+			sPs2ElemLi5.appendChild(sPs2ElemA5);
+	
+	
+			sPs2Elem.appendChild(sPs2ElemLi);
+			sPs2Elem.appendChild(sPs2ElemLi2);
+			sPs2Elem.appendChild(sPs2ElemLi3);
+			sPs2Elem.appendChild(sPs2ElemLi4);
+			sPs2Elem.appendChild(sPs2ElemLi5);
+			
+		sLiPS2.appendChild(sPs2Elem);
+
+//Sixth Element of Navigation - Search
+	var sLiSrch = document.createElement('li');
+	sLiSrch.setAttribute("id", "search");
+	sLiSrch.setAttribute("class", "");
+
+		var sLiSrchFrmFld = document.createElement('fieldset');
+
+		var sLiSrchFrmFldLgd = document.createElement('legend');
+		sLiSrchFrmFldLgd.setAttribute("text", "Search");
+
+		var sLiSrchFrmFldDiv = document.createElement('div');
+		sLiSrchFrmFldDiv.setAttribute("text", "Search");
+
+		var sLiSrchFrmFldInpt = document.createElement('input');
+		sLiSrchFrmFldInpt.setAttribute("type", "text");
+		sLiSrchFrmFldInpt.setAttribute("class", "text");
+		sLiSrchFrmFldInpt.setAttribute("id", "id");
+		sLiSrchFrmFldInpt.setAttribute("name", "id");
+
+		var sLiSrchFrm = document.createElement('form');
+        sLiSrchFrm.setAttribute("name", "search_form");
+        
+		var sQueryStrVar = websiteName+"/search/index.htm?id="+sLiSrchFrmFldInpt.value.toString();
+		sQueryStrVar = sQueryStrVar + "&site=";
+		sQueryStrVar = sQueryStrVar + "&section=true";
+		sLiSrchFrm.setAttribute("action", sQueryStrVar);
+        sLiSrchFrm.setAttribute("method", "GET");
+
+		sLiSrchFrmFldDiv.appendChild(sLiSrchFrmFldInpt);
+		sLiSrchFrmFld.appendChild(sLiSrchFrmFldDiv);
+		sLiSrchFrmFld.appendChild(sLiSrchFrmFldLgd);
+		sLiSrchFrm.appendChild(sLiSrchFrmFld);
+		sLiSrch.appendChild(sLiSrchFrm);
+
+
+//Adding all top Elements
+	navdiv.appendChild(sElem);
+	sElem.appendChild(sLiPsn);
+	sElem.appendChild(sLiGNM);
+	sElem.appendChild(sLiPS3);
+	sElem.appendChild(sLiPSP);
+	sElem.appendChild(sLiPS2);
+	sElem.appendChild(sLiSrch);
+
+}
+
+function scrollPageToTop(){
+	self.scrollTo(0,0);
+}
+
+function getUserInfoKeyValue(userInfo,key){	
+	var userInfoValues=userInfo.split(",");
+	for(i = 0; i < userInfoValues.length; i++){
+    	var pair=userInfoValues[i].split("=");
+        if(pair[0]==key){
+            	return pair[1];
+        }
+    }
+}
+
+
+
+
+function linkdiv(){
+if((window.location=="https://web.archive.org/web/20100826161338/http://us.playstation.com/psp/index.htm")||(window.location=="https://web.archive.org/web/20100826161338/http://us.playstation.com/psp/"))
+	{
+	document.getElementById("linkdiv").style.display="block";
+	}else{
+		document.getElementById("linkdiv").style.display="none";
+	}
+}
+function linkdivon(){
+document.getElementById("linkdiv").style.display="none";
+$("#background").attr("onclick","");
+$("#background").css("cursor","default");
+}
+
+
+$(document).ready(function(){
+	if(bIsIE){
+		if($('#main').length) {
+			$('.browser ul li a').click(function(){
+				$(document).scrollTop(500);
+			});
+		}
+	}
+});
+
+
+/*WRS-2194 start
+$(document).ready(function() {
+	var pspChkPath = location.pathname.toLowerCase().indexOf('madden-nfl-11-psp-3000-bundle') != -1;
+	if(pspChkPath)
+	{
+		$('a.button_link').css("display","none");
+	}
+	else{
+		$('a.button_link').css("display","block");
+	}
+
+});
+WRS-2194 end*/
+
+
+/* Share this - ASR*/
+$(function() {
+	$('.share').fadeIn('slow',function(){
+		$('.share').css('display','block');
+	});
+});
+
+
+$(document).ready(function() 
+{
+	if ($('#moduleSpace').length > 0 ) 
+	{
+		$('<a id="moduleLink" href="#" style=" display:block; height:100%; width:100%">&nbsp;</a>').appendTo("#moduleSpace");	
+	}
+});
+
+
+}
+/*
+     FILE ARCHIVED ON 16:13:38 Aug 26, 2010 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 14:38:56 Aug 05, 2021.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 748.823
+  exclusion.robots: 0.221
+  exclusion.robots.policy: 0.202
+  RedisCDXSource: 208.307
+  esindex: 0.019
+  LoadShardBlock: 483.674 (3)
+  PetaboxLoader3.datanode: 457.573 (4)
+  CDXLines.iter: 41.502 (3)
+  load_resource: 520.798
+  PetaboxLoader3.resolve: 436.891
+*/

@@ -1,0 +1,2668 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+	margin:0;
+	padding:0;
+}
+object { outline:none;}
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+fieldset, img {
+	border:0;
+}
+legend {
+	display:none;
+}
+img { 
+}
+address, caption, cite, code, dfn, em, strong, th, var {
+	font-style:normal;
+	font-weight:normal;
+}
+ol, ul {
+	list-style:none;
+}
+caption, th {
+	text-align:left;
+}
+q:before, q:after {
+	content:'';
+}
+abbr, acronym {
+	border:0;
+}
+a {
+	outline:none;
+}
+strong {
+	font-weight:bold;
+}
+em {
+	font-style:italic;
+}
+#footer sup{line-height:80%;}
+.clearfix:after {
+	content:".";
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden;
+}
+#slideObject {
+	height:581px;
+	width: 860px;
+	position: relative;
+	overflow:visible;
+	opacity: 1;
+	left: 0px;
+	top: 0px;
+	/*top:66px;*/
+	padding-left: 20px;
+	cursor:default;
+}
+#agreeDisareeBox {
+	position:fixed;
+	left:0px;
+	top:0px;
+	width:100%;
+	z-index:999999;
+	height:100%;
+	filter: alpha(opacity = 50);
+	opacity:.5;
+}
+.clear {
+	clear:both;
+}
+.MainAgreeDisagree {
+	text-align:center;
+	position:absolute;
+	width:100%;
+	top:100px;
+	z-index:999999;
+}
+#agreeDisaree {
+	text-align:left;
+	background:#ededed;
+	width:490px;
+	height:250px;
+	padding:5px;
+	border:30px solid #303030;
+	margin:auto;
+}
+#agreeDisaree .closebutton a, #agreeDisareeWall .closebutton a {
+	float:right;
+	display:block;
+	height:8px;
+	width:9px;
+	background:url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_fsh_btn_close.gif") no-repeat;
+}
+#agreeDisaree .termstext, #agreeDisareeWall .termstext {
+	background-color:#FFF;
+	padding:8px;
+	margin:7px 15px 15px 15px;
+	width:444px;
+	height:170px;
+	font-size:12px;
+	color:#555;
+	line-height:18px;
+}
+#agreeDisaree .termstext h1, #agreeDisareeWall .termstext h1 {
+	font-size:20px;
+	font-weight:600;
+	padding:0;
+	margin:5px 0;
+}
+#agreeDisaree .termstext div, #agreeDisareeWall .termstext div {
+	overflow:auto;
+	width:450px;
+	height:150px;
+}
+#agreeDisaree .btncontainer, #agreeDisareeWall .btncontainer {
+	text-align:right;
+	padding:0 15px;
+}
+#agreeDisaree .btncontainer ul, #agreeDisaree .btncontainer li, #agreeDisareeWall .btncontainer ul, #agreeDisareeWall .btncontainer li {
+	margin:0;
+	padding:0;
+	float:right;
+	list-style:none;
+}
+#agreeDisaree .btncontainer li, #agreeDisareeWall .btncontainer li {
+	padding:0px 10px;
+	float:left;
+}
+#agreeDisaree .btnagreedisagree, #agreeDisareeWall .btnagreedisagree {
+	background:url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_fsh_btn_agreedisagree.gif") 0 0 no-repeat;
+	width:100px;
+	display:block;
+	padding: 5px 10px;
+	height:19px;
+	font: bold 16px Arial, Helvetica, sans-serif;
+	cursor:pointer;
+	text-align:left;
+}
+#agreeDisaree .btnagreedisagree:hover, #agreeDisareeWall .btnagreedisagree:hover {
+	background:url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_fsh_btn_agreedisagree.gif") 0 -29px no-repeat;
+}
+#agreeDisareeWall {
+	position:fixed;
+	left:450px;
+	top:100px;
+	background:#ededed;
+	z-index:999999;
+	width:490px;
+	height:250px;
+	padding:5px;
+	border:1px solid #FFF;
+}
+
+
+
+
+
+
+body {
+	margin:0 0 60px 0;
+	padding:0 0 60px 0;
+	font-size:62.5%;
+	font-family:Arial, Helvetica, Sans-Serif;
+	background:#999999 url('/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/newbodybg_inner.jpg') repeat-x 0 0px;
+}
+body#home{
+	margin:0 0 60px 0;
+	padding:0 0 60px 0;
+	font-size:62.5%;
+	font-family:Arial, Helvetica, Sans-Serif;
+	background:#999999 url('/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/newbodybg.jpg') repeat-x 0 0px;
+}
+body a {
+	text-decoration:none;
+	font-weight:bold;
+	color:#FFF;
+}
+#background {
+	margin:0 -525px 0 -580px;
+	position:absolute;
+	z-index:0;
+	left:50%;
+	width:1160px;
+	height:600px;
+	background:transparent url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_generic_v1.png") no-repeat left top;	
+}
+body#playstation3  #background {
+	background-image:url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps2_beautyshot_02.png"); 
+}
+body#metal_gear_solid  #background {
+	background-image:url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_fpo_bg_detail_1_jpg.jpg");
+}
+#trophies #background {
+	background:transparent url(/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/psn_trophies_marquee1.png) no-repeat scroll left top;
+	height:600px;
+	left:50%;
+	margin:0 -525px 0 -580px;
+	position:absolute;
+	top:35px;
+	width:1160px;
+	z-index:0;
+}
+/*------------------------------------------------------------------
+#marquee - Marquee interactive display area
+------------------------------------------------------------------*/
+#marqueeWrap {
+	position:relative;
+    margin:0 auto;
+    width:100%;
+    min-width:1060px !important;
+}
+.preload_marquee{
+	width:100%;
+	position:absolute;
+	top:0;
+	height:600px;
+    background:url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/pre-loaded-marquee_internal.jpg") top center no-repeat;
+}
+
+#marquee {
+	position:absolute;
+	top:0px;
+	z-index:1;
+	width:100%;
+	min-width:1060px; 
+} 
+/*------------------------------------------------------------------
+Make believe & resize issue fixed ends
+-----------------------------------------------------------------*/
+/*------------------------------------------------------------------
+Top Black Header and sony Logo on top right Starts
+------------------------------------------------------------------*/
+#blackHeader_bar {
+background-color:#000000;
+height:35px;
+width:100%;
+}
+#blackHeader_bar .toplogo {
+margin:0 auto;
+width:1160px;
+}
+#blackHeader_bar .toplogo img {
+float:right;
+}
+.navigationTop {
+	background:transparent none repeat scroll 0 0;
+	height:50px;
+	padding:0px 118px 0 8px;
+	width:370px;
+    z-index:99999;
+}
+/*------------------------------------------------------------------
+Top Black Header and sony Logo on top right End
+------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+#wrap - Wraps and centers all content
+------------------------------------------------------------------*/
+#wrap {
+	position:relative;
+	top:0;
+	width:970px;
+	margin:0 auto;
+	padding:0 0 0 90px;
+}
+#wrap h3 {
+	color:#404040;
+} 
+#wrap h3.belowSubHead {
+	margin-top:20px;
+}
+#home h3 {
+}
+#main {
+	 position:relative;
+	height:1%;
+	min-height:483px;
+	width:780px;
+	padding:0 40px 30px 40px; 
+	background-color:#FFF;
+	border-top:10px solid #2D2D2D;	
+	z-index:1;
+}
+#home #main h3 { 
+color:#525252;
+padding:30px 0 13px;
+font-size:27px;
+font-weight:bold;
+ }
+#home h3.bottom_border {
+    border-bottom:1px solid #acacac;
+}
+/*------------------------------------------------------------------
+#header - Header contains profile widget
+------------------------------------------------------------------*/
+#header {
+	display:block;
+	position:			absolute;
+	right:				48px;
+	top:				0px;
+	z-index:			999998;
+}
+#headerbeta {
+	display:block;
+	position:			absolute;
+	right:				48px;
+	top:				0px;
+	z-index:			9;
+}
+
+/*****************************************/
+/*------------------------------------------------------------------
+#main - Main content area, contains content and sidebar
+-----------------------------------------------------------------*/
+.moduleSpace{
+    height: 446px;
+    width: 859px;
+    cursor: default;
+   }
+.moduleSpacesmall {
+    height: 157px;
+    width: 859px;
+}
+#main {
+	 position:relative;
+	min-height:			483px;
+	 background-color:	#FFF;
+	z-index:			1;
+}
+
+body#consoleModules #main {
+	top:				77px;
+	border-top:			10px solid #d12127;
+}
+body#consoleModules #consoleContentModules {
+	background:			#FFFFFF; 
+	height:				1%;
+	margin-top:			78px;
+	padding:			33px 0 40px 0;
+	width:				860px;
+}
+.marquee #main {
+	z-index:			1;
+}
+#main.search {
+	margin-top:			0;
+}
+#main.alt {
+	padding:			0 20px 20px 40px;
+	*padding-bottom:	5px;	
+	width:				800px;	
+}
+#playstation3 #main {
+	border-color:		#D12127;
+}
+#playstation2 #main {
+	border-color:		#0067AC;
+}
+#psp #main {
+	border-color:		#FDB913;
+}
+#main a {
+	color:				#3C3C3C;
+}
+#main a:hover {
+	color:				#D12127;
+}
+#main a:active {
+	color:				#000;
+}
+#home #main {
+	border-top:			none;
+	padding-bottom:		40px;
+}
+a.backtotop{ font-size:12px; padding:10px 0px 4px 0px; clear:both; display:block;}
+/* #content - The sites major content lives here
+-----------------------------------------------------------------*/
+#content {
+	float:				left;
+	width:				460px;
+	margin:				0 0px 0 0;
+	padding:			0;
+}
+.search #content {
+	width:				601px;
+}
+.alt #content{
+	width:				605px;
+}
+
+#gm_games_det #wrap .alt #content {
+	width:	603px;
+}
+
+#breadcrumb {
+	margin:				18px 0 27px 0;
+	width:690px;
+	line-height:18px;	
+}
+
+#privacy_policy #breadcrumb {*padding-top:10px;}
+
+.pulse #breadcrumb{float:left;}
+
+#breadcrumb li {
+	padding:			0 1px 0 12px;
+	display:			inline;
+	font-size:			12px;
+	color:				#555;
+	background:			transparent url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_icon_arrow_ps3_gif.gif") no-repeat left bottom;
+}
+#breadcrumb li.first {
+	padding:			0 1px 0 12px;
+}	
+#breadcrumb li a {
+	font-weight:		bold;
+}
+
+/* #sidebar - The sidebar to the content column
+-----------------------------------------------------------------*/
+#sidebar {
+	float:				right;
+	width:				300px;
+	margin:				0;
+	padding-top:10px;
+}
+
+.systemFaqps3 #sidebar, #playstation3 #sidebar,.alt #sidebar {
+	width:				180px;
+	margin:				0;
+	 _font-size:10px;
+	_margin-right:-11px;
+}
+.search #sidebar {
+	width:				160px;
+}
+
+/* Generic button/link styles ====  red button link
+-----------------------------------------------------------------*/
+
+.arrow_link {
+	padding-right:		15px;
+	background-image:	url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_bullet-link-arrow-red_gif.gif");
+	background-repeat:	no-repeat;
+	background-position:right center;
+}
+.arrow_link:hover {
+	background-image:	url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_link-arrow-red_hover_gif.gif");
+}
+
+.arrow_link.arrow_on_grey {
+	background-image:	url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_bullet-link-arrow-red_gif.gif");
+}
+
+.arrow_link.arrow_on_grey:hover {
+	background-image:	url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_bullet-link-arrow-red_hover.gif");
+}
+
+
+/*------------------------------------------------------------------
+Heading with links
+------------------------------------------------------------------*/
+#main .header_with_links {
+	position:relative;
+    border-bottom:		1px solid #bababa;
+    position:			relative;
+	height:				30px;
+	margin-top:			51px;
+}
+#main .header_with_links .more_links {
+	position:			absolute;
+	right:				0px;
+	top:				0px;
+}
+#main #psnPromo .header_with_links .more_links{
+	top:				8px;
+}
+#main .header_with_links .more_links .link {
+    float:				left;
+    border-left:		1px solid #dcdcdc;
+    height:				25px;
+    padding:			5px 0 0 10px;
+    
+}
+#main .header_with_links .more_links .link.first {
+    border-left:		none;
+    margin-right:		4px;
+    /* *margin-right:		4px;*/
+    padding-left:		0px;
+}
+#main .header_with_links .more_links .link a {
+    font-size:			12px;
+    line-height:		20px;
+	 
+    display:			block;
+  	color:				#292929;
+	background-position: right 6px;
+	/*background-position: right 4px;*/
+	/* *background-position: right 1px;*/
+}
+
+
+#psn_generic #main .header_with_links .more_links .link a{
+	font-size:			11px;
+	line-height:		normal;
+	margin-top:			0px;
+	background-position: right 2px;
+}
+#psn_generic #main .header_with_links .more_links .link{
+	height:				20px;
+}
+#main .header_with_links .more_links .link a:hover {
+	color:				#D12127; 
+}
+/*------------------------------------------------------------------
+#footer - Footer contains links, logos, privacy link and copyright information
+------------------------------------------------------------------*/
+#footer {
+	width:				825px;
+	background:			#fafafa url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_bg_support_gif.gif") left top repeat-x; 
+	padding:			0px 0px 0px 35px;
+	margin:				0 auto; 
+	border-top:			1px solid #E1E1E1;
+	_position:			relative;
+}
+#footer .FooterUpper {
+	float:left; 
+}
+#consoleModules #footer {
+	margin-top:			0;
+}
+#footer div {
+	width: 				100%;
+}
+#footer h2 {
+	/*border-bottom:		1px solid #D7D7D7;*/
+	font-size:			21px;
+	letter-spacing:		0;
+	line-height:		normal;
+	margin:				25px 0 0 0;
+	padding:			5px 0;
+	width:				auto;
+	color:				#808185;
+}
+#footer .support {
+	width:				180px;
+	float:				left;
+	margin-right:		20px;
+}
+#footer .support li {
+	 
+	list-style:			none;
+
+}
+#footer .community {
+	width:				180px;
+	float:				left;
+	margin-right:		20px;
+}
+ 
+#footer div.below-all {
+	float:left;
+	color:#474b4c;
+	padding:35px 0 5px 0;
+	_padding-top:10px;
+	_margin-top:-10px;
+}
+#footer div.below-allCopyRight {
+	float:left;
+	width:100%;
+	padding-top:8px;
+	cursor:default;
+	line-height:22px;
+}
+#footer div.below-allLinks {
+	float:left;
+	width:520px;
+	padding-top:26px
+}
+#footer div.below-all img {
+	float:left;
+}
+#footer div.below-all span {
+	float:left;
+}
+#footer div.below-all span {
+	color:#464b4e;
+	/*margin-left:4px;*/
+	margin-right:4px;
+	cursor:pointer;
+}
+#footer div.below-all span.noMargin {
+	margin-left:0px;
+}
+#footer div.below-all span:hover {
+	color:#D12127;
+}
+#footer div.below-all a {
+	color:#464b4e;
+	margin-left:4px;
+	margin-right:4px;
+}
+#footer div.below-all a.noMargin {
+	margin-left:0px;
+}
+#footer div.below-all a:hover {
+	color:#D12127;
+} 
+#footer div.below-allLinksImg {
+	float:left;
+	padding-left:75px;
+	width:195px;	 
+}
+#footer div.below-allLinksImg img {
+	margin-right:10px;
+	margin-top:15px;
+}
+#footer div.below-allLinksImg a {
+	margin:0px;
+}
+
+#footer div.below-allLinksImg img.nomarginright {
+	margin-right:0px;
+	margin-top:8px;	 
+	margin-left:-3px;
+}
+#footer div.below-allLinksImg img.esrb_img{margin:5px 0 0px 0;}
+
+#footer .network {
+	width:				185px;
+	float:				left;
+	margin:25px 0 0 5px;
+	
+}
+#footer .network .top {
+	background:			url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_icon_network_gif.gif") no-repeat left 0px;	
+	margin:				0;
+	padding:			0;
+}
+
+#footer .network h2 {
+	font-size: 			15px;
+	padding:			0px 0px 10px 45px;
+	margin:				30px 0 15px 0;
+	font-weight:		normal;
+	border-bottom:		1px solid #D7D7D7;
+	line-height:		20px;
+	width:				auto;
+	height:				30px;
+	background:			url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_icon_network_gif.gif") no-repeat left 0px; 
+} 
+ 
+#footer .network img {
+	margin-top:			5px;
+} 
+
+#footer ul li a {
+	display:			block;
+	width:				auto;
+	font-size:			12px;
+	font-weight:		bold;
+	line-height:		24px;
+	color:				#818284;
+	border-top:			1px solid #D2D2D2;
+	background:			transparent url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_footerlink_gif.gif") no-repeat right 7px;
+	padding:			2px 0;	
+	_padding:			1px 0;	
+	cursor:pointer;
+}
+#footer .support ul li.first a  {
+	color:				#818284;
+}
+#footer .support ul li.first a:hover {
+	color:#D12127;
+}
+* html  #footer .community ul li a {
+	width:				150px;
+}
+#footer .community ul li a.news {
+	margin-top:			25px;
+	*margin-top:		40px;
+	border-top:			1px solid bababa;
+} 
+#footer .community ul li a span{float: left; display: block; cursor:pointer;} 
+#footer .community ul li a span.rss{padding: 6px 5px 0pt 0pt; cursor:pointer;}
+#footer ul li.first a {
+	border-top:			none;
+}
+#footer ul li a:hover {
+	color:				#D12127;
+	background-image:	url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_footerlink_over_gif.gif");
+} 
+#footer .support .site ul {
+	display:			block;
+	float:				left;
+	border:				none;
+	background: 		none;
+	margin:				0;
+	padding:			0 0 0 0;
+	margin:				40px 10px 0 0;
+	width:				119px;
+}
+#footer .support .site ul li {
+	width:				119px;
+}
+#footer .support .site ul.first {
+	padding-left:		2px;
+}
+#footer .support .site ul.last {
+	margin-right:		0px;
+}
+#footer .support .site ul li a {
+	background: url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_right_triangle_grey_gif.gif") no-repeat right 7px; 
+	border-top: none;
+	border-bottom: 1px solid #D1D1D1;
+	color: #292929;
+	display: block;
+	font-size: 11px;
+	font-weight: normal;
+	line-height: 21px;
+	width: 119px;
+}
+#footer .support .site ul li a:hover {
+	background: url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_right_triangle_red_gif.gif") no-repeat right 7px; 
+	color: #D12127;
+} 
+#footer #logos {
+	margin: 40px 0 10px 0;
+}
+#footer #copyright {
+	font-size: 11px;
+	color: #666666;
+	cursor: default;
+}
+#footer .status {
+	float: left;
+	width: 212px;
+	height: 80px;
+	margin-top: 8px;
+	display: block;
+	border-left: 1px solid #959595;
+	border-right: 1px solid #959595;
+	background: url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_icon_network_gif.gif") no-repeat 26px 34px;
+}
+#footer .status p {
+	font-size:			12px;
+	color:				#555;
+	padding:			25px 20px 0 45px;
+}
+#footer ul li span {
+	display: block;
+	width: auto;
+	font-size: 12px;
+	font-weight: bold;
+	cursor:pointer;
+	line-height: 24px;
+	color: #818284;
+	border-top: 1px solid #D2D2D2;
+	background: url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_footerlink_gif.gif") no-repeat right 7px;
+	padding: 2px 0;	
+}
+#footer ul li span:hover{background: url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_footerlink_over_gif.gif") no-repeat right; color:#d12127;}
+
+/*------------------------------------------------------------------
+#navigation - Main navigation across the site
+------------------------------------------------------------------*/
+ #navigation {
+	position:			absolute;
+	left:				-5px;
+	top:				33px;
+	/*z-index:			999999;*/
+	z-index:			99999;
+	width:				140px;
+	height:				auto;
+	font-family:arial;
+}
+#navigation #logo {
+	position:			relative;
+	display:			block;
+	width:				138px;
+	height:				111px;
+	background:			transparent url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_bg_nav1_top.png") no-repeat left top;
+}
+#navigation #logo a {
+	position:			absolute;
+	left:				30px;
+	top:				34px;
+	display:			block;
+	width:				71px;
+	height:				56px;
+	background:			transparent url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_logo1_playstation.png") no-repeat left top;
+	text-indent:		-9999px;
+}
+#navigation li ul {
+	display:			none;
+	padding-top:		21px;
+}
+#navigation li ul li a {
+	position:			static !important;
+	width:				auto !important;
+	height:				auto !important;
+	padding:			0 0 7px 33px;
+	font-size:			12px;
+	line-height:		14px;
+	margin-bottom:5px;
+	font-weight:		bold;
+	text-indent:		0 !important;
+	background:			none !important;
+	opacity:			0.65;
+	color:				#FFF;
+	text-decoration:none;
+	background:			transparent url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_nav_open1_triangle.png") no-repeat 9999px 9999px !important;
+}
+#navigation li ul li a:hover {
+	background-position:20px 2px !important;
+	opacity:			1;	
+	color:				#FFF;
+}
+#navigation li.open ul {
+	padding-top:		34px;
+}
+#navigation li.open ul li a {
+	display:			block !important;
+	padding:			0 0 7px 33px;
+	font-size:			12px;
+	line-height:		14px;
+	font-weight:		bold;
+	opacity:			1;
+	color:				#898989;
+	background:			transparent url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_nav_open1_triangle.png") no-repeat 9999px 9999px !important;
+}
+#navigation li.open ul li a:hover {
+	height:				auto !important;
+	background-position:20px 2px !important;
+	color:				#FFF;
+}
+#navigation .open a:hover {
+	height:				30px !important; 
+	background-position:0 0 !important;	
+}
+
+/* PlayStation 3*/
+#navigation #ps3 a {
+	position:			absolute;
+	left:				-3px;
+	top:				199px;
+	display:			block;
+	width:				140px;
+	height:				30px;
+	background:			transparent url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_nav1_ps3.png") no-repeat left top;
+	text-indent:		-9999px;
+}
+#navigation #ps3.open a {
+	display:			none;
+}
+#navigation #ps3 a:hover {
+	top:				192px;
+	height:				49px;
+	background-position:0 -30px;
+}	
+#navigation #ps3.open a:hover {
+	top:				190px !important;
+}
+#navigation #ps3 a.active {
+	top:				192px;
+	height:				49px;
+	z-index:			99;
+	background-position:0 -79px;	
+}
+#navigation #ps3 ul {
+	position:			absolute;
+	left:				114px;
+	top:				190px;
+	z-index:			999;
+	width:				153px;
+	height:				170px;
+	background:			transparent url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_nav_expanded1_ps3.png") no-repeat left top;
+}
+#navigation #ps3.open ul {
+	top:				199px;
+	left:				-2px;
+	display:			block;
+	height:				160px;
+	background:			transparent url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_nav_expanded1_ps3.png") no-repeat left top;
+}
+
+/* PSP */
+#navigation #psp a {
+	position:			absolute;
+	left:				-1px;
+	top:				229px;
+	display:			block;
+	width:				140px;
+	height:				30px;
+	background:			transparent url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_nav1_psp.png") no-repeat left top;
+	text-indent:		-9999px;
+}
+#navigation #psp.open a {
+	display:			none;
+}
+#navigation #psp a:hover {
+	top:				222px;
+	height:				49px;
+	background-position:0 -30px;
+}	
+#navigation #psp.open a:hover {
+	top:				30px !important;
+}
+#navigation #psp a.active {
+	position:			absolute;
+	top:				221px;
+	height:				49px;
+	z-index:			99;
+	background-position:0 -79px;	
+}
+#navigation #psp ul {
+	position:			absolute;
+	left:				114px;
+	top:				218px;
+	_top:				219px;
+	z-index:			999;
+	width:				153px;
+	height:				160px;
+	background:			transparent url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_nav_expanded1_psp.png") no-repeat left top;
+}
+#navigation #psp.open ul {
+	top:				32px;
+	left:				198px;
+	z-index:			998;
+	display:			block;
+	height:				160px;
+	background:			transparent url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_nav_open1_psp.png") no-repeat left top;
+}
+#navigation #psp.alt a { top: 255px; }
+#navigation #psp.alt a:hover { top: 246px; }	
+#navigation #psp.open.alt a:hover { top: 255px !important; }
+#navigation #psp.alt a.active { top: 246px; }
+#navigation #psp.alt ul { top: 243px; }
+
+/* PlayStation 2 */
+#navigation #ps2 a {
+	position:			absolute;
+	left:				-1px;
+	top:				259px;
+	display:			block;
+	width:				140px;
+	height:				30px;
+	background:			transparent url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_nav1_ps2.png") no-repeat left top;
+	text-indent:		-9999px;
+}
+#navigation #ps2.open a {
+	display:			none;
+}
+#navigation #ps2 a:hover {
+	top:				250px;
+	height:				49px;
+	background-position:0 -30px;
+}
+#navigation #ps2.open a:hover {
+	top:				259px !important;
+}
+#navigation #ps2 a.active {
+	top:				250px;
+	height:				49px;
+	z-index:			99;
+	background-position:0 -79px;	
+}
+#navigation #ps2 ul {
+	position:			absolute;
+	left:				114px;
+	top:				248px;
+	z-index:			999;
+	width:				153px;
+	height:				160px;
+	background:			transparent url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_nav_expanded1_ps2.png") no-repeat left top;
+}	
+#navigation #ps2.open ul {
+	top:				259px;
+	left:				-2px;
+	z-index:			998;
+	display:			block;
+	height:				160px;
+	background:			transparent url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_nav_open1_ps2.png") no-repeat left top;
+}
+#navigation #ps2.alt a { top: 285px; }
+#navigation #ps2.alt a:hover { top: 276px; }
+#navigation #ps2.open.alt a:hover { top: 285px !important; }
+#navigation #ps2.alt a.active { top: 276px; }
+#navigation #ps2.alt ul { top: 274px; }	
+
+/* PlayStation Network */
+#navigation #psn a {
+	position:			absolute;
+	left:				-2px;
+	top:				111px;
+	display:			block;
+	width:				140px;
+	height:				44px;
+	background:			transparent url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_nav1_psn.png") no-repeat left top;
+	text-indent:		-9999px;
+}
+#navigation #psn.open a {
+	display:			none;
+}
+#navigation #psn a:hover {
+	top:				102px;
+	height:				63px;
+	background-position:0 -44px;
+}
+#navigation #psn.open a:hover {
+	top:				111px !important;
+	height:				44px !important;
+}
+#navigation #psn.open ul {
+	padding-top:		48px;
+}
+#navigation #psn.open ul li a:hover {
+	height:				auto !important;
+}
+#navigation #psn a.active {
+	top:				102px;
+	height:				63px;
+	z-index:			99;
+	background-position:0 -107px;	
+}
+#navigation #psn ul {
+	position:			absolute;
+	left:				114px;
+	top:				100px;
+	z-index:			999;
+	width:				153px;
+	height:				233px;
+	background:			transparent url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_nav_expanded1_psn.png") no-repeat left top;
+}
+#navigation #psn.open ul {
+	top:				111px;
+	left:				0px;
+	z-index:			998;
+	display:			block;
+	height:				233px;
+	background:			transparent url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_nav_open1_psn.png") no-repeat left top;
+}
+#navigation #psn.alt a { top: 315px; }
+#navigation #psn.alt a:hover { top: 307px; }
+#navigation #psn.open.alt a:hover { top: 315px !important; }
+#navigation #psn.alt a.active { top: 306px; }
+#navigation #psn.alt ul { top: 304px; }
+
+#navigation #psn.alt4 a { top: 301px; }
+#navigation #psn.alt4 a:hover { top: 293px; }
+#navigation #psn.open.alt4 a:hover { top: 201px !important; }
+#navigation #psn.alt4 a.active { top: 292px; }
+#navigation #psn.alt4 ul { top: 290px; }
+#navigation #psn ul li ul li a{ font-size:12px;}
+
+/* Games and Media */
+#navigation #games_and_media a {
+	position:			absolute;
+	left:				-1px;
+	top:				155px;
+	display:			block;
+	width:				140px;
+	height:				44px;
+	background:			transparent url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_nav_games1_and_media.png") no-repeat left top;
+	text-indent:		-9999px;
+}
+#navigation #games_and_media.open a {
+	display:			none;
+}
+#navigation #games_and_media a:hover {
+	top:				146px;
+	height:				63px;
+	background-position:0 -44px;
+}	
+#navigation #games_and_media.open a:hover {
+	top:				155px !important;
+	height:				44px !important;
+}
+#navigation #games_and_media.open ul {
+	padding-top:		48px;
+}
+#navigation #games_and_media.open ul li a:hover {
+	height:				auto !important;
+}
+#navigation #games_and_media a.active {
+	top:				146px;
+	height:				63px;
+	z-index:			99;
+	background-position:0 -107px;	
+}
+#navigation #games_and_media ul {
+	position:			absolute;
+	left:				114px;
+	top:				144px;
+	z-index:			999;
+	width:				153px;
+	height:				160px;
+	background:			transparent url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_nav_expanded_games_and_med1.png") no-repeat left top;
+}
+#navigation #games_and_media.open ul {
+	top:				155px;
+	left:				0px;
+	z-index:			998;
+	display:			block;
+	height:				160px;
+	background:			transparent url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_nav_expanded_games_and_med1.png") no-repeat left top;
+}
+#navigation #games_and_media.alt a { top: 359px; }
+#navigation #games_and_media.alt a:hover { top: 350px; }	
+#navigation #games_and_media.open.alt a:hover { top: 359px !important; }
+#navigation #games_and_media.alt a.active { top: 350px; }
+#navigation #games_and_media.alt ul { top: 348px; }
+
+#navigation #games_and_media.alt4 a { top: 345px; }
+#navigation #games_and_media.alt4 a:hover { top: 336px; }	
+#navigation #games_and_media.open.alt4 a:hover { top: 345px !important; }
+#navigation #games_and_media.alt4 a.active { top: 336px; }
+#navigation #games_and_media.alt4 ul { top: 334px; }
+
+#navigation #games_and_media.alt2 a { top: 387px; }
+#navigation #games_and_media.alt2 a:hover { top: 378px; }	
+#navigation #games_and_media.open.alt2 a:hover { top: 387px !important; }
+#navigation #games_and_media.alt2 a.active { top: 378px; }
+#navigation #games_and_media.alt2 ul { top: 376px; }
+
+/* Search */
+#navigation #search {
+	position:			absolute;
+	left:				-1px;
+	top:				289px;
+	display:			block;
+	width:				140px;
+	height:				48px;
+	background:			transparent url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_nav1_search.png") no-repeat left top;
+	text-indent:		-9999px;
+}
+#navigation #search:hover {
+	top:				279px;
+	height:				56px;
+	background-position:0 -48px;
+}
+#navigation #search input {
+	position:			absolute;
+	left:				14px;
+	top:				7px;
+	width:				88px;
+	height:				16px;
+	padding:			4px 16px 4px 4px;
+	font-size:			12px;
+	font-weight:		bold;
+	color:				#333;
+	border:				none;
+	background:			#AAA url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_bg_nav_search.gif") no-repeat left top;
+}
+#navigation #search:hover input {
+	top:				17px;
+	background-position:0 -24px;
+}
+#navigation #search.expanded {
+	top:				278px;
+	left:				-6px;
+	width:				273px;
+	height:				62px;
+	background:			transparent url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_nav_expanded1_search.png") no-repeat left top;
+}
+#navigation #search.expanded input {
+	top:				18px;
+	left:				19px;
+	padding-right:		26px;
+	width:				209px;
+	background:			transparent url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_bg_nav_search_expanded.gif") no-repeat left top;
+}
+#navigation #search.alt { top: 403px; }
+#navigation #search.alt:hover { top: 393px; }
+#navigation #search.alt.expanded { top: 392px; }
+#navigation #search.expanded.alt input { top: 18px; }
+
+#navigation #search.alt4 { top: 389px; }
+#navigation #search.alt4:hover { top: 379px; }
+#navigation #search.alt4.expanded { top: 378px; }
+#navigation #search.expanded.alt4 input { top: 18px; }
+
+#navigation #search.alt2 { top: 431px; }
+#navigation #search.alt2:hover { top: 421px; }
+#navigation #search.alt2.expanded { top: 420px; }
+#navigation #search.expanded.alt2 input { top: 18px; }
+
+#navigation #search.alt3 { top: 389px; }
+#navigation #search.alt3:hover { top: 379px; }
+#navigation #search.alt3.expanded { top: 378px; }
+#navigation #search.alt3.expanded input { top: 18px; }
+
+/* OVERLAYS! */
+#overlayLoader {
+	position:			absolute; 
+	top:				100px;
+	padding:			20px;
+	padding:			0px;
+	background-color	:transparent;
+	border				:none;   
+}
+#overlayLoader .inner {
+	position:			relative;
+	padding:			0px;
+	background-color:	#FFFFFF;
+	border:				6px solid #999;
+}
+#overlay, #overlaybuynow {
+	position:			absolute;
+	left:				100px;
+	top:				100px;
+	z-index:			999999;
+	padding:			0px;
+	background-color	:transparent;
+	border				:none;  
+}
+
+#overlaySurvey {
+	position:			fixed;
+	_position:			absolute;
+	left:				50%;
+	margin-left:		-330px;
+	top:				100px;
+	z-index:			999999;
+	padding:			0px;
+	background-color	:transparent;
+	border				:none;  
+}
+
+ #overlay .inner, #medClas .inner, #overlaybuynow .inner, #medClas .inner {
+	position:			relative;
+	width:				460px;
+	padding:			10px 10px 10px 10px;
+	background-color	:#fbfbfb;
+	border:				none;
+}
+
+ #overlaySurvey .survey_inner {
+	position:			relative;
+	width:				660px;
+	padding:			10px 10px 10px 10px;
+	background-color	:#fbfbfb;
+	border:				none;
+}
+
+#overlay .inner .close, #overlaybuynow .inner .close, #overlaySurvey .survey_inner .survey .closebar .close{
+	position:			absolute;
+	right:				20px;
+	top:				20px; 
+	width:				46px;
+	height:				8px;
+	background:			transparent url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/button_takeover_close.png") no-repeat left top;
+	text-indent:		-9999px;
+}
+#overlay .inner .closebar .close,  #medClas .inner .closebar .close, #overlaybuynow .inner .closebar .close, #overlaySurvey .survey_inner .survey .closebar .close{
+	position:			absolute;
+	background:			url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/takeover_close1.png") no-repeat left 8px;
+	text-indent:		-9999px;
+	top: 0px; 
+	right: 0px; 
+	height: 24px; 
+	width: 58px;
+	cursor:pointer;
+}
+#overlay .inner .closebar, #medClas .inner .closebar{
+	background:	#5e5e5e; 
+	top: -24px; 
+	height: 24px; 
+	position: absolute; 
+	width: 100%; 
+	left: 0px;
+	border-bottom:1px solid #555;
+}
+#overlaybuynow .inner .closebar, #overlaySurvey .survey_inner .survey .closebar{
+	background:	#5e5e5e; 
+	top: -24px; 
+	height: 24px; 
+	position: absolute; 
+	width: 680px; 
+	left: 0px;
+	border-bottom:1px solid #555;
+}
+
+
+#overlaySurvey #comfirmationSurvey a.button_link {
+	background:transparent url(/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/button_big_dark_grey_right.gif) no-repeat right top;
+	float:left;
+	margin:5px 0 0 0;
+	padding-right:20px;
+	color:#ffffff;
+	font-weight:bold;
+	height:33px;
+	text-decoration:none;
+	font-size:18px;
+}
+#overlaySurvey #comfirmationSurvey a.button_link span{
+	background:transparent url(/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/button_big_dark_grey_left.gif) no-repeat left top;
+	display:block;
+	font-size:17px;
+	height:22px;
+	 cursor:pointer;
+	padding:6px 0 5px 10px;
+}
+#overlaySurvey #comfirmationSurvey a.button_link:hover{
+	background-position:right -33px;
+}
+#overlaySurvey #comfirmationSurvey a.button_link:hover span{
+	background-position:left -33px;
+}
+
+
+#overlay .inner .image, #overlaybuynow .inner .image, #overlayHelp .inner .image  {
+	float:				left;
+	margin-right:		6px;
+	padding:			13px;
+	background-color:	#FAFAFA;
+	border:				1px solid #E5E5E5;
+}
+#overlay .inner .content, #overlaybuynow .inner .content, #overlayHelp .inner .content{
+	float:				left;
+	width:				290px;
+	height:				132px;
+	padding:			9px 9px 13px 13px;
+	background-color:	#FAFAFA;
+	border:				1px solid #E5E5E5;
+}
+#overlay .inner .content h2, #medClas .inner .content h2, #overlaybuynow .inner .content h2{
+	padding:			0 0 24px 0;
+	_padding:			0 0 10px 0;
+	font-size:			21px;
+	line-height:		24px;
+	letter-spacing:		0px;
+	font-weight:		bold;
+	color:				#292929;
+}
+#overlay .inner .content p, #medClas .inner .content p, #overlaybuynow .inner .content p {
+	margin-top:			-6px;
+	padding:			0 0 2px 0;
+	font-size:			13px;
+	color:				#555;
+	font-weight:		bold;
+}
+#overlay .inner .content h3, #medClas .inner .content h3, #overlaybuynow .inner .content h3 {
+	display:			block;
+	margin:				0;
+	 
+	color:				#929292;
+	text-transform:		uppercase;
+	border-bottom:		1px dotted #D4D4D4;
+}
+#overlay .inner .content a, #overlaybuynow .inner .content a {
+	display:			block;
+	margin:				7px 0 0 0;
+	padding:			0 0 0 23px;
+	font-size:			13px;
+	line-height:		15px;
+	font-weight:		bold;
+	color:				#555;
+	background:			transparent url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_button_radio_gif.gif") no-repeat 0 0;
+}
+#overlay .inner .content a.down, #medClas .inner .content a.down, #overlaybuynow .inner .content a.down {
+	background-position:0 -15px;
+}
+#overlay .inner .content .ageGateForm div, #overlaybuynow .inner .content .ageGateForm div{
+	float:				left;
+	margin-right:		6px;
+}
+#overlay .inner .content .ageGateForm input, #overlaybuynow .inner .content .ageGateForm input {
+	width:				24px;
+	margin:				10px 0 0 0;
+	padding:			4px;
+	background-color:	#E4E4E4;
+	border:				1px solid #ABABAB;
+	font-size:			12px;
+	font-weight:		bold;
+	color:				#7C7C7C;
+}
+#overlay .inner .content .ageGateForm input#year, #overlaybuynow .inner .content .ageGateForm input#year {
+	width:				51px;
+}
+#overlay .inner .button, #overlaybuynow .inner .button {
+	float:				right;
+	width:				120px;
+	*width:				140px;
+	letter-spacing:		-1px;
+	margin-right:		6px;
+	margin-top:			9px;
+}
+#overlay .inner .submit, #overlaybuynow .inner .submit {
+	margin-right:		0;
+}
+#overlay .inner .stores, #overlaybuynow .inner .stores {
+	width:				580px;
+}
+#overlay .inner .store, #overlaybuynow .inner .store {
+	float:				left;
+	width:				137px;
+	height:				125px;
+	margin:				6px 6px 0px 0;
+	background-color:	#FAFAFA;
+	border:				1px solid #E5E5E5;
+}
+#overlay .inner .store .logo, #overlaybuynow .inner .store .logo {
+	display:			table-cell;
+	width:				137px;
+	height:				77px;
+	margin:				0 auto;
+	text-align:			center;
+	vertical-align:		middle;
+}	
+#overlay .inner .store img, #overlaybuynow .inner .store img {
+	margin:				0 auto;
+}
+#overlay .inner .store .button, #overlaybuynow .inner .store .button {
+	width:				122px;
+}
+#overlay.warning .content, #overlaybuynow.warning .content {
+	width:				433px;
+	 
+}
+#overlay.warning .content h2, #overlaybuynow.warning .content h2 {
+	padding-bottom:		13px;
+}
+#overlay.warning .content p, #overlaybuynow.warning .content p {
+	line-height:		20px;
+}
+#overlay.buyGame .inner, #overlaybuynow.buyGame .inner {
+	width:				574px;
+}
+#overlay.buyGame .content, #overlaybuynow.buyGame .content {
+	width:				405px;
+}
+#overlayLogin{
+	position:			fixed;
+	_position:			absolute;
+	top:				60px;
+	z-index:			999999;
+	*left:				0px;
+	width:				100%;
+}
+#overlayLogin .inner {
+	position:			relative;
+	width:				460px;
+	margin:				auto;
+}
+#overlayLogin .buynow
+{
+	margin-left: 		auto;
+	margin-right: 		auto;
+	text-align: 		center;
+}
+#overlayLogin .inner .closebar {
+	background:	#5e5e5e;
+	top: -24px; 
+	height: 24px; 
+	position: absolute; 
+	width: 100%; 
+	left: 0px;
+	border-bottom:1px solid #555;
+}
+#overlayLogin .buy .close {
+	position:			absolute;
+	background:			url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/takeover_close1.png") no-repeat left 8px;
+	text-indent:		-9999px;
+	top: 0px; 
+	right: 0px; 
+	height: 24px; 
+	width: 58px;
+}
+#mainRecomm {
+	position:			relative;
+	z-index:			1;
+	height:				1%;
+	min-height:			483px;
+	padding:			0 40px 55px 40px;
+	background-color:	#FFF;
+	border-top:			10px solid #2D2D2D;
+}
+/* User Login style */
+#overlayLogin {
+	position:			fixed;
+	 _position:			absolute;
+	top:				60px;
+	z-index:			999999;
+	*left:				0px;
+	width:				100%;
+	}
+#overlayLogin .inner {
+	position:			relative;
+	width:				460px;
+	margin:				auto;
+
+}
+#overlayLogin .LoginOuter
+{
+	margin-left: 		auto;
+	margin-right: 		auto;
+	text-align: 		center;
+}
+
+#overlayLogin .inner .closebar {
+	background:	#5e5e5e;
+	top: -24px; 
+	height: 24px; 
+	position: absolute; 
+	width: 100%; 
+	left: 0px;
+	border-bottom:1px solid #555;
+}
+#overlayLogin .login .close {
+	position:			absolute;
+	background:			url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/takeover_close1.png") no-repeat left 8px;
+	text-indent:		-9999px;
+	top: 0px; 
+	right: 0px; 
+	height: 24px; 
+	width: 58px;
+}
+/* RLS profiles */
+#header #profile .rls_links {
+	float:left;
+	border-left: 		1px solid #111; 
+	border-right: 		1px solid #111; 
+	height:				29px;
+	padding:			15px 2px 0 5px; 
+	margin-left: 		-64px; 
+	margin-top: 		-16px; 
+	display: 			block;
+	background:			#222;
+}
+#header #profile .rls_links ul li a {
+	padding:			0 8px;
+	color:				#D7D7D7;
+}
+#header #profile .rls_links ul li {
+	padding:			1px 0 8px 0;
+	background:			#222;
+}
+#header #profile .rls_links ul li.last a {
+	background:			none;
+}
+
+#content h3 { 
+color:#525252; 
+}
+ 
+#black_overlay {
+background:#000000;
+left:0px;
+top:0px;
+width:100%;
+height:100%; 
+position:fixed; 
+z-index:999999;
+opacity:.7;
+display:none;
+filter:alpha(opacity=70);
+
+}
+ #black_overlay1 {
+background:#000000;
+left:0px;
+top:0px;
+width:100%; 
+height:100%;
+_height:1200px;
+position:fixed;
+_position:absolute;
+z-index:999999;
+opacity:.7;
+display:none;
+filter:alpha(opacity=70);
+
+}
+#black_overlay11{
+background:#000000;
+left:0px;
+top:0px;
+width:100%;
+height:100%; 
+position:fixed;
+_position:absolute;
+z-index:999999;
+opacity:.7;
+display:none;
+filter:alpha(opacity=70);
+}
+#black_overlayLoad {
+background:#000000;
+left:0px;
+top:0px;
+width:100%;
+height:100%;
+position:fixed;
+_position:absolute;
+z-index:99;
+opacity:.7;
+display:none;
+filter:alpha(opacity=70);
+}
+ #overlay.share-this {
+	position:			fixed;
+	_position:			absolute;
+	margin-left:		-245px;
+	top:				80px;
+	z-index:			999999;
+	padding:			0;
+	background:#fff;
+	left:				50%;
+
+}
+
+ #overlay.pspgo {
+	position:			fixed;
+	_position:			absolute;
+	margin-left:		-245px;
+	top:				150px;
+	z-index:			9999999;
+	padding:			0;
+	background:#fff;
+	left:				50%; 
+}
+
+
+#home #hardwareWrap {
+	top:405px;
+}
+
+#homeShadow {
+	background:transparent url(/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_bg_main_shadow_png.png) repeat-y scroll left top;
+	left:-20px;
+	margin:0;
+	position:relative;
+	top:405px;
+	width:900px;
+	z-index:1;
+}
+
+#console #main #head a.button_link span {
+background-image:url(/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_button_bg_right_on_grey_gif.gif);
+}
+
+a.ButtonRed {
+background:url(/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_button_bg_left_small_gif.gif) 0 0 no-repeat;
+font-size:16px;
+height:31px;
+float:left;
+}
+a.ButtonRed:hover
+{
+	background:url(/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_button_bg_left_small_gif.gif) 0 -31px no-repeat;
+}
+a.ButtonRed:active
+{
+	background:url(/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_button_bg_left_small_gif.gif) 0 -62px no-repeat;
+}
+a.ButtonRed span { 
+background:url(/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_right_arrow_small_gif.gif) no-repeat right top;
+display:block;
+height:20px;
+padding:5px 30px 6px 10px;
+} 
+a.ButtonRed:hover span {
+background:url(/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_right_arrow_small_gif.gif) no-repeat right -31px;
+}
+a.ButtonRed:active span {
+background:url(/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_right_arrow_small_gif.gif) no-repeat right -62px;}
+
+#overlay.warning {
+left:50%;
+padding:0;
+position:fixed;
+_position:absolute;
+top:100px;
+z-index:999999;
+margin-left:-300px;
+}
+
+#footer div.rightFooterLink{ 
+	float:left;
+	margin-right:20px;
+	width:185px;
+}
+
+div.rightFooterLink h2{ border:none}
+/* #footer .paddingTopimage{padding-top:30px;} */
+
+#overlay.warning .inner.overlay2 .content, #overlayHelp.warning  .inner.overlay2  .content  {
+	min-height: 134px;
+	height:auto;
+}
+
+#overlay1 {
+border:medium none;
+left:50%;
+margin-left:-296px;
+margin-top:-250px;
+padding:0;
+position:fixed;
+_position:absolute;
+top:50%;
+z-index:9999991;
+}
+
+#overlay1 .inner {
+	position:			relative;
+	width:				460px;
+	padding:			10px 10px 10px 10px;
+	background-color	:#fbfbfb;
+	border:				none;
+}
+#overlay1 .inner .close {
+	position:			absolute; 
+	top:				-14px; 
+	width:				636px; 
+	height:				10px; 
+	background:			#5e5e5e url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/button_takeover_close.png") no-repeat 580px 2px;
+	text-indent:		-9999px;
+	left:				0;
+	padding:			4px 0;
+}
+
+#overlay1 .inner div.container {
+	position:			absolute; 
+	top:				-14px; 
+	width:				632px; 
+	height:				10px; 
+	background:			#5e5e5e;
+	left:				0;
+	padding:			4px 0;
+	padding-right:4px;
+}
+#overlay1 .inner div.container .close {
+	position:relative;top:0;float:right;width:60px;height:10px;background:url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/button_takeover_close.png") no-repeat 0 2px;
+	text-indent:-9999px;left:0;background-color:none;padding:0px;}
+
+#overlay2 .inner div.container {position:absolute;top:-14px; width:632px; height:10px; background:#5e5e5e;left:0;padding:4px 0;padding-right:4px;}
+#overlay2 .inner div.container .close {
+background:url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/button_takeover_close.png") no-repeat 0 2px;
+float:right;height:10px;left:0;padding:0;position:relative;text-indent:-9999px;top:0;width:60px;
+}
+
+
+#overlay1 .inner .video-top-bg {height: 20px;background-color:#5E5E5E;position:relative;top:-10px;left:-10px;width:636px}
+
+#overlay1 .inner .close1 {
+background:url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/button_takeover_close.png") no-repeat scroll 0 2px #5E5E5E;
+height:10px;
+left:585px;
+padding:4px 0;
+position:absolute;
+text-indent:-9999px;
+top:2px;
+width:51px;
+}
+
+#overlay1 .inner .close_psmove {
+background:url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/button_takeover_close.png") no-repeat scroll 0 2px #5E5E5E;
+height:10px;
+left:585px;
+padding:4px 0;
+position:absolute;
+text-indent:-9999px;
+top:2px;
+width:51px;
+}
+
+#overlay1 .inner .closebar .close {
+	position:			absolute;
+	background:			url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/takeover_close1.png") no-repeat left 8px;
+	text-indent:		-9999px;
+	top: 				0px; 
+	right:				0px; 
+	height: 			24px; 
+	width: 				58px;
+}
+#overlay1 .inner .closebar {
+	background:			#5e5e5e url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/close_bar_bg.png") no-repeat left top;
+	top: 				-24px; 
+	height: 			24px; 
+	position: 			absolute; 
+	width: 				100%; 
+	left: 				0px;
+	border-bottom:		1px solid #555;
+}
+#overlay1 .inner .image {
+	float:				left;
+	margin-right:		6px;
+	padding:			13px;
+	background-color:	#FAFAFA;
+	border:				1px solid #E5E5E5;
+}
+#overlay1 .inner .content {
+	float:				left;
+	width:				290px;
+	height:				132px;
+	padding:			9px 9px 13px 13px;
+	background-color:	#FAFAFA;
+	border:				1px solid #E5E5E5;
+}
+#overlay1 .inner .content h2 {
+	padding:			0 0 24px 0;
+	font-size:			21px;
+	line-height:		24px;
+	letter-spacing:		0px;
+	font-weight:		bold;
+	color:				#292929;
+}
+#overlay1 .inner .content p {
+	margin-top:			-6px;
+	padding:			0 0 2px 0;
+	font-size:			13px;
+	color:				#555;
+	font-weight:		bold;
+}
+#overlay1 .inner .content h3 {
+	display:			block;
+	margin:				0;
+ 
+	color:				#929292;
+	text-transform:		uppercase;
+	border-bottom:		1px dotted #D4D4D4;
+}
+#overlay1 .inner .content a {
+	display:			block;
+	margin:				7px 0 0 0;
+	padding:			0 0 0 23px;
+	font-size:			13px;
+	line-height:		15px;
+	font-weight:		bold;
+	color:				#555;
+	background:			transparent url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_button_radio_gif.gif") no-repeat 0 0;
+}
+#overlay1 .inner .content a.down {
+	background-position:0 -15px;
+}
+#overlay1 .inner .content .ageGateForm div {
+	float:				left;
+	margin-right:		6px;
+}
+#overlay1 .inner .content .ageGateForm input {
+	width:				24px;
+	margin:				10px 0 0 0;
+	padding:			4px;
+	background-color:	#E4E4E4;
+	border:				1px solid #ABABAB;
+	font-size:			12px;
+	font-weight:		bold;
+	color:				#7C7C7C;
+}
+#overlay1 .inner .content .ageGateForm input#year {
+	width:				51px;
+}
+#overlay1 .inner .button {
+	float:				right;
+	width:				120px;
+	*width:				140px;
+	letter-spacing:		-1px;
+	margin-right:		6px;
+	margin-top:			9px;
+}
+#overlay1 .inner .submit {
+	margin-right:		0;
+}
+#overlay .inner .stores {
+	width:				580px;
+}
+#overlay1 .inner .store {
+	float:				left;
+	width:				137px;
+	height:				125px;
+	margin:				6px 6px 0px 0;
+	background-color:	#FAFAFA;
+	border:				1px solid #E5E5E5;
+}
+#overlay1 .inner .store .logo {
+	display:			table-cell;
+	width:				137px;
+	height:				77px;
+	margin:				0 auto;
+	text-align:			center;
+	vertical-align:		middle;
+}	
+#overlay1 .inner .store img {
+	margin:				0 auto;
+}
+#overlay1 .inner .store .button {
+	width:				122px;
+}
+/* Warning Style */
+#overlay1.warning .content {
+	width:				433px;
+	 
+}
+#overlay1.warning .content h2 {
+	padding-bottom:		13px;
+}
+#overlay1.warning .content p {
+	line-height:		20px;
+}
+/* Buy Game Style */
+#overlay1.buyGame .inner {
+	width:				574px;
+}
+#overlay1.buyGame .content {
+	width:				405px;
+}
+
+/* OVERLAYS! */
+
+#overlay2, #overlay3 
+{
+border:medium none;
+left:50%;
+margin-left:-296px;
+margin-top:-175px;
+padding:0;
+position:absolute;
+top:50%;
+z-index:999999;
+}
+
+#overlayHelp
+{
+border:medium none;
+left:50%;
+margin-left:-296px;
+padding:0;
+position:fixed;
+top:150px;
+z-index:999999;
+}
+
+#overlay2 .inner, #overlay3 .inner, #overlayHelp .inner {
+	position:			relative;
+	width:				460px;
+	padding:			10px 10px 10px 10px;
+	background-color	:#fbfbfb;
+		border:				none;
+}
+#overlay2 .inner .close, #overlay3 .inner .close, #overlayHelp .inner .close  {
+	position:			absolute;
+	top:				-14px;
+	width:				636px;
+	height:				10px;
+	background:			#5e5e5e url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/button_takeover_close.png") no-repeat 582px 2px;
+	text-indent:		-9999px;
+	left:				0;
+	padding:			2px 0;
+}
+#overlayHelp .inner .close  {
+	position:			absolute;
+	top:				-14px;
+	height:				20px;
+	width:				580px;
+	background:			#5e5e5e url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/button_takeover_close.png") no-repeat 529px 10px;
+	text-indent:		-9999px;
+	left:				0;
+	padding:			2px 0;
+}
+#overlay2 .inner .closebar .close, #overlay3 .inner .closebar .close , #overlayHelp.inner .closebar .close{
+	position:			absolute;
+	background:			url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/takeover_close1.png") no-repeat left 8px;
+	text-indent:		-9999px;
+	top: 0px; 
+	right: 0px; 
+	height: 24px; 
+	width: 58px;
+}
+#overlay2 .inner .closebar, #overlay3 .inner .closebar  {
+	background:	#5e5e5e url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/close_bar_bg.png") no-repeat left top;
+	top: -24px; 
+	height: 24px; 
+	position: absolute; 
+	width: 100%; 
+	left: 0px;
+	border-bottom:1px solid #555;
+}
+#overlayHelp .inner .closebar  {
+	top: -13px;
+	background:	#5e5e5e;
+	height: 12px; 
+	position: absolute; 
+	width: 100%; 
+	left: 0px;
+	border-bottom:1px solid #555;
+}
+#overlay2 .inner .image, #overlay3 .inner .image, #overlayHelp .inner .image {
+	float:				left;
+	margin-right:		6px;
+	padding:			13px;
+	background-color:	#FAFAFA;
+	border:				1px solid #E5E5E5;
+}
+#overlay2 .inner .content, #overlay3 .inner .content, #overlayHelp .inner .content {
+	float:				left;
+	width:				290px;
+	height:				132px;
+	padding:			9px 9px 13px 13px;
+	background-color:	#FAFAFA;
+	border:				1px solid #E5E5E5;
+}
+#overlay2 .inner .content h2, #overlay3 .inner .content h2, #overlayHelp .inner .content h2 {
+	padding:			0 0 24px 0;
+	font-size:			21px;
+	line-height:		24px;
+	letter-spacing:		0px;
+	font-weight:		bold;
+	color:				#292929;
+}
+#overlay2 .inner .content p, #overlay3 .inner .content p, #overlayHelp .inner .content p{
+	margin-top:			-6px;
+	padding:			0 0 2px 0;
+	font-size:			13px;
+	color:				#555;
+	font-weight:		bold;
+}
+#overlay2 .inner .content h3, #overlay3 .inner .content h3, #overlayHelp .inner .content h3 {
+	display:			block;
+	margin:				0;
+	padding:			0 0 2px 0;
+	 
+	color:				#929292;
+	text-transform:		uppercase;
+	border-bottom:		1px dotted #D4D4D4;
+}
+#overlay2 .inner .content a, #overlay3 .inner .content a {
+	display:			block;
+	margin:				7px 0 0 0;
+	padding:			0 0 0 23px;
+	font-size:			13px;
+	line-height:		15px;
+	font-weight:		bold;
+	color:				#555;
+	background:			transparent url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_button_radio_gif.gif") no-repeat 0 0;
+}
+#overlayHelp .inner .content a{
+	display:			block;
+	margin:				7px 0 5px 0;
+	font-size:			13px;
+	line-height:		15px;
+	font-weight:		bold;
+	color:				#000;
+
+}
+#overlayHelp .inner .content a:hover{color:#d12127;}
+
+#overlay2 .inner .content a.down, #overlay3 .inner .content a.down {
+	background-position:0 -15px;
+}
+#overlay2 .inner .content .ageGateForm div, #overlay3 .inner .content .ageGateForm div {
+	float:				left;
+	margin-right:		6px;
+}
+#overlay2 .inner .content .ageGateForm input, #overlay3 .inner .content .ageGateForm input {
+	width:				24px;
+	margin:				10px 0 0 0;
+	padding:			4px;
+	background-color:	#E4E4E4;
+	border:				1px solid #ABABAB;
+	font-size:			12px;
+	font-weight:		bold;
+	color:				#7C7C7C;
+}
+#overlay2 .inner .content .ageGateForm input#year, #overlay3 .inner .content .ageGateForm input#year {
+	width:				51px;
+}
+#overlay2 .inner .button, #overlay3 .inner .button {
+	float:				right;
+	width:				120px;
+	*width:				140px;
+	letter-spacing:		-1px;
+	margin-right:		6px;
+	margin-top:			9px;
+}
+#overlay2 .inner .submit, #overlay3 .inner .submit  {
+	margin-right:		0;
+}
+#overlay .inner .stores {
+	width:				580px;
+}
+#overlay2 .inner .store {
+	float:				left;
+	width:				137px;
+	height:				125px;
+	margin:				6px 6px 0px 0;
+	background-color:	#FAFAFA;
+	border:				1px solid #E5E5E5;
+}
+#overlay2 .inner .store .logo {
+	display:			table-cell;
+	width:				137px;
+	height:				77px;
+	margin:				0 auto;
+	text-align:			center;
+	vertical-align:		middle;
+}	
+#overlay2 .inner .store img {
+	margin:				0 auto;
+}
+#overlay2 .inner .store .button {
+	width:				122px;
+}
+#overlay2.warning .content {
+	width:				433px;
+	 
+}
+#overlay2.warning .content h2 {
+	padding-bottom:		13px;
+}
+#overlay2.warning .content p {
+	line-height:		20px;
+}
+#overlay2.buyGame .inner {
+	width:				574px;
+}
+#overlay2.buyGame .content {
+	width:				405px;
+}
+/* Overlay3 */
+#overlay3 .inner .store {
+	float:				left;
+	width:				137px;
+	height:				125px;
+	margin:				6px 6px 0px 0;
+	background-color:	#FAFAFA;
+	border:				1px solid #E5E5E5;
+}
+#overlay3 .inner .store .logo {
+	display:			table-cell;
+	width:				137px;
+	height:				77px;
+	margin:				0 auto;
+	text-align:			center;
+	vertical-align:		middle;
+}	
+#overlay3 .inner .store img {
+	margin:				0 auto;
+}
+#overlay3 .inner .store .button {
+	width:				122px;
+}
+#overlay3.warning .content {
+	width:				433px;
+	 
+}
+#overlay3.warning .content h2 {
+	padding-bottom:		13px;
+}
+#overlay3.warning .content p {
+	line-height:		20px;
+}
+#overlay3.buyGame .inner {
+	width:				574px;
+}
+#overlay3.buyGame .content {
+	width:				405px;
+}
+/* Search Tips */
+.search_tips{width:780px; float:left; font-family:Arial, Helvetica, sans-serif;}
+.search_tips p.indent{margin-bottom:15px; background:none; padding-left:0px; color:#555; font-size:18px;}
+.search_tips h2{margin-bottom:23px; color:#292929; font-size:45px; font-weight:bold; letter-spacing:-2px; line-height:48px; padding:0;}
+.search_tips .index{width:248px; float:left; background:#f4f4f4; border:1px solid #e9e9e9;}
+.search_tips .index h4{font-size:14px; color:#414141; font-weight:bold; font-size:14px; line-height:19px; margin:0px; padding:5px 0 5px 10px;}
+.search_tips .index ul{list-style-type:none; list-style-image:none; list-style-position:outside; margin:0; padding:0;}
+.search_tips .index ul li{font-size:14px; padding:4px 0 4px 12px; float:left; color:#414141; width:236px;}
+.search_tips .index ul li a{font-weight:bold; padding:0 0 0 12px; width:236px; font-weight:bold; text-decoration:none; display:block;}
+.search_tips .index_content{width:510px; float:left; margin-left:20px;}
+.search_tips .index_content h4{margin-bottom:8px; color:#292929; font-size:18px; font-weight:bold; letter-spacing:normal; line-height:22px; padding:0;}
+.search_tips .index_content h5{margin-bottom:4px; color:#292929; font-size:14px; font-weight:bold; letter-spacing:normal; line-height:22px; padding:0;}
+.search_tips .index_content p{color:#555; font-size:14px; text-align:left; line-height:20px; margin-bottom:20px;}
+#medClas{ width:480px; background:#fff;}
+#medClas .inner .content p{ margin-top:0px;}
+body#home .viewAllEvents a {font-weight:normal;}
+
+ol.footnotes{ 
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:decimal;  
+	color:#666666;
+	font-size:11px;
+	padding-left:25px;
+}
+
+ol.footusernotes{ 
+	list-style-image:none;
+	list-style-position:inside;
+	list-style-type:decimal;  
+	color:#666666;
+	font-size:13px;
+	padding-left:0px;
+}
+
+
+ul.pspSoftwareupdate{ 
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:decimal;   
+	font-size:14px;
+	color:#333333;
+	padding-left:25px;
+	margin-top:20px;
+}
+ 
+ul.pspSoftwareupdate li{
+	padding:5px 0;
+} 
+ 
+ul.pspSoftwareupdate li p{
+	font-weight:bold;
+	padding:8px 0;
+	width:100%;
+} 
+ 
+#games_media #main .header_with_links {*height:44px;}
+
+.centerIe6{ width:auto; padding-left:50px; float:left;  height:25px;}
+.centerIe6 img{ float:left; margin-right:10px;}
+
+
+#main.alt #content #copyrightMovie{	
+    color:#909090;
+    display:block;
+    font:11px arial;
+    padding-top:10px;
+    width:auto;
+}
+
+ 
+
+#terms {
+ 
+background:#FFFFFF none repeat scroll 0 0;
+height:300px;
+left:50%;
+margin-left:-300px;
+position:fixed;
+top:150px;
+width:600px;
+z-index:999999;
+ 
+}
+#terms .close{
+position:			absolute;
+	background:			url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/takeover_close1.png") no-repeat left 8px;
+	text-indent:		-9999px;
+	top: 0px; 
+	right: 0px; 
+	height: 24px; 
+	width: 58px;
+	cursor:pointer;}
+	
+	#terms .closebar{
+	background:	#5e5e5e;
+	top: -24px; 
+	height: 24px; 
+	position: absolute; 
+	width: 100%; 
+	left: 0px;
+	border-bottom:1px solid #555;
+}
+#terms .shareVideo {
+color:#525252;
+font-size:12px;
+height:270px;
+margin-top:5px;
+overflow:auto;
+text-align:left;
+padding:8px;
+width:580px;
+}
+span.top{font-size:13px}
+#terms .shareVideo a{
+color:#525252;
+font-weight:bold;
+}
+#eventsLanding .event_search .search p{padding-bottom:10px;}
+
+#content.corporate{width:605px;}
+
+#playstation3 #main #content.corporate {width:530px;}
+
+#rssfeeds .corporate{width:790px;}
+
+#rssfeeds .corporate p{
+	padding-top:		10px;
+	font-size:			14px;
+	line-height:		22px;
+	color:				#555;
+}
+
+#rssfeeds .corporate ul.infolinks{
+	display:			block; 
+	border:				none;
+	background: 		none;
+	margin:				0;
+	padding:			0 0 0 0;
+	margin:				10px 10px 0 10px; 
+	width:				170px;
+}
+#rssfeeds .corporate ul.infolinks li {  
+	list-style-type:none;
+	border-bottom:1px solid #EAEAEA;
+}
+
+#rssfeeds .corporate ul.infolinks li a{ 
+	background:transparent url(/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_bullet-link-arrow-red_gif.gif) no-repeat scroll right center;
+	color:#292929;
+	display:block;
+	font-size:12px;
+	font-weight:normal;
+	line-height:30px;
+}
+#rssfeeds .corporate ul.infolinks li a:hover{
+	color:				#D12127;
+	background-image:	url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_link-arrow-red_hover_gif.gif");
+}
+
+
+.od_topanswer_text {
+background:#E6E6E6 url(/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_od_text_gif.gif) repeat-x scroll center bottom;
+border:1px solid #C1C1C1;
+color:#000000;
+font-size:15px;
+padding:0 11px 0 0;
+width:447px;
+}
+.od_topanswer_text ol {
+line-height:20px;
+margin-left:20px;
+margin-top:7px;
+padding-left:20px;
+}
+.od_topanswer_text li {
+line-height:19px;
+margin-bottom:8px;
+padding-left:5px;
+}
+.od_topanswer_text a {
+color:#333333;
+text-decoration:none;
+}
+.od_topanswer_text a:hover {
+color:#000000;
+text-decoration:underline;
+}
+.od_kc_searchbox {
+background-color:#CCCCCC;
+border:1px solid #C1C1C1;
+font-size:11px;
+padding:7px 7px 0;
+text-align:right;
+width:219px;
+}
+
+.faq-wrap{
+	margin:10px 0 0 0;
+}
+.col1{
+	width:177px; 
+	float:left;
+	margin:0 18px 0 0;
+}
+.col2{
+	width:460px; 
+	float:left;
+}
+.col3{
+	width:230px; 
+	float:left;
+}
+.clr{
+	clear:both;
+}
+
+h1, h2, h3, h4, h5, h6{font-weight:normal}
+
+
+
+/* jQuery SlideShow */
+#page-wrap{ 
+        width:1160px; 
+        margin:0 auto;
+        background:url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/pre-loaded-marquee.jpg") top center no-repeat;
+}
+                 
+.items a,.items a:active,.items a:link,.items a:visited{ font-size:1.2em; color:#3300CC; text-decoration:underline;
+display:block; margin-top:10px; }
+.items a:hover{ text-decoration:none; }
+.brief{ font-size:0.8em; padding-left:10px; }
+.long{ font-size:0.8em; padding-left:10px; }
+#page-wrap { position:relative; height:600px; }
+#page-wrap DIV { position:absolute; top:0; left:0; z-index:8; opacity:0.0; height: 600px;  }
+#page-wrap DIV .items{ float:left; height:600px; }
+#page-wrap .active { z-index:100000; opacity:1.0; }
+#page-wrap .last-active { z-index:9; opacity:0; display:none }
+#page-wrap DIV IMG { display: none; border: 0; margin-bottom: 10px; }
+#page-wrap DIV.active img{ display: block;}
+
+.overlayIe6{_position:absolute;}
+.input-submit{background:transparent url(/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_input_submit.jpg) no-repeat scroll left top; width:76px; height:21px;  border:none;cursor:pointer;} 
+.input-cancel{background:transparent url(/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_cancel.jpg) no-repeat scroll left top; width:53px; height:21px;  border:none;cursor:pointer;}				
+.emailthis{float:left;width:409px;padding:15px 0 0 0;*padding-top:12px;}				
+.blankdiv{margin:10px 0px 0px 135px; text-align:center; display:none; font-size:12px; color:#ff0000; float:left;}			
+.emailthis label{width:135px; float:left; font-weight:bold; font-size:13px;} 				
+.emailthis input{ background:transparent url(/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_input_bg_psnstore.jpg) repeat-x scroll left top; border:1px solid #DADADA; padding:2px;}				
+.shareVideo .reuiredfield{float:left; font-weight:bold; font-size:13px; padding:10px 0 0 0 ; width:409px;}				
+
+.shareVideo .reuiredinput input{margin-left:8px; }				
+.shareVideo .reuiredinput{float:right;  padding:0px 20px 0 0}	
+p.related a {
+background:transparent url(/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_bullet-link-arrow-red.gif) no-repeat scroll right center;
+display:block;
+font-size:12px;
+font-weight:bold;
+padding:0px 20px 0px 0; 
+width:152px;
+}
+p.related a:hover {
+background:transparent url(/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_bullet-link-arrow-red_hover.gif) no-repeat scroll right center;
+font-size:12px;
+}
+
+
+
+
+/* Style for Report Abuse */
+#report_page #abuseinput .gameid{padding:5px 0 0 8px; width:778px;}
+#report_page #abuseinput .gameid .gametab{float:left; margin:5px 10px 0 10px; width:250px;}
+#report_page #abuseinput .gameid .gametab strong{ font-family:arial; color:#262626; float:left; line-height:22px; margin-right:5px; font-size:14px;}
+#report_page #abuseinput .gameid .gametab input {background:url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/newinput22.gif") no-repeat left top; border:0px solid #DADADA;
+color:#555555;
+float:left;
+line-height:16px;
+margin:0 9px 0 0;
+padding:6px;
+width:142px;}  
+
+#report_page .abform{width:782px; float:left;}
+#report_page #abuseinput{background-color:#FDFDFD; border:1px solid #EDEDED; margin:0; width:782px; float:left; margin-bottom:20px; height:38px;}
+#report_page #abuseinput .tabs{background-color:#F2F2F2; border-color:#FFFFFF #FFFFFF #E2E2E2; border-style:solid; 
+border-width:1px; height:28px; list-style-type:none; margin:0; padding:10px 10px 8px 18px; width:752px; border-bottom:1px solid #fff;}
+
+#report_page #abuseinput .tabs h2{color:#262626; font-size:22px;  margin:0px; }
+
+#report_page #abuseinput #inputtab { float:left; margin:2px 10px 0px 0px; width:250px;}
+#report_page #abuseinput .inputtab strong{ font-family:arial; color:#262626; float:left; line-height:22px; margin-right:5px; font-size:14px;}
+
+#report_page #abuseinput #inputtab input{background:url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/newinput22.gif") no-repeat scroll left top transparent; border:0px solid #DADADA; color:#555555; float:left; line-height:16px;
+margin:0 9px 0 0; padding:6px; width:142px; } 
+
+#report_page .ratinginbox{ float:left; margin:15px 0px 0px 0px; width:100%;}
+#report_page .ratinginbox strong{ font-family:arial; color:#262626; float:left; line-height:26px; margin-right:5px; width:57px;font-size:14px; font-weight:bold;}
+#report_page .ratinginbox .smallinp{background:url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ratingimgnew.gif") no-repeat scroll left top transparent; border:0px solid #DADADA; color:#555555; float:left; line-height:26px;
+height:26px; padding:4px; *padding:0px 4px 0px 4px; width:30px; }
+
+#report_page .ratinginbox .logninputtab{background:url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/logninputtab.gif") no-repeat scroll left top transparent;
+border:0px solid #DADADA; color:#555555; float:left; height:26px; line-height:26px; padding:4px; *padding:0px 4px 0px 4px; width:690px; }
+
+
+#report_page .ratinginbox .textareabackground{background:url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/textareaback.gif") no-repeat scroll left top transparent;
+border:0px solid #DADADA; color:#555555; float:left; line-height:19px; padding:8px; height:257px; width:734px; overflow:auto;}
+
+#report_page .rattininboxcover{float:left; border:1px solid #eeeeee; padding:15px 0px 10px 12px; *width:766px; width:770px;display:inline;  
+background:#FDFDFD url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_bg_carousel_top_gif.gif") repeat-x scroll left top;}
+
+#report_page .abform .rattininboxcover .AbuseBtnSection a.busubmit{background:url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_button_bg_right_on_grey_png.png") no-repeat left top; float:left; margin-top:20px; padding-right:22px; font-size:18px; height:35px; font-weight:bold; overflow:hidden; width:107px; margin-right:10px;}  
+
+#report_page .abform .rattininboxcover .AbuseBtnSection a.busubmit span{background:url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_button_bg_left_on_grey_png.png") no-repeat  left top; 
+display:block; height:31px; padding:6px 0 9px 10px; color:#fff;}
+
+#report_page .abform .rattininboxcover .AbuseBtnSection a.busubmit:hover{background-position:right -35px;}
+
+#report_page .abform .rattininboxcover .AbuseBtnSection a.busubmit:hover span {background-position:left -35px;}
+
+
+
+.vgs_container{float:left;clear:both;position:relative;width:550px;font-weight:bold;font-size:12px;}
+a.vgs_lnk {
+    font-size:			12px;
+    line-height:		20px;
+/*    display:			block;*/
+  	color:				#292929;
+	background-position: right 2px;
+	*background-position: right 3px;
+	padding-right:		15px;
+	background-image:	url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_bullet-link-arrow-red_gif.gif");
+	background-repeat:	no-repeat;
+}
+a.vgs_lnk:hover {
+	background-image:	url("/web/20100826161334im_/http://webassetsa.scea.com/pscomauth/groups/public/documents/webasset/ps_link-arrow-red_hover_gif.gif");
+}
+
+#moviebox_outer{width:780px;}
+#moviebox_outer h3{margin:10px 0;}
+#moviebox_outer .moviebox {background:none repeat 0 0 #EAEAEA;float:left;margin:0 13px 20px 0;padding:1px;width:381px;}
+#moviebox_outer .moviebox.last{margin:0;}
+#moviebox_outer .moviebox.bottom{width:780px;}
+#moviebox_outer .moviebox .inner_moviebox {background-color:#EAEAEA;border:1px solid #FFFFFF;float:left;padding:6px;width:367px;}
+#moviebox_outer .moviebox .inner_moviebox.last {width:766px;}
+#moviebox_outer .moviebox .inner_moviebox .white-border {border:1px solid #FFFFFF; width:133px; height:132px;float:left;}
+#moviebox_outer .moviebox .bg  {background:none no-repeat scroll 0 0 #EAEAEA;border:1px solid #DCDCDC;float:left;height:125px;padding:5px 0 0 0;text-align:center;
+vertical-align:middle;width:131px;}
+#moviebox_outer .moviebox .box_txt_2{float:left;font-size:12px;font-weight:normal;padding-left:10px;width:219px;}
+#moviebox_outer .moviebox .box_txt_2.last{width:618px;}
+#moviebox_outer .moviebox .box_txt_2 span {font-size:12px; font-family:Arial; font-weight:bold; color:#3c3c3c;}
+#moviebox_outer .moviebox .box_txt_2 p{ font-family:Arial; font-size:12px; font-weight:normal; color:#3c3c3c; line-height:16px; margin-top:6px; width:100%;height:106px;}
+#moviebox_outer .moviebox .esrbtopborder{border-top:1px solid #C8C8C8;margin-top:10px;}
+#moviebox_outer .moviebox .rating_div {border-top:1px solid #fff;color:#535353;font-size:11px;font-weight:bold;padding-top:5px;width:100%;}			
+#moviebox_outer .moviebox .whitebar{border-top:1px solid #ffffff;width:100%;}
+#moviebox_outer .moviebox .rating_div.last {width:621px;}
+#moviebox_outer .moviebox .rating_div span{ color:#828282; font-size:11px;}
+#official_rules{ width:780px;padding-top:10px;}
+#official_rules h3{ font-size:37px;font-weight:normal;}
+#official_rules p{border-bottom:1px solid #E2E2E2;color:#3C3C3C;font-size:14px;line-height:22px;padding-bottom:27px;}
+
+
+ 
+ 
+ 
+ 
+ 
+
+/*For reg class use only*/
+h1 sup, h1 span.reg, h1 span.registeredClass{
+	font-size:11px;
+	line-height:1px;
+	vertical-align:super;
+	*vertical-align:text-top;
+}
+h2 .reg, h2 sup, h2 span.reg, h2 sup, h2 span.registeredClass {
+	font-size:11px;
+	line-height:1px;
+}
+h3 span.reg, h3 sup, h3 span.registeredClass{
+	font-size:11px;
+	line-height:1px;
+	vertical-align:super;
+} 
+h4 .reg, h4 sup, h4 span.reg, h4 sup, h4 span.registeredClass{
+	font-size:11px;
+	line-height:1px;
+	vertical-align:super;
+}
+h5 .reg, h5 sup, h5 span.reg, h5 sup, h5 span.registeredClass{
+	font-size:11px;
+	line-height:1px;
+	vertical-align:super;
+}
+h6 .reg, h6 sup, h6 span.reg, h6 sup, h6 span.registeredClass{
+	font-size:11px;
+	line-height:1px;
+	vertical-align:super;
+}
+span.reg, span.registeredClass{
+	font-size:9px;
+	line-height:1px;
+	vertical-align:text-top;
+	font-weight:normal;
+}
+p span.reg, p span.registeredClass{
+	font-size:11px;
+    vertical-align:text-top;
+}
+p .reg, p sup {
+	font-size:11px;
+    line-height:1em;
+	vertical-align:text-top;
+}
+li .reg, li sup {
+	font-size:11px;
+	line-height:1px;
+	vertical-align:super;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    li .reg, li sup { vertical-align:super; }
+}
+
+
+
+span sup{
+	font-size:11px;
+	line-height:1em;
+	vertical-align:text-top;
+}
+
+/*
+span sup{
+	font-size:11px;
+	line-height:1px;
+	vertical-align:text-top;
+}
+*/
+
+
+a  span.reg {
+  vertical-align: text-top;
+  font-size: 11px;
+  line-height: 1px;
+}
+
+.subnav li a span.reg{
+	font-size:9px;
+	vertical-align: text-top;
+}
+
+.PS_Breadcrumb_Nav sup{
+  vertical-align: super;
+  font-size:10px;
+  line-height: 1px;
+} 
+#breadcrumb sup{
+  vertical-align: super;
+  font-size:10px;
+  line-height: 1px;
+}
+.head_promo .button_link span sup{font-size:10px}
+
+
+.psn_join span.reg, .psn_join span.registeredClass{
+	font-size:			11px;
+	line-height:		1px;
+	vertical-align:		super;
+}
+.question span.reg, .question span.registeredClass{
+	font-size:			11px;
+	line-height:		1px;
+	vertical-align:		super; 
+	*line-height:		22px;
+}
+
+/* end reg class */
+
+
+
+
+
+
+
+
+
+
+
+/*
+     FILE ARCHIVED ON 16:13:34 Aug 26, 2010 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 14:38:54 Aug 05, 2021.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 461.692
+  exclusion.robots: 0.104
+  exclusion.robots.policy: 0.096
+  RedisCDXSource: 40.492
+  esindex: 0.009
+  LoadShardBlock: 386.435 (3)
+  PetaboxLoader3.datanode: 358.845 (4)
+  CDXLines.iter: 28.205 (3)
+  load_resource: 378.679
+  PetaboxLoader3.resolve: 187.433
+*/
