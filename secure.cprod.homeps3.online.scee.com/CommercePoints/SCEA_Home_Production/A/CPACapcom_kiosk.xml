@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<commerce_point>
+	<node type="products"> <!-- Capcom classic titles -->
+      <header>
+        <name lang="en-US" default="true">Capcom classic titles</name>
+		<background>http://scea-home.playstation.net/a.home/hosted/CommercePoints/Thumbnails/onestopshop_bg_scea.dds</background> 
+      </header>	  		
+		<product category="UP9000-NPUJ00748_00">UP9000-NPUJ00748_00-0000000000000001</product>
+		<product category="UP9000-NPUJ00923_00">UP9000-NPUJ00923_00-0000000000000001</product>
+		<product category="UP9000-NPUJ00197_00">UP9000-NPUJ00197_00-0000000000000001</product>
+		<product category="UP9000-NPUJ00258_00">UP9000-NPUJ00258_00-0000000000000001</product> 	  	    					  	 	 		
+</node>
+</commerce_point>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<commerce_point>
+  <node type="objects"> <!-- MAIN NODE OPEN -->
+    <header>
+	  <background>http://scea-home.playstation.net/a.home/hosted/CommercePoints/Thumbnails/onestopshop_bg_scea.dds</background> 
+    </header>
+	  <object>30C0ACCE-65464643-96BFBF35-1E0AC8EF</object> <!-- 4/25/12 Wardrobe -->
+	  <object>96AC2869-14924ED5-8CF97CE5-9DA7C116</object> <!-- 4/25/12 Wardrobe -->
+	  <object>0ADBC0BF-FB5949C7-BFF43242-A3E26D1F</object> <!-- 4/25/12 Wardrobe -->
+	  <object>00000000-00000000-00000000-00040006</object> <!-- 4/25/12 Wardrobe -->
+	  <object>E7745965-16404717-A7EDA5B1-BAD28B22</object> <!-- 4/25/12 Wardrobe -->
+	  <object>7EF8CA24-3A13471C-8416867E-E0F8A371</object> <!-- 4/25/12 Wardrobe -->
+	  <object>541DBAE7-E7FB49E1-84F64762-C4ACF1A6</object> <!-- 4/25/12 Wardrobe -->
+	  <object>5133EA14-C6254841-8795BAD4-70250542</object> <!-- 4/25/12 Wardrobe -->
+	  <object>5133EA14-C6254841-8795BAD4-70250542</object> <!-- 4/25/12 Wardrobe -->
+
+  </node> <!-- MAIN NODE CLOSE -->
+</commerce_point>

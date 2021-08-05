@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss 
+	xmlns:dc="http://purl.org/dc/elements/1.1/" 
+	version="2.0"
+	xmlns:PSHome="http://sppwilliamsfreestuff1.tumblr.com/#">
+	
+	<channel>
+		<atom:link rel="hub" href="http://tumblr.superfeedr.com/" xmlns:atom="http://www.w3.org/2005/Atom"/>
+		<description></description>
+		<title>freestuff1</title>
+		<generator>Tumblr (3.0; @sppwilliamsfreestuff1)</generator><link>http://sppwilliamsfreestuff1.tumblr.com/</link>
+							<item>
+			<title>Giftinator</title>
+			<description>&lt;p&gt;&lt;img alt="image" src="http://scee-home.playstation.net/e.home/hosted/NewsViewer/20141203/GiftinatorWeeklyGift__NewsViewer_400x236.dds"/&gt;&lt;/p&gt;</description>
+		</item>	
+					<item>
+			<title>Acorn Meadows Park</title>
+			<description>&lt;p&gt;&lt;img alt="image" src="http://scee-home.playstation.net/e.home/hosted/NewsViewer/20141203/VeemeePark_Batch001_Waterfall_400x236.dds"/&gt;&lt;/p&gt;</description>
+		</item>	
+			<item>
+			<title>Atom Universe</title>
+			<description>&lt;p&gt;&lt;img alt="image" src="http://scee-home.playstation.net/e.home/hosted/NewsViewer/20141203/AtomUniverse_newsViewer.dds"/&gt;&lt;/p&gt;</description>
+		</item>	
+	</channel>
+</rss>

@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" xmlns:og="http://ogp.me/ns#">
+<head>
+<!--<meta http-equiv="Set-Cookie" content="" />-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Imagetoolbar" content="no" />
+<meta name="Keywords" content="PixelJunk,PixelJunk Racers,PixelJunk Monsters,PixelJunk Eden,PixelJunk Shooter,PixelJunk Shooter2" />
+<meta name="Description" content="Welcome to the PixelJunk(TM) Official Website. This is your one stop resource for the latest news, previews and events in the world of PixelJunk(TM)!" />
+<meta name="Robots" content="index,follow" />
+<meta name="Author" content="Q-Games" />
+<meta name="Generator" content="Aptana" />
+
+<meta property="og:image" content="http://pixeljunk.jp/fourth_image/home_open.gif" />
+<link rel="image_src" href="http://pixeljunk.jp/fourth_image/home_open.gif" />
+
+<link rel="canonical" href="http://pixeljunk.jp" />
+
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript" src="/cssjavs/jquery.min.1.7.js"></script>
+<script type="text/javascript" src="/cssjavs/swfobject.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-38313355-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<link rel="stylesheet" type="text/css" href="../cssjavs/parentstyle.css" />
+<link rel="stylesheet" type="text/css" href="./cssjavs/index.css" />
+
+<title>PixelJunk&trade; Exhibition</title>
+</head>
+<body>
+<noscript><font color="WHITE">Please TURN ON JAVASCRIPT!!</font></noscript>
+<div id="floater"></div>
+<div id="wrap">
+	<div id="outside_frame">
+		<div id="show_frame"></div>
+		<div id="show_frame0" class="show_frame_class">
+			<img src="images/en/ps3_home_index2_en.jpg?20110107" alt="PixelJunk Exhibition index" title="" />
+			<a href="#"><img src="images/en/button_exhibition_en.jpg" id="exhibition_button" class="fade" alt="PixelJunk exhibition button" title="" /></a>
+			<a href="#"><img src="images/en/button_shooter_en.jpg" id="shooter_button" class="fade" alt="PixelJunk Shooter button" title="" /></a>
+		</div>
+		<div id="show_frame1" class="show_frame_class">
+			<div class="scroll">
+				<img src="images/en/ps3_home_exhibition_01_en.jpg" alt="PixelJunk Exhibition" title="" />
+				<div>
+					<img src="images/en/ps3_home_exhibition_02_en.jpg" alt="PixelJunk exhibition" title="" />
+					<a href="http://playstationhome.jp/" target="_blank"><img src="images/button_home_official_.jpg" id="official" class="fade" alt="PS3 home Official page" title="" /></a>
+				</div>
+			</div>
+		</div>
+		<div id="show_frame2" class="show_frame_class">
+			<div class="scroll">
+				<img src="images/en/ps3_home_shooter_01_en.jpg" alt="Shooter Hangar deck" title="" />
+				<img src="images/en/ps3_home_shooter_02_en.jpg" alt="Shooter Hangar deck" title="" />
+			</div>
+		</div>
+		<div class="pixeljunk_footerbar">
+			<div class="bar_left1">
+				<a href="../news.php"><img src="../fourth_image/news/back_icon.png" id="back" alt="PixelJunk News" title="" /></a>
+				<a href="#"><img src="images/button_previous.gif" id="prev00" alt="prev" title="" /></a>
+				<a href="#"><img src="images/button_previous.gif" id="prev01" alt="prev" title="" /></a>
+				<a href="#"><img src="images/button_previous.gif" id="prev02" alt="prev" title="" /></a>
+			</div>
+			<div class="bar_left2"></div>
+			<div class="bar_center"><a href="../index.php"><img src="../fourth_image/pixeljunk_logo.png" alt="pixeljunk logo" title="" border="0" /></a></div>
+			<div class="bar_right2"></div>
+			<div class="bar_right1">
+				<a href="index.php.ja"><img src="images/button_language_jp.gif" id="language" alt="language" title="" /></a>
+				<a href="#"><img src="images/button_next.gif" id="next00" alt="next" title="" /></a>
+				<a href="#"><img src="images/button_next.gif" id="next01" alt="next" title="" /></a>
+				<a href="#"><img src="images/button_next.gif" id="next02" alt="next" title="" /></a>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="../cssjavs/jquery.cycle.all.min.js"></script>
+<script type="text/javascript" src="cssjavs/index.js"></script>
+</body>
+</html>

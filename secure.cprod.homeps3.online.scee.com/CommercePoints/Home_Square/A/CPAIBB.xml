@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<commerce_point>
+  <node type="objects">
+          <header>
+		  <background>http://scea-home.playstation.net/a.home/hosted/CommercePoints/Thumbnails/ibbnobb.png</background>
+          </header>
+<object>982A7290-DD394C97-B35AB98D-C119E413</object>
+<object>71C1E629-28144404-86A146AC-8458FE94</object>
+<object>4E92A9E2-AAF14344-B40ECE1B-09734058</object>
+<object>7C0A374C-09BF4B4E-814DF153-80840BD0</object>
+<object>83FEDCC7-F6754696-92D47486-1DA2DAA9</object>
+<object>A1F0791A-37034AC4-BFA44500-59930F5A</object>
+<object>0E5D0CEA-8B6B449F-94B4552C-A0624942</object>
+<object>54F0613E-52054236-BAD9C079-808A2A9B</object>
+<object>CC09A541-B3894E25-A38118CF-945B40FC</object>
+<object>CF15B451-CFD0448C-854DFDD9-681C971C</object>
+<object>E29147FD-0A5D467A-AEDE7DEF-295C4369</object>
+<object>40950769-03B84965-BB203CD2-FB7308EB</object>
+<object>239FD001-8C6D4590-8866D45C-F0EE0A96</object>
+  </node>
+</commerce_point>

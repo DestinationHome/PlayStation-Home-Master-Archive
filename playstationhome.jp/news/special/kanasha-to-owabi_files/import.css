@@ -1,0 +1,49 @@
+@charset "Shift_JIS";
+
+/**********************************
+Copyright (C) 2007 fork corporation
+http://www.fork.co.jp/
+author : mote
+**********************************/
+
+/* except win & mac IE4.x, NC4.x */
+@import "/web/20111007155408cs_/http://playstationhome.jp/css/format.css";
+@import "/web/20111007155408cs_/http://playstationhome.jp/css/fonts.css";
+@import "/web/20111007155408cs_/http://playstationhome.jp/css/modules.css";
+
+@import "/web/20111007155408cs_/http://playstationhome.jp/css/layout.css";
+@import "/web/20111007155408cs_/http://playstationhome.jp/css/header.css";
+@import "/web/20111007155408cs_/http://playstationhome.jp/css/contents.css";
+@import "/web/20111007155408cs_/http://playstationhome.jp/css/contents01.css";
+@import "/web/20111007155408cs_/http://playstationhome.jp/css/form.css";
+@import "/web/20111007155408cs_/http://playstationhome.jp/css/footer.css";
+
+@import "/web/20111007155408cs_/http://playstationhome.jp/css/bbs.css";
+@import "/web/20111007155408cs_/http://playstationhome.jp/css/market.css";
+@import "/web/20111007155408cs_/http://playstationhome.jp/css/tabbed.css";
+/* @import "/web/20111007155408cs_/http://playstationhome.jp/css/highslide.css"; */
+@import "/web/20111007155408cs_/http://playstationhome.jp/css/colorChange.css";
+
+@import "/web/20111007155408cs_/http://playstationhome.jp/css/relative-bbs.css";
+
+/*
+     FILE ARCHIVED ON 15:54:08 Oct 07, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 14:16:24 Jul 28, 2021.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 1557.474
+  exclusion.robots: 0.09
+  exclusion.robots.policy: 0.084
+  RedisCDXSource: 34.791
+  esindex: 0.006
+  LoadShardBlock: 1504.647 (3)
+  PetaboxLoader3.datanode: 1599.828 (4)
+  CDXLines.iter: 15.936 (3)
+  load_resource: 339.231
+  PetaboxLoader3.resolve: 86.549
+*/

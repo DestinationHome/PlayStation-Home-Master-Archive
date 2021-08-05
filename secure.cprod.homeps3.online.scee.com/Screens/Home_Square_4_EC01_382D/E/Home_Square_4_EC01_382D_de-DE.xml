@@ -1,0 +1,90 @@
+<XML>
+  <SCREEN ID="Shop1Poster1ID">
+    <TYPE>MEDIARSS</TYPE>
+    <SOURCE LINK="http://eu.playstation.com">http://scee-home.playstation.net/e.home/mfe/content/RSS_Feeds/Home_SquareShop1Poster1IDDE.xml</SOURCE>
+  </SCREEN>
+  <SCREEN ID="Shop1Poster2ID">
+    <TYPE>MEDIARSS</TYPE>
+    <SOURCE LINK="http://eu.playstation.com">http://scee-home.playstation.net/e.home/mfe/content/RSS_Feeds/Home_SquareShop1Poster2IDDE.xml</SOURCE>
+  </SCREEN>
+  <SCREEN ID="Shop1Poster3ID">
+    <TYPE>MEDIARSS</TYPE>
+    <SOURCE LINK="http://eu.playstation.com">http://scee-home.playstation.net/e.home/mfe/content/RSS_Feeds/Home_SquareShop1Poster3IDDE.xml</SOURCE>
+  </SCREEN>
+  <SCREEN ID="Shop1Poster4ID">
+    <TYPE>MEDIARSS</TYPE>
+    <SOURCE LINK="http://eu.playstation.com">http://scee-home.playstation.net/e.home/mfe/content/RSS_Feeds/Home_SquareShop1Poster4IDDE.xml</SOURCE>
+  </SCREEN>
+  <SCREEN ID="Shop1Poster5ID">
+    <TYPE>MEDIARSS</TYPE>
+    <SOURCE LINK="http://eu.playstation.com">http://scee-home.playstation.net/e.home/mfe/content/RSS_Feeds/Home_SquareShop1Poster5IDDE.xml</SOURCE>
+  </SCREEN>
+  <SCREEN ID="Shop1Poster6ID">
+    <TYPE>MEDIARSS</TYPE>
+    <SOURCE LINK="http://eu.playstation.com">http://scee-home.playstation.net/e.home/mfe/content/RSS_Feeds/Home_SquareShop1Poster6IDDE.xml</SOURCE>
+  </SCREEN>
+  <SCREEN ID="Shop1Poster7ID">
+    <TYPE>MEDIARSS</TYPE>
+    <SOURCE LINK="http://eu.playstation.com">http://scee-home.playstation.net/e.home/mfe/content/RSS_Feeds/Home_SquareShop1Poster7IDDE.xml</SOURCE>
+  </SCREEN>
+  <SCREEN ID="Shop1Poster8ID">
+    <TYPE>MEDIARSS</TYPE>
+    <SOURCE LINK="http://eu.playstation.com">http://scee-home.playstation.net/e.home/mfe/content/RSS_Feeds/Home_SquareShop1Poster8IDDE.xml</SOURCE>
+  </SCREEN>
+  <SCREEN ID="Shop1Poster9ID">
+    <TYPE>MEDIARSS</TYPE>
+    <SOURCE LINK="http://eu.playstation.com">http://scee-home.playstation.net/e.home/mfe/content/RSS_Feeds/Home_SquareShop1Poster9IDDE.xml</SOURCE>
+  </SCREEN>
+  <SCREEN ID="Shop1Poster10ID">
+    <TYPE>MEDIARSS</TYPE>
+    <SOURCE LINK="http://eu.playstation.com">http://scee-home.playstation.net/e.home/mfe/content/RSS_Feeds/Home_SquareShop1Poster10IDDE.xml</SOURCE>
+  </SCREEN>
+  <SCREEN ID="Shop1Poster11ID">
+    <TYPE>MEDIARSS</TYPE>
+    <SOURCE LINK="http://eu.playstation.com">http://scee-home.playstation.net/e.home/mfe/content/RSS_Feeds/Home_SquareShop1Poster11IDDE.xml</SOURCE>
+  </SCREEN>
+  <SCREEN ID="Shop1Poster12ID">
+    <TYPE>MEDIARSS</TYPE>
+    <SOURCE LINK="http://eu.playstation.com">http://scee-home.playstation.net/e.home/mfe/content/RSS_Feeds/Home_SquareShop1Poster12IDDE.xml</SOURCE>
+  </SCREEN>
+  <SCREEN ID="Shop1Poster13ID">
+    <TYPE>MEDIARSS</TYPE>
+    <SOURCE LINK="http://eu.playstation.com">http://scee-home.playstation.net/e.home/mfe/content/RSS_Feeds/Home_SquareShop1Poster13IDDE.xml</SOURCE>
+  </SCREEN>
+  <SCREEN ID="Building2Poster1ID">
+    <TYPE>MEDIARSS</TYPE>
+    <SOURCE LINK="http://eu.playstation.com">http://scee-home.playstation.net/e.home/mfe/content/RSS_Feeds/Home_SquareBuilding2Poster1IDDE.xml</SOURCE>
+  </SCREEN>
+  <SCREEN ID="Building2Poster2ID">
+    <TYPE>MEDIARSS</TYPE>
+    <SOURCE LINK="http://eu.playstation.com">http://scee-home.playstation.net/e.home/mfe/content/RSS_Feeds/Home_SquareBuilding2Poster2IDDE.xml</SOURCE>
+  </SCREEN>
+  <SCREEN ID="Building2Poster3ID">
+    <TYPE>MEDIARSS</TYPE>
+    <SOURCE LINK="http://eu.playstation.com">http://scee-home.playstation.net/e.home/mfe/content/RSS_Feeds/Home_SquareBuilding2Poster3IDDE.xml</SOURCE>
+  </SCREEN>
+  <SCREEN ID="Building3Poster1ID">
+    <TYPE>MEDIARSS</TYPE>
+    <SOURCE LINK="http://eu.playstation.com">http://scee-home.playstation.net/e.home/mfe/content/RSS_Feeds/Home_SquareBuilding3Poster1IDDE.xml</SOURCE>
+  </SCREEN>
+  <SCREEN ID="Building3Poster2ID">
+    <TYPE>MEDIARSS</TYPE>
+    <SOURCE LINK="http://eu.playstation.com">http://scee-home.playstation.net/e.home/mfe/content/RSS_Feeds/Home_SquareBuilding3Poster2IDDE.xml</SOURCE>
+  </SCREEN>
+  <SCREEN ID="Building2Poster2">
+    <TYPE>MEDIARSS</TYPE>
+    <SOURCE LINK="http://eu.playstation.com">http://scee-home.playstation.net/e.home/mfe/content/RSS_Feeds/Home_SquareBuilding2Poster2DE.xml</SOURCE>
+  </SCREEN>
+  <SCREEN ID="MainVideoScreenID">
+    <TYPE>MEDIARSS</TYPE>
+    <SOURCE LINK="http://eu.playstation.com">http://scee-home.playstation.net/e.home/mfe/content/RSS_Feeds/Home_SquareMainVideoScreenIDDE.xml</SOURCE>
+  </SCREEN>
+  <SCREEN ID="FountainScreenID">
+    <TYPE>MEDIARSS</TYPE>
+    <SOURCE LINK="http://eu.playstation.com">http://scee-home.playstation.net/e.home/mfe/content/RSS_Feeds/Home_SquareFountainScreenIDDE.xml</SOURCE>
+  </SCREEN>
+  <SCREEN ID="ContentRelocator">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/HS4/points_of_interest_blue.dds</SOURCE>
+  </SCREEN>
+</XML>

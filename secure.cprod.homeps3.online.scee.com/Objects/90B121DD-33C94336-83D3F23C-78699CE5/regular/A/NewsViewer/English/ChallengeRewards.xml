@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss 
+	xmlns:dc="http://purl.org/dc/elements/1.1/" 
+	version="2.0"
+	xmlns:PSHome="http://sppwilliamsfreestuff1.tumblr.com/#">
+	
+	<channel>
+		<atom:link rel="hub" href="http://tumblr.superfeedr.com/" xmlns:atom="http://www.w3.org/2005/Atom"/>
+		<description></description>
+		<title>freestuff1</title>
+		<generator>Tumblr (3.0; @sppwilliamsfreestuff1)</generator><link>http://sppwilliamsfreestuff1.tumblr.com/</link>
+		<item>
+			<title>This season in Challenges...</title>
+			<description>&lt;p&gt;&lt;img alt="image" src="http://scee-home.playstation.net/e.home/hosted/CommercePoints/Thumbnails/antfarmsmall.dds"/&gt;&lt;/p&gt;</description>
+			<!--link>http://sppwilliamsfreestuff1.tumblr.com/post/52874639739</link-->
+			<!--guid>http://sppwilliamsfreestuff1.tumblr.com/post/52874639739</guid-->
+			<!--pubDate>Thu, 13 Jun 2013 12:21:00 -0400</pubDate-->
+			<!--PSHome:CUSTOM_CONTENT link="ACCEPT|commerce|LOOT_Public_Space_237E_1F7A/E/CPELOOTPUB00.xml" /-->
+		</item>
+		<item>
+			<title>This season in Challenges...</title>
+			<description>&lt;p&gt;&lt;img alt="image" src="http://scee-home.playstation.net/e.home/hosted/CommercePoints/Thumbnails/glasseselectric.dds"/&gt;&lt;/p&gt;</description>
+			<!--link>http://sppwilliamsfreestuff1.tumblr.com/post/52874550460</link-->
+			<!--guid>http://sppwilliamsfreestuff1.tumblr.com/post/52874550460</guid-->
+			<!--pubDate>Thu, 13 Jun 2013 12:19:00 -0400</pubDate-->
+		</item>
+		<item>
+			<title>This season in Challenges...</title>
+			<description>&lt;p&gt;&lt;img alt="image" src="http://scee-home.playstation.net/e.home/hosted/CommercePoints/Thumbnails/racetracksmall.dds"/&gt;&lt;/p&gt;</description>
+			<!--link>http://sppwilliamsfreestuff1.tumblr.com/post/52874550460</link-->
+			<!--guid>http://sppwilliamsfreestuff1.tumblr.com/post/52874550460</guid-->
+			<!--pubDate>Thu, 13 Jun 2013 12:19:00 -0400</pubDate-->
+			<!--PSHome:CUSTOM_CONTENT link="ACCEPT|scene|Jewel_Of_The_Skies_B0C2_AB36" /-->
+		</item>
+		
+	</channel>
+</rss>

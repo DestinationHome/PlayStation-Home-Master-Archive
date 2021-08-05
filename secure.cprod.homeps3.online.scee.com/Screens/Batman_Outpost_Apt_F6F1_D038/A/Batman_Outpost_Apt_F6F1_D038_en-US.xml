@@ -1,0 +1,10 @@
+<XML>
+  <SCREEN ID="Batcave_Outpost_Screen_Computer">
+    <TYPE>VIDEO</TYPE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Movies/M1981_EIDOS_BATMAN_AA_DEMO_LOCALISATION_US_090709.mp4</SOURCE>
+  </SCREEN>
+  <SCREEN ID="Batcave_Outpost_Screen_Batmobile">
+    <TYPE>VIDEO</TYPE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Movies/EIDOS_BATMAN_AA_JOKER_NOPS3_NOESRB_MPEG4_640x360.mp4</SOURCE>
+  </SCREEN>
+</XML>

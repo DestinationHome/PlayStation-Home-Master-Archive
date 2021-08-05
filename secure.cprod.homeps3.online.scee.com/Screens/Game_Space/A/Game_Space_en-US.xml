@@ -1,0 +1,49 @@
+<XML>
+  <SCREEN ID="GSVideoScreen01">
+    <TYPE>VIDEO</TYPE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Movies/PSmultPLUSSZL60RETAILv116_KW_HOME.mp4</SOURCE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Movies/DANI-CODEGLUE_2013-08_SWEET-BOHO_PS-HOME_640x352.mp4</SOURCE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Movies/Sodium_Blimp_Home_280813640x352.mp4</SOURCE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Movies/Hatchback_VIS_103v640x352.mp4</SOURCE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Movies/Drop_Science_Home_640x352.mp4</SOURCE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Movies/Science_of_Fast_4Pack_640x352.mp4</SOURCE>
+  </SCREEN>
+  <SCREEN ID="GSVideoScreen02">
+    <TYPE>VIDEO</TYPE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Movies/VIDZONE_TRAILER_GM_640x352.mp4</SOURCE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Movies/SodiumBlimp_BlastersParadise_HOME640x352.mp4</SOURCE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Movies/VEEMEE_3DPrinter_Batch006_PromoVideo_640x352_2013-09-04_SCEA.mp4</SOURCE>
+  </SCREEN>
+  <SCREEN ID="GSImageAdvert03">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/PS_VidZone_HOMEbillboard.dds</SOURCE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/beards_684x384.dds</SOURCE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/Sodium_Blimp_Release_684x384.dds</SOURCE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/HipHopMovesvolume2_684x384.dds</SOURCE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/GM_StockCars_684x384.dds</SOURCE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/Billboard_DiabloEyeShirts_684x384.dds</SOURCE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/Plus_ResidentEvilHD_Billboard.dds</SOURCE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/ClearasilSkateboarding_HomebillboardNEW.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="GSImageAdvert02">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/ibb_Companion_10072013_684x384.dds</SOURCE>
+    <SOURCE> 	http://scea-home.playstation.net/a.home/mfe/content/Posters/Posters_SCEA_684x384_Starfleet_Male.dds</SOURCE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/GM_Tailgate_684x384_EN.dds</SOURCE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/PS_VidZone_HOMEbillboard.dds</SOURCE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/GM_HorseRace_684x384.dds</SOURCE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/Design_3_684x384.dds</SOURCE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/Cook_684x384.dds</SOURCE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/Billboard_DiabloWhimsyshireShirts_684x384.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="GSImageAdvert01">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/DBM-Yacht-684x384-v01.dds</SOURCE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/PS_VidZone_HOMEbillboard.dds</SOURCE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/DBM-Pool-684x384-v01.dds</SOURCE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/CateredDining_Batch002_BBQ1_2013-08-28_684x384.dds</SOURCE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/UndeadPets_Batch001_dog_2013-08-28_684x384.dds</SOURCE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/Billboard_DiabloWhimsyshireShirts_684x384.dds</SOURCE>
+    <SOURCE>http://scea-home.playstation.net/a.home/mfe/content/Posters/ClearasilSkateboarding_HomebillboardNEW.dds</SOURCE>
+  </SCREEN>
+</XML>
