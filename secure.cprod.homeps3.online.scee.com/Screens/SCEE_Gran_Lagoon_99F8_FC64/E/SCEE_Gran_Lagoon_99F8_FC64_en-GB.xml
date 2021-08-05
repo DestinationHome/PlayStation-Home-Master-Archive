@@ -1,0 +1,30 @@
+<XML>
+  <SCREEN ID="GRN_0001_350">
+    <TYPE>VIDEO</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/Granzella/april_ending_e2.mp4</SOURCE>
+  </SCREEN>
+  <SCREEN ID="GRN_0001_302">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/22_05_2013/GRN_0001_302_poster_mizugi1_20130522.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="GRN_0001_303">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/15_05_2013/GRN_0001_303_poster_bike1_20130515.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="GRN_0001_304">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/Granzella/GRN_0001_004_poster_guide1_1024x512_EN.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="GRN_0001_305">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/27_02_2013/GRN_0001_005_poster_rule1_1024x512_EN.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="GRN_0001_306">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/Granzella/GRN_0001_006_poster_secret1.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="GRN_0001_301">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/06_02_2103/GRN_0006_301_poster_seaside1_20130206.dds</SOURCE>
+  </SCREEN>
+</XML>
