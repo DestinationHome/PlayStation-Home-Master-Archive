@@ -13,10 +13,17 @@ For more information about the origin of this archive of PlayStation Home, you c
 Here are the following domains that have been analyzed/documented in this archive:
 
 * a0.twimg.com
+* a0.ww.dl.playstation.net
+* a1.ww.np.dl.playstation.net
 * a2.twimg.com
 * alpha.lootgear.com
+* api.crackle.com
+* apollo.dl.playstation.net
 * blog.playstation.com
-* buzzps3.svo.online.scee.com
+* b0.ww.np.dl.playstation.net
+* bb.watch.impress.co.jp
+* blog.playstation.com
+* buzzps3.svo.online.scee.com 
 * capcom.co.jp
 * cdn.alphazone4.com
 * cdn.bdlivenetwork.sonypictures.com
@@ -77,6 +84,7 @@ Here are the following domains that have been analyzed/documented in this archiv
 * meninblack.com
 * mercury.dl.playstation.net
 * modnation-production.s3.amazonaws.com
+* native.np.ac.playstation.net
 * ndaurora.s3.amazonaws.com
 * ndreams.stats.s3.amazonaws.com
 * nrage.s3.amazonaws.com
@@ -104,6 +112,7 @@ Here are the following domains that have been analyzed/documented in this archiv
 * secure.$(env).homeps3.online.scee.com
 * secure.cdevc.homeps3.online.scee.com
 * secure.cprod.homeps3.online.scee.com
+* secure.cqa-e.homeps3.online.scee.com
 * select.ww.home.playstation.net
 * server-stage.lootgear.com
 * services.heavyh2o.net
@@ -119,9 +128,11 @@ Here are the following domains that have been analyzed/documented in this archiv
 * trophy01.np.community.playstation.net
 * tss-geotrust-crl.thawte.com
 * uk.playstation.com
+* us.playstation.com
 * uniquez-home.com
 * video.dl.playstation.net
 * videos.revision3.com
+* ww-prod.destinations.scea.com
 * wpc.33F8.edgecastcdn.net
 * www.affinitystudios.com
 * www.bigbenuk.com
