@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/">
+	<channel>
+		<title>RSS Feed</title>
+		<description>Offline RSS feed</description>
+
+		<item>
+			<media:content url="http://scej-home.playstation.net/j.home/event/for091015/contents/ev_sq_p_musiccafe_091015.dds" medium="image" height="752" width="1000" duration="60" />
+			<media:title type="html">ev_sq_p_musiccafe</media:title>
+			<media:description>for event.</media:description>
+			<media:thumbnail url="http://scej-home.playstation.net/j.home/event/for091015/contents/ev_sq_p_musiccafe_091015.dds" width="1000" height="752" />
+			<media:category type="html">Advert</media:category>
+		</item>
+		<item>
+			<media:content url="http://scej-home.playstation.net/j.home/event/for091015/contents/ev_sq_p_roljukebox_091015.dds" medium="image" height="752" width="1000" duration="60" />
+			<media:title type="html">ev_sq_p_rollyjukebox</media:title>
+			<media:description>for event.</media:description>
+			<media:thumbnail url="http://scej-home.playstation.net/j.home/event/for091015/contents/ev_sq_p_roljukebox_091015.dds" width="1000" height="752" />
+			<media:category type="html">Advert</media:category>
+		</item>
+
+	</channel>
+</rss>

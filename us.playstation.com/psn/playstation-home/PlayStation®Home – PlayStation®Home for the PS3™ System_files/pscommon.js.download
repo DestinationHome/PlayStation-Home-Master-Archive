@@ -1,0 +1,2236 @@
+var _____WB$wombat$assign$function_____ = function(name) {return (self._wb_wombat && self._wb_wombat.local_init && self._wb_wombat.local_init(name)) || self[name]; };
+if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; return this; } }
+{
+  let window = _____WB$wombat$assign$function_____("window");
+  let self = _____WB$wombat$assign$function_____("self");
+  let document = _____WB$wombat$assign$function_____("document");
+  let location = _____WB$wombat$assign$function_____("location");
+  let top = _____WB$wombat$assign$function_____("top");
+  let parent = _____WB$wombat$assign$function_____("parent");
+  let frames = _____WB$wombat$assign$function_____("frames");
+  let opener = _____WB$wombat$assign$function_____("opener");
+
+/**
+* =========================================================== FLASH ASSETS CONTROL =====================================================
+* THIS THREE METHODS ARE MANDATROY FOR ALL FLASH APPPLICATIONS TO RUN 
+* getAssetPath()
+* getDataPath()
+* getVideoPath()
+* ======================================================================================================================================
+*/
+
+/* For mobile redirection to mobi.us.playstation.com  */
+/*
+var deviceBB = "blackberry";
+var deviceAndroid = "android";
+var devicepsp = "psp";
+var devicepspo = "PLAYSTATION PORTABLE";
+var uagent = navigator.userAgent.toLowerCase();
+if (navigator.userAgent && ( navigator.userAgent.indexOf("iPad") > -1 || navigator.userAgent.indexOf("iPhone") > -1 )) {
+
+}else if ((uagent.search(devicepsp) > -1) || (uagent.search(devicepspo) > -1)){
+	window.location="https://web.archive.org/web/20100826161202/http://mobi.us.playstation.com";
+}else if ((uagent.search(deviceBB) > -1) || screen.width <= 600) {
+	window.location="https://web.archive.org/web/20100826161202/http://mobi.us.playstation.com";
+}
+*/
+/* END For mobile redirection to mobi.us.playstation.com  */ 
+
+	
+	
+//var ucmroot = "/ucm/";
+//Mobi Code Starts
+/*
+if(navigator.userAgent.toLowerCase().indexOf('psp') != -1) {
+	window.location="https://web.archive.org/web/20100826161202/http://mobi.us.playstation.com/mobi/UserAgentDetectionServlet"; 
+}
+var serverName=window.location.host;	
+var servletURL="http://"+serverName+"/uwps/UserAgentDetectionServlet"; 
+var status=false;
+$.ajax({
+type: "POST",
+url: servletURL,   
+async:   true,
+success: function(result){
+if(result != '' && result != null)
+window.location=result;
+}
+});  */
+//Mobi Code Ends
+
+
+var hostName = window.location.host;
+var flashBaseURL = ""
+var gameSKUId ="";
+var floodLightShow="FloodLight1";
+
+
+if((hostName.indexOf("stagea.us.playstation.com")!=-1) || (hostName.indexOf("stage.us.playstation.com")!=-1))
+	flashBaseURL= "https://web.archive.org/web/20100826161202/http://stage-webassets.scea.com"+ucmroot+"groups/public/documents/";
+else if((hostName.indexOf("us.playstation.com")!=-1) || (hostName.indexOf("qa.playstation.com")!=-1))
+	flashBaseURL= "https://web.archive.org/web/20100826161202/http://webassets.scea.com"+ucmroot+"groups/public/documents/";
+else
+	flashBaseURL=ucmroot+"groups/public/documents/";
+
+
+ 
+function getAssetPath(){	return flashBaseURL+"webasset/";}
+function getDataPath() {	return flashBaseURL +"webcontent/";}
+function getHttpVideoPath(){return flashBaseURL +"video/"; }
+function getVideoPath(){  
+	//return flashBaseURL +"video/";
+	return "rtmp://sceafs.fplive.net/scea/pscomauth/groups/public/documents/video/"
+}
+
+function getUcmInstanceName(){
+    var ucmName = ucmroot;
+    return ucmName;
+}
+function getAssesBase(){
+    var insName = getUcmInstanceName();
+    var baseUrl = window.location.protocol+"//"+window.location.host+insName;
+    return baseUrl; 
+}
+function getPageURL(){return window.location.toString();}
+function getBaseURL(){
+    var siteName="/usplaystation";
+    var urlString = "";
+    urlString = window.location.toString();
+    if(urlString.indexOf(siteName)==-1){
+        siteName="";
+    }
+    return window.location.protocol+"//"+window.location.host+siteName;
+}
+
+function getHostURL(){
+    return window.location.protocol+"//"+window.location.host+"/";
+} 
+function getOmnitureAccount(){return "sceaplaystationprod";}
+
+/**
+* =========================================================== MAIN NAVIGATION ==========================================================
+* THIS REQUIRES ALL THE FOLLOWING FUNCTIONS AND JS FILES TO BE AVAILABLE BEFORE THE FOLLOWING SCRIPT EXECUTES.
+* getAssetPath()
+* getDataPath()
+* ======================================================================================================================================
+*/
+var ucmWebRoot=ucmroot;
+var expandedSection = ""; 
+var subSection="";
+var loc=window.location.toString();
+        
+if(loc.indexOf("systems/") > -1)                    subSection = "systems";
+else if(loc.indexOf("techspecs") > -1)              subSection = "systems";
+else if(loc.indexOf("faq") > -1)                    subSection = "systems";
+else if(loc.indexOf("accessories") > -1)            subSection = "accessories";
+else if(loc.indexOf("features") > -1)               subSection = "features";
+else if(loc.indexOf("games/") > -1)                 subSection = "games";
+
+else if(loc.indexOf("site=support")> -1 ||loc.indexOf("/support") > -1)                subSection = "support";
+else if(loc.indexOf("site=PlayStation_Blog")> -1)                subSection = "PlayStation_Blog";
+else if(loc.indexOf("site=PlayStation_com")> -1)                subSection = "PlayStation_com";
+else if(loc.indexOf("site=Forums")> -1 )                subSection = "Forums";
+else if(loc.indexOf("site=All")> -1 )                subSection = "All";
+else if(loc.indexOf("store") > -1)                  subSection = "store";
+else if(loc.indexOf("playstation-plus") > -1)       subSection = "plus";
+else if(loc.indexOf("gaming") > -1)                 subSection = "gaming";
+else if(loc.indexOf("events") > -1)                 subSection = "events";
+else if(loc.indexOf("original-programming") > -1)   subSection = "originalprogramming";
+else if(loc.indexOf("home") > -1)                   subSection = "home";
+else if(loc.indexOf("add-ons") > -1)                subSection = "addons";
+else if(loc.indexOf("demos") > -1)                  subSection = "demos";
+else if(loc.indexOf("movies") > -1)                 subSection = "movies";
+else if(loc.indexOf("shows-and-tv-series") > -1)    subSection = "tvseries";
+else if(loc.indexOf("games-and-media") > -1)        subSection = "gamesmedia";
+
+else if(loc.indexOf("community") > -1)              subSection = "community";   
+else if(loc.indexOf("playstation-move") > -1)       subSection = "ps_move"; //Added by ASR to select the subsection
+else if(loc.indexOf("spring-fever") > -1)       subSection = "gamesmedia"; //Added by ASR to select the subsection
+  
+
+if(window.location.toString().indexOf("/search/") < 0){
+
+if(window.location.toString().indexOf("games-and-media/psn-spring-fever-2010-games/") > -1){
+ 
+    if(window.location.toString().indexOf("id=")==-1)
+    {
+        expandedSection = "games_media_nav";
+        subSection="All";
+    }
+    else 
+    {expandedSection = "";  
+    }
+} 
+  
+else if(window.location.toString().indexOf("games-and-media/games/") > -1){
+    if(window.location.toString().indexOf("id=")==-1)
+        expandedSection = "games_media_nav";
+    else expandedSection = "";  
+}
+ else if(window.location.toString().indexOf("psn") > -1 || window.location.toString().indexOf("playstation_network") > -1) {
+
+    if(window.location.toString().indexOf("id=")==-1)
+        expandedSection = "psn_nav";
+    else
+        expandedSection = "";
+}      
+ 
+ 
+ 
+else if(window.location.toString().indexOf("games-and-media/add-ons/") > -1){
+    if(window.location.toString().indexOf("id=")==-1){
+        expandedSection = "games_media_nav";
+    }
+    else expandedSection = "";  
+}
+
+
+
+else if(window.location.toString().indexOf("games-and-media/shows-and-tv-series/") > -1){
+    if(window.location.toString().indexOf("id=")==-1){
+        expandedSection = "games_media_nav";
+    }
+    else expandedSection = "";  
+}
+else if(window.location.toString().indexOf("games-and-media/movies/") > -1){
+    if(window.location.toString().indexOf("id=")==-1){
+        expandedSection = "games_media_nav";
+    }
+    else expandedSection = "";  
+}
+
+else if(window.location.toString().indexOf("games-and-media") > -1) {
+    if(window.location.toString().indexOf("id=")==-1){
+        if(window.location.toString().indexOf("ps3") > -1 || window.location.toString().indexOf("playstation3") > -1 || window.location.toString().indexOf("playstation 3") > -1){      
+            expandedSection = "ps3_nav";
+        }
+        else if(window.location.toString().indexOf("psp") > -1){
+            expandedSection = "psp_nav";
+        }
+        else if(window.location.toString().indexOf("ps2") > -1 || window.location.toString().indexOf("playstation2") > -1 || window.location.toString().indexOf("playstation 2") > -1){
+            expandedSection = "ps2_nav";
+        }
+        else{
+            expandedSection = "games_media_nav";
+        }
+    }
+    else
+        expandedSection = "";   
+}
+
+
+else if(window.location.toString().indexOf("ps3") > -1 || window.location.toString().indexOf("playstation3") > -1 || window.location.toString().indexOf("playstation 3") > -1) {
+    if(window.location.toString().indexOf("id=")==-1){
+        expandedSection = "ps3_nav";
+    	if(window.location.toString().indexOf("playstation-move/faq") > -1){subSection = "ps_move";}
+    	
+    }
+    else{
+        expandedSection = "";
+        }
+}
+else if(window.location.toString().indexOf("psp") > -1) {
+    if(window.location.toString().indexOf("id=")==-1)  expandedSection = "psp_nav";
+    else expandedSection = "";
+}
+else if(window.location.toString().indexOf("ps2") > -1 || window.location.toString().indexOf("playstation2") > -1 || window.location.toString().indexOf("playstation 2") > -1) {
+
+    if(window.location.toString().indexOf("id=")==-1) {  expandedSection = "ps2_nav"; }
+    else  { expandedSection = ""; } 
+}
+else{
+    expandedSection = "";
+}
+
+}/* Close of search check */
+
+
+var params = {  
+    allowscriptaccess: "always",   
+    wmode:"transparent",
+    swLiveConnect:"true",
+    allowNetworking:"all"
+};
+
+if(loc.indexOf("usplaystation")> 0){
+    var flashvars = {navXML: "ps_main_navigation.xml",expandedSection: expandedSection,selectedSubSection: subSection};
+}
+else{
+    var flashvars = {navXML: "ps_main_navigation_pub.xml",expandedSection: expandedSection,selectedSubSection: subSection};
+}
+var attributes = {id: "navswf", name: "navswf"};
+var navSwfPath;  
+navSwfPath=getAssetPath()+"ps_mainnav.swf"  ;       
+swfobject.embedSWF(navSwfPath, "navdiv", "130", "755", "9.0.47", ucmWebRoot+"groups/public/documents/webasset/ps_expressinstall.swf", flashvars, params, attributes);
+/* end of navigation*/
+
+
+var xmlHttp;   
+function createXmlHttpRequest(){
+    if(window.ActiveXObject){
+        xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    else if(window.XMLHttpRequest){
+        xmlHttp=new XMLHttpRequest();
+    }
+}
+createXmlHttpRequest();
+
+function fetchFriendsList(){    
+    var serverName=window.location.host;  
+    var servletURL=window.location.protocol+"//"+serverName+"/uwps/FetchFriendsList";  
+    var status=false;
+    $.ajax({
+    type: "POST",
+    url: servletURL,   
+    async:   true,
+    success: function(result){  
+        getMovieName("profile_login").updateProfile(); 
+    }
+    });  
+    return status;
+}              
+function createCookie(name,value,days) {
+	
+    var expires="";
+    if(readCookie(name)){ return; }
+    else{
+    
+    
+        var date = new Date();
+        date.setTime(date.getTime()+(7*24*60*60*1000));
+        expires = "; expires="+date.toGMTString();        
+        var domainName=".playstation.com";
+        document.cookie = name+"="+value+expires+"; path=/; domain="+domainName;       
+    }
+}
+
+function createSessionCookie(name,value,days) {
+
+	
+    var expires="";
+	var domainName=".playstation.com";
+    if(readCookie(name)){ return; }
+    else{  
+		var serverName=window.location.host+"";
+		if(serverName.indexOf("playstation.com") != -1)
+		{
+			domainName=".playstation.com";
+		}
+		else
+		{
+		var domainName=".playstation.sony.com";
+		}
+        document.cookie = name+"="+value+"; path=/; domain="+domainName;       
+    }
+}
+
+function getCookieValueFromServer(cookieName){  
+    var cookieValue="";
+    var serverName=window.location.host;
+    var servletURL=window.location.protocol+"//"+serverName+"/uwps/CookieHandler";
+    xmlHttp.open("POST", servletURL, false);
+    xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xmlHttp.send(null);
+    return xmlHttp.responseText; 
+}
+
+function overwriteCookie(name,value,days) {
+    var expires="";
+    var date = new Date();
+    date.setTime(date.getTime()+(7*24*60*60*1000));
+    expires = "; expires="+date.toGMTString();
+    if(!days){
+        document.cookie = name+"="+value+expires+"; path=/";
+    }
+    else{
+        document.cookie = name+"="+value+"; path=/";
+    }
+}
+ 
+function readCookie(name) {
+    var nameEQ1 = name + "=";    
+    var ca1 = document.cookie;
+    var ca= ca1.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+       while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ1) == 0){
+                return  unescape(c.substring(nameEQ1.length,c.length)) ;
+        }
+    }
+    return false;
+}
+
+function eraseCookie(name) {
+    var date = new Date();
+    date.setTime(-1);
+    var expires = "; expires="+date.toGMTString();
+    document.cookie = name+"="+""+expires+"; path=/";
+}
+
+function getXmlHttpRequestObject() {
+    if (window.XMLHttpRequest) {
+        return new XMLHttpRequest(); //Not IE
+    } 
+    else if(window.ActiveXObject) {
+        return new ActiveXObject("Microsoft.XMLHTTP"); //IE
+    } 
+    else {
+        //Display your error message here. 
+        //and inform the user they might want to upgrade
+        //their browser.
+    }
+ }
+    
+if (typeof DOMParser == "undefined") {
+    DOMParser = function () {}
+    DOMParser.prototype.parseFromString = function (str, contentType) {
+        if (typeof ActiveXObject != "undefined") {
+            var d = new ActiveXObject("MSXML.DomDocument");
+            d.loadXML(str);
+            return d;
+        }
+        else if (typeof XMLHttpRequest != "undefined") {
+            var req = new XMLHttpRequest;
+            req.open("GET", "data:" + (contentType || "application/xml") +
+                            ";charset=utf-8," + encodeURIComponent(str), false);
+            if (req.overrideMimeType) {
+            req.overrideMimeType(contentType);
+            }
+            req.send(null);
+            return req.responseXML;
+        }
+    }
+}
+
+function setIFrameHeightToCookie(cookieValue,iframeId){
+    var formHeight = readCookie(cookieValue);   
+    var iFrame = document.getElementById(iframeId); 
+    if(iFrame == null){
+        iFrame=parent.document.getElementById(iframeId);
+    }
+    if (formHeight != null ){   
+        iFrame.height = parseInt(formHeight) + 30;
+        if(iFrame.height=='NaN' || iFrame.height=='0'){
+            iFrame.height = '600px';
+        }
+    } 
+    else{
+        if(iFrame != null)  iFrame.height = '600px';
+    }
+}
+
+function queryString(parameter) { 
+  var loc = location.search.substring(1, location.search.length);
+  var param_value = false;
+
+  var params = loc.split("&");
+  for (i=0; i<params.length;i++) {
+      param_name = params[i].substring(0,params[i].indexOf('='));
+      if (param_name == parameter) {
+          param_value = params[i].substring(params[i].indexOf('=')+1)
+          
+      }
+  }
+  if (param_value) {
+      return param_value;
+  }
+  else {
+      return false; //Here determine return if no parameter is found
+  }
+}
+
+function getParam(param){
+    var loc = location.search.substring(1, location.search.length);     
+    var param_name="";
+    var name="";
+    var params = loc.split("&");
+    for (i=0; i<params.length;i++) {
+        name = params[i].substring(0,params[i].indexOf('='));
+        param_name="";
+        if(name && name==param){
+            param_name = name;
+            break;
+        }   
+    }
+    return param_name;
+}
+function trimString(stringToTrim){
+if(stringToTrim=='undefined')  return "";
+    return stringToTrim.replace(/^\s\s*/, '').replace(/\s\s*$/, '');
+}
+
+function checkMultipleEmails(c_s_list,seperator){
+    if(c_s_list.lastIndexOf(",")+1==c_s_list.length)
+        c_s_list=c_s_list.substring(0,c_s_list.length-1);
+    var arr = c_s_list.split(seperator); 
+    for (var i = 0, l = arr.length; i < l; i++){ 
+        var str = trimString(arr[i]); 
+        if(!emailIdCheckOne(str)) return false;                  
+    }
+    return true;
+}
+    
+function emailIdCheckOne(str) {
+    var at="@";
+    var dot=".";
+    var lat=str.indexOf(at);
+    var lstr=str.length;
+    var ldot=str.indexOf(dot);
+    if (str.indexOf(at)==-1){
+       return false
+    }
+    if (str.indexOf(at)==-1 || str.indexOf(at)==0 || str.indexOf(at)==lstr)   {return false}
+    if (str.indexOf(dot)==-1 || str.indexOf(dot)==0 || str.indexOf(dot)==lstr){return false}
+    if (str.indexOf(at,(lat+1))!=-1){return false }
+    if (str.substring(lat-1,lat)==dot || str.substring(lat+1,lat+2)==dot){
+        return false;
+    }   
+    if (str.indexOf(dot,(lat+2))==-1){
+        return false;
+    }   
+    if (str.indexOf(" ")!=-1){
+        return false;
+    }   
+    return true;                    
+}
+    
+    /*date_arr and days_arr variables are also used by psn store sign up*/
+    
+var date_arr = new Array;
+var days_arr = new Array;
+
+date_arr[0]=new Option("01",31);
+date_arr[1]=new Option("02",28);
+date_arr[2]=new Option("03",31);
+date_arr[3]=new Option("04",30);
+date_arr[4]=new Option("05",31);
+date_arr[5]=new Option("06",30);
+date_arr[6]=new Option("07",31);
+date_arr[7]=new Option("08",31);
+date_arr[8]=new Option("09",30);
+date_arr[9]=new Option("10",31);
+date_arr[10]=new Option("11",30);
+date_arr[11]=new Option("12",31);
+
+function fill_select(f){        
+    document.writeln("<SELECT class='drop_down_month' name=\"months\"  id=\"months\">");
+    document.writeln("<option value='MM'>MM</option>");
+    for(x=0;x<12;x++)
+            document.writeln("<OPTION value=\""+date_arr[x].value+"\">"+date_arr[x].text+"</OPTION>");
+    		document.writeln("</SELECT>");
+        	document.writeln("<span style='font-size:14px;color:#525252;margin-right:5px;'>/</span>");
+            
+    document.writeln("<SELECT class='drop_down_month' name=\"days\" id=\"days\">");
+    document.writeln("<option value='DD'>DD</option>");
+    for(x=1;x<=31;x++)
+    	 document.writeln("<OPTION value="+x+">"+x+"</OPTION>");
+         document.writeln("</SELECT>");
+    	 document.writeln("<span style='font-size:14px;color:#525252;margin-right:5px;'>/</span>");   			
+   		 selection=f.months[f.months.selectedIndex].value;
+}
+
+function update_days(f){
+    temp=f.days.selectedIndex;
+    var currentDay=(document.getElementById('days').value);
+    var currentMnth=(document.getElementById('months').value);
+    if(currentMnth != "MM"){ 
+        for(x=f.days.options.length;x>0;x--){
+            days_arr[x]=null;
+            f.days.options[x]=null;            
+        }
+    }
+    selection=parseInt(f.months[f.months.selectedIndex].value);
+    ret_val = 0;
+    if(f.months[f.months.selectedIndex].value == 28){
+        year=parseInt(f.years.options[f.years.selectedIndex].value);
+        if ((year % 4 != 0 || year % 100 == 0) &&  year % 400 != 0) ret_val=0;
+        else if (year % 400 == 0 ) ret_val=1; 
+        else if (year % 400 == 0)  ret_val=1;
+        else ret_val=1;
+    }
+    selection = selection + ret_val;
+    for(x=1;x < selection+1;x++){
+        days_arr[x-1]=new Option(x);
+        f.days.options[x-1]=days_arr[x-1];
+    }
+    if (temp == -1) f.days.options[0].selected=true;
+    else{
+        if(f.days.options[temp] == null && f.days.options[0] != null)
+                f.days.options[0].selected=true;
+        else f.days.options[temp].selected=true;
+     }
+}
+function year_install(f){
+        var d = new Date();
+        var curr_year = d.getFullYear();
+        document.writeln("<SELECT class='drop_down_month' name=\"years\" id=\"years\" >")
+        document.writeln("<option value='YYYY'>YYYY</option>");
+        for(x=curr_year;x>=1900;x--) document.writeln("<OPTION value=\""+x+"\">"+x);
+        document.writeln("</SELECT>");
+         var bIsPS3 = navigator.userAgent.toLowerCase().indexOf('playstation') != -1;
+        if (bIsPS3.toString()!="true")
+       	{ 
+       		update_days(f)
+       	}
+}
+function loadOtherParamData(paramType,paramValue){
+    $("#hiddenOtherParamText").get(0).innerHTML=paramType;
+    $("#hiddenOtherParamValue").get(0).innerHTML=paramValue;
+}
+
+
+function checkBlankLink(linkText){
+    if(linkText == ""){        
+        document.getElementById("moreLinks").style.display="none";
+    }
+    else{        
+        document.getElementById("moreLinks").style.display="block";
+    }
+}
+
+//This Function is for Browing each tab and redirecting the link according to the tab seleted 
+function redirectMoreLinks(strUrl){
+    var redirectPlatform=document.getElementById("hiddenPlatform").innerHTML;
+  
+    
+    var redirectType=trimString(document.getElementById("hiddenType").innerHTML);
+      
+      
+    var redirectOtherParamType ="";
+    var redirectOtherParamValue ="";
+    if(document.getElementById("hiddenOtherParamText") != null){
+        redirectOtherParamType=trimString(document.getElementById("hiddenOtherParamText").innerHTML);
+    }
+    if(document.getElementById("hiddenOtherParamValue") != null){
+         redirectOtherParamValue=trimString(document.getElementById("hiddenOtherParamValue").innerHTML);
+    }
+    var subCategoryType="console"; 
+   
+   
+  
+    
+    if(redirectType != null  && redirectType == "Accessory"){
+        if(strUrl == "ps3"){
+            window.location=location.protocol +"//"+ window.location.host + globalSiteName+"ps3/accessories/index.htm";
+        }
+        else if(strUrl == "ps2"){
+            window.location=location.protocol +"//"+ window.location.host + globalSiteName+"ps2/accessories/index.htm";
+        }
+        else if(strUrl == "psp"){
+            window.location=location.protocol +"//"+ window.location.host + globalSiteName+"psp/accessories/index.htm?redirectPlatform="+redirectPlatform;
+        }
+    
+    }
+    else if (redirectOtherParamType != null && redirectOtherParamType != "" ){
+        window.location =location.protocol +"//"+window.location.host+globalSiteName+"games-and-media/gameslist/index.htm?type="+redirectType+"&subCategoryType="+subCategoryType+"&subCategoryValue="+redirectPlatform+"&"+redirectOtherParamType+"="+redirectOtherParamValue; 
+    }
+    else{
+        window.location =location.protocol +"//"+window.location.host+globalSiteName+"games-and-media/gameslist/index.htm?type="+redirectType+"&subCategoryType="+subCategoryType+"&subCategoryValue="+redirectPlatform;    
+    }  
+    if(redirectType != null  && redirectType == "store"){
+     redirectStoreLinks();
+    }
+}
+var globalSiteName="/usplaystation/";
+if(window.location.toString().indexOf("usplaystation")==-1)
+    globalSiteName="/";
+ 
+function redirectNarrowLinks(){
+    var redirectPlatform=document.getElementById("hiddenPlatform").innerHTML;narrowBy
+    var redirectType=document.getElementById("hiddenType").innerHTML;
+    var narrowBy=document.getElementById("narrowBy").innerHTML;
+    var subCategoryType="console"; 
+    window.location =location.protocol +"//"+window.location.host+globalSiteName+"games-and-media/gameslist/index.htm?type="+redirectType+"&narrow="+narrowBy+"&subCategoryType="+subCategoryType+"&subCategoryValue="+redirectPlatform;    
+}
+
+function redirectSupportLinks(strLink){
+    if(strLink != null){
+        window.location=location.protocol +"//"+window.location.host+globalSiteName+strLink;    
+    }
+}
+
+function HideIEDropDown(){
+    if($.browser.msie && $.browser.version=="6.0"){
+        var anchors = document.getElementsByTagName("select");
+        for (var anchor = 0; anchor<anchors.length;anchor++){
+            var item = anchors[anchor];
+            item.style.visibility='hidden';
+        }
+    }
+}
+
+function ShowIEDropDown(){      
+    if($.browser.msie && $.browser.version=="6.0"){
+        var anchors = document.getElementsByTagName("select");
+        for (var anchor = 0; anchor<anchors.length;anchor++){
+            var item = anchors[anchor];
+            item.style.visibility='visible';
+        }
+    }
+}
+
+function removeOptionsByValue(selectName, value, frmAgeGate) {
+  for (var i=selectName.options.length-1; i>=0; i--) {
+    if (selectName.options[i].value == value) {
+      selectName.options[i] = null;
+    }
+  }
+  update_days(frmAgeGate);
+}
+
+function openOverlay(div1, div2){
+    $('.'+div1).toggle();
+    $('#'+div2).toggle();
+}
+
+function openCIOverlay(skuid, rgid){
+    $('.share-this3').toggle();
+    $('#black_overlay11').toggle();
+    document.getElementById('ciOverlayFrame').src="https://web.archive.org/web/20100826161202/http://sony.links.channelintelligence.com/pages/prices.asp?sSKU="+skuid+"&nRGID=1864";
+}
+function openCIOverlayFlBuy(){
+    $('.share-this3').toggle();
+    $('#black_overlay11').toggle();
+    document.getElementById('ciOverlayFrame').src="https://web.archive.org/web/20100826161202/http://sony.links.channelintelligence.com/pages/prices.asp?cii_nIID=69770527&cii_sSort=vendor&cii_sSortOrder=asc&cii_nRGID=1864&cii_nRID=0&cii_sCT=&cii_sCData=";
+}
+
+function openFlashOverlay(div1, div2, url){
+    $('.'+div1).toggle();
+    $('#'+div2).toggle();
+    $('#iframeFlashOverlay').attr("src",url);   
+}
+
+
+function blankFun(){}
+
+function getRequestParameter(){
+    var current_URL=window.location.toString();
+    var ind=current_URL.indexOf("?");
+    var paramValue="";
+    if (current_URL.indexOf('?') != -1) {
+        var param= current_URL.substring(current_URL.indexOf('?')+1);
+         paramValue=current_URL.substring(current_URL.indexOf('=')+1);
+    }
+    return paramValue;
+}
+
+function isTicketCookiesExists(){
+    var ticketCookie=readCookie("TICKET");   
+	 var s2sTicketCookie=readCookie("PSNS2STICKET");
+    if(ticketCookie && s2sTicketCookie)
+        return true;
+    else
+        return  false; 
+}
+
+function viewLargeScreenshot(url){  
+     if(document.cookie.indexOf('Screenshot') >= 0){
+        document.getElementById("agreeDisaree").style.display="none";
+        document.getElementById("agreeDisareeBox").style.display="none";
+        window.open(url)
+        document.getElementById('hiddenField').value=url;
+    }
+    else{    
+        document.getElementById("agreeDisaree").style.display="block";
+        document.getElementById("agreeDisareeBox").style.display="block";
+        document.getElementById("agreeDisareeBox").style.zIndex="1";
+        document.getElementById("agreeDisaree").style.zIndex="9";
+        document.getElementById('hiddenField').value=url;
+    }
+}
+
+function agreescreenshot(){
+    document.cookie ='Screenshot=popup; expires=Fri, 27 Jul 2010 02:47:11 UTC; path=/'; 
+    var openwindow=document.getElementById('hiddenField').value;
+    window.open(openwindow);
+    document.getElementById("agreeDisaree").style.display="none";
+    document.getElementById("agreeDisareeBox").style.display="none";    
+}
+
+function openDownloadWallpaper(url){
+
+var desc="filename="+url;
+    if(document.cookie.indexOf('Wallpaper') >= 0){
+        document.getElementById("agreeDisareeWall").style.display="none";
+        document.getElementById("agreeDisareeBox").style.display="none";
+        window.open(url)
+        document.getElementById('hiddenField1').value=url;
+    }
+    
+    else{    
+        document.getElementById("agreeDisareeWall").style.display="block";
+        document.getElementById("agreeDisareeBox").style.display="block";
+        document.getElementById("agreeDisareeWall").style.zIndex="9";
+        document.getElementById("agreeDisareeBox").style.zIndex="1";            
+        document.getElementById('hiddenField1').value=url;
+     }
+        logeventRequest("130","301",desc);
+}
+
+function agree(){
+    document.cookie ='Wallpaper=popup; expires=Fri, 27 Jul 2010 02:47:11 UTC; path=/'; 
+    var openwindow1=document.getElementById('hiddenField1').value;
+    window.open(openwindow1)
+    document.getElementById("agreeDisareeWall").style.display="none";
+    document.getElementById("agreeDisareeBox").style.display="none";
+}
+function removeOptionsByValue_psn(selectName, value, frm) {
+
+
+  for (var i=selectName.options.length-1; i>=0; i--) {
+  
+    if (selectName.options[i].value == value) {
+      selectName.options[i] = null;
+    }
+  }
+  
+  for(x=frm.days.options.length;x>0;x--)
+  {
+            frm.days.options[x]=null;
+   }
+  update_days_psn(frm);
+}
+
+
+function fill_select_psn(f){        
+ document.writeln("<SELECT  name=\"months\" style=\"width:50px;\" id=\"months\" onclick=\" removeOptionsByValue_psn(this.form.months,'MM' ,SignUpUpdate)\"  onchange=\"update_days_psn(SignUpUpdate)\">");
+        document.writeln("<option value='MM'>MM</option>")
+        for(x=0;x<12;x++)
+                document.writeln("<OPTION value=\""+date_arr[x].value+"\">"+date_arr[x].text);
+        document.writeln("</SELECT>");
+            document.writeln("<span style='font-size:14px;color:#525252;margin-right:5px;'>/</span>")
+                document.writeln("<SELECT  style=\"width:45px;\" name=\"days\" id=\"days\"><option value='DD'>DD</option>")
+                
+                 for(x=1;x<=31;x++)
+                 { document.writeln("<OPTION value=\""+x+"\">"+x);
+                 }
+                document.writeln("</SELECT>");
+                   document.writeln("<span style='font-size:14px;color:#525252;margin-right:5px;'>/</span>")
+        
+             selection=f.months[f.months.selectedIndex].value;
+}
+
+function update_days_psn(f){
+        temp=f.days.selectedIndex;
+        
+        for(x=days_arr.length;x>0;x--){
+       
+            days_arr[x]=null;
+            f.days.options[x]=null;
+        }
+       
+      
+        selection=parseInt(f.months[f.months.selectedIndex].value);
+        ret_val = 0;
+        if(f.months[f.months.selectedIndex].value == 28){
+            year=parseInt(f.years.options[f.years.selectedIndex].value);
+            if(year==2000)
+               ret_val=1;
+            else if (year % 4 != 0 || year % 100 == 0 ) ret_val=0;
+            else if (year % 400 == 0)  ret_val=1;
+                else
+                ret_val=1;
+        }
+        selection = selection + ret_val;
+        
+        for(x=1;x < selection+1;x++){
+      
+            days_arr[x-1]=new Option(x);
+            f.days.options[x-1]=days_arr[x-1];
+        }
+        if (temp == -1) f.days.options[0].selected=true;
+        else  f.days.options[temp].selected=true;
+}
+function year_install_psn(f){
+    var d = new Date();
+    var curr_year = d.getFullYear();
+    document.writeln("<SELECT  style=\"width:80px;\" name=\"years\" id=\"years\" onchange=\"update_days_psn(SignUpUpdate)\">")
+    document.writeln("<option value='YYYY'>YYYY</option>");
+    for(x=curr_year;x>=1900;x--) document.writeln("<OPTION value=\""+x+"\">"+x);
+    document.writeln("</SELECT>");
+    update_days_psn(f)
+}
+
+            
+function isValidEmailAddress(emailAddress) {
+var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
+return pattern.test(emailAddress);
+}
+
+function isValidDate(month,year,day) {
+    if(isNaN(month) || isNaN(year) || isNaN(day)){
+        return false;
+    }
+    else{
+        return true;
+    }
+}
+
+var xmlhttp;
+var vtitleLength = 30;
+var vdescriptionLength = 180;
+var htitleLength = 25;
+var hdescriptionLength = 85;
+
+function showBlogs(feedurl, count, type){
+    if(feedurl==""||feedurl=="#"){
+        $("#news").hide();
+        $(".header_with_links").hide();
+    }
+    
+    xmlhttp=GetXmlHttpObject();
+    if (xmlhttp==null){
+        //alert ("Your browser does not support AJAX!");
+        return;
+    }
+    var url="/uwps/UsplaystationBlogs";
+    url=url+"?url="+feedurl;
+    url=url+"&count="+count;
+    url=url+"&type="+type;
+    url=url+"&sid="+Math.random();
+    /*if(type=='H'){
+        xmlhttp.onreadystatechange=horizontalBlogesChanged;
+    }else if(type=='V'){
+        xmlhttp.onreadystatechange=verticalBlogsChanged;
+    }*/
+    xmlhttp.onreadystatechange=putBlogs;
+    xmlhttp.open("GET",url,true);
+    xmlhttp.send(null);
+}
+
+
+function putBlogs(){
+    if (xmlhttp.readyState==4)
+    {
+        var returnStr = xmlhttp.responseText;
+        if(trimString(returnStr.toString())!="No News items available"){
+            if(document.getElementById("news"))
+            {
+            document.getElementById("news").innerHTML = returnStr;
+            }
+        }else{
+            $("#news").hide();
+            $(".header_with_links").hide();
+        }
+    }
+}
+function horizontalBlogesChanged(){
+    if (xmlhttp.readyState==4) {
+        var returnStr = "";
+        returnStr = returnStr + "<div class=\"grid\"><div class=\"gridInner\">";
+        var xmlDoc=xmlhttp.responseXML;
+        var items = xmlDoc.getElementsByTagName("item");
+        for(itemIndex = 0; itemIndex < items.length; itemIndex=itemIndex+1){
+            var lastItem = "";
+            if(itemIndex == items.length-1){
+                lastItem = " last";
+            }
+            var title = xmlDoc.getElementsByTagName("title")[itemIndex].childNodes[0].nodeValue;
+            var link = xmlDoc.getElementsByTagName("link")[itemIndex].childNodes[0].nodeValue;
+            var description = xmlDoc.getElementsByTagName("description")[itemIndex].childNodes[0].nodeValue;
+            if(title.length > htitleLength){
+                title = title.substring(0, htitleLength)+"...";
+            }
+            if(description.length > hdescriptionLength){
+                description = description.substring(0, hdescriptionLength)+"...";
+            }
+            returnStr = returnStr + "<div class=\"item"+lastItem+"\"><div class=\"itemInner\">"
+                        +"<div class=\"top\"><h4>"+title+"</h4>"
+                        +"<p>"+description+"</p><a class=\"read\" href=\""+link+"\">Read</a>"
+                        +"</div><div class=\"byline\"><h5><a href=\""+link+"\">PlayStation Blog</a></h5><p>JUN 18, 2009</p>"
+                        +"</div></div></div>";
+        }
+        returnStr = returnStr + "</div></div>";
+        document.getElementById("news").innerHTML = returnStr;
+    }
+}
+
+function verticalBlogsChanged(){
+    if (xmlhttp.readyState==4){
+        var returnStr = "<h3>Latest PlayStation<span class='reg'>&reg;</span> News</h3>";
+        var xmlDoc=xmlhttp.responseXML;
+        var items = xmlDoc.getElementsByTagName("item");
+        var count = 0;
+        for(itemIndex = 0; itemIndex < items.length; itemIndex=itemIndex+1){
+            var title = xmlDoc.getElementsByTagName("title")[itemIndex].childNodes[0].nodeValue;
+            var link = xmlDoc.getElementsByTagName("link")[itemIndex].childNodes[0].nodeValue;
+            var description = xmlDoc.getElementsByTagName("description")[itemIndex].childNodes[0].nodeValue;
+            if(title.length > vtitleLength){
+                title = title.substring(0, vtitleLength)+"...";
+            }
+            if(description.length > vdescriptionLength){
+                description = description.substring(0, vdescriptionLength)+"...";
+            }
+            returnStr = returnStr + "<div class=\"item clearfix\"><div class=\"comment\"><h6>Jun 18, 2009</h6><h4>"+title+"</h4>"
+                        +"<p>"+description+"&#8230;</p></div><div class=\"location\"><span><img src=\"groups/public/documents/webasset/ps_bg_blog_logo_gif.gif\" alt=\"BLOG\"/></span>"
+                        +"<h5 class=\"blog\"><a href=\""+link+"\">PlayStation Blog</a></h5><a href=\""+link+"\" class=\"link\">Read</a></div></div>";
+            count+=1;
+        }
+        document.getElementById("news").innerHTML = returnStr;
+        document.getElementById("news").style.height = count * 200+"px";
+        var iCntHt = count * 200;
+        document.getElementById("news").style.float= "left";
+        //document.getElementById("content").style.height= 150 + iCntHt + "px";
+        document.getElementById("main").style.height= 1800 + "px";
+    }
+}
+
+function GetXmlHttpObject()
+{
+    if (window.XMLHttpRequest){
+        // code for IE7+, Firefox, Chrome, Opera, Safari
+        return new XMLHttpRequest();
+    }
+    if (window.ActiveXObject){
+        // code for IE6, IE5
+        return new ActiveXObject("Microsoft.XMLHTTP");
+    }
+return null;
+}
+
+function disagreescreenshot(){
+    document.getElementById("agreeDisaree").style.display="none";
+    document.getElementById("agreeDisareeBox").style.display="none";
+}
+ function disagree(){
+    document.getElementById("agreeDisareeWall").style.display="none";
+    document.getElementById("agreeDisareeBox").style.display="none";
+            
+}
+function disapear(){
+    document.getElementById('agreeDisareeBox').style.display="none";
+    document.getElementById('agreeDisareeBox').style.display="none";
+}
+
+
+function openSocialSite(siteAlias,videoId){
+    var urltoShow=window.location+"?videoid="+videoId;
+    switch(siteAlias){
+        case "facebook":
+            window.open("https://web.archive.org/web/20100826161202/http://www.facebook.com/share.php?u="+ encodeURIComponent(urltoShow)+"&t=" + encodeURIComponent("Your friend has shared a video.Click here to watch."));
+            break;
+        case "digg":
+            window.open('https://web.archive.org/web/20100826161202/http://digg.com/submit?phase=2&amp;url='+window.location+"?videoid="+videoId+'&amp;bodytext='+encodeURIComponent('Explore the official website of Sony PlayStation')+'&amp;tags=&amp;title='+encodeURIComponent(document.title));
+        return false;
+            break;
+        case "myspace":     
+            window.open("https://web.archive.org/web/20100826161202/http://www.myspace.com/index.cfm?fuseaction=postto&t=Your%20friend%20has%20shared%20a%20video.%20Click%20here%20to%20watch.&u="+window.location+"%3Fvideoid%3D"+ videoId);
+            break;
+        case "stumble":
+            window.open('https://web.archive.org/web/20100826161202/http://www.stumbleupon.com/submit?url='+encodeURIComponent(window.location+"?videoid="+videoId)+'&amp;title='+encodeURIComponent(document.title));
+            return false;
+            break;
+        case "delicious":
+            window.open('https://web.archive.org/web/20100826161202/http://del.icio.us/post?v=2&amp;url='+encodeURIComponent(window.location+"?videoid="+videoId)+'&amp;notes='+encodeURIComponent('Explore the official website of Sony PlayStation.')+'&amp;tags=&amp;title='+encodeURIComponent(document.title));
+        return false;
+            break;
+        case "linkedin":
+            window.open('https://web.archive.org/web/20100826161202/http://www.linkedin.com/shareArticle?mini=true&url='+encodeURIComponent(window.location+"?videoid="+videoId)+'&title='+encodeURIComponent(document.title));
+            break;
+        case "reddit":
+            window.open('https://web.archive.org/web/20100826161202/http://www.reddit.com/submit?url='+encodeURIComponent(window.location)+'&title='+encodeURIComponent(document.title));
+            return false;
+            break;
+        case "twitter":
+            window.open('https://web.archive.org/web/20100826161202/http://twitter.com/home?status='+encodeURIComponent(window.location+"?videoid="+videoId));
+            break;  
+        default:
+            break;  
+    }
+}
+
+function pauseMediaPlayer(playerId){
+    var isPlaying=getMovieName(playerId).isFLVPlaying();
+    if(isPlaying){
+        getMovieName(playerId).pausePlayBack();
+    }
+    else{
+        return;
+    }
+}
+function playMediaPlayer(playerId){
+    var isPlaying=getMovieName(playerId).isFLVPlaying();
+    if(isPlaying){
+        getMovieName(playerId).playPlayBack();
+    }
+    else{
+        return;
+    }   
+}
+function URLDecode(psEncodeString){  
+  var lsRegExp = /\+/g;
+  return unescape(String(psEncodeString).replace(lsRegExp, " "));
+} 
+/*mediahelper.js*/
+
+/*ps_FSH_AGEINFO.JS*/
+function createAgeGateCookie(ageLevel){
+    xmlstorehttp=GetXmlHttpObject();
+    if (xmlstorehttp==null){
+        alert ("Your browser does not support AJAX!");
+        return;
+    }
+    var storeurl="/usplaystation/uwps/CreateAgeGateCookie";
+    storeurl=storeurl+"?op.anValue="+ageLevel;
+    storeurl=storeurl+"&sid="+Math.random();
+    xmlstorehttp.onreadystatechange=getAgeGateDetail
+    xmlstorehttp.open("GET",storeurl,true);
+    xmlstorehttp.send(null);
+}
+function getAgeGateCookie(){
+    var ageGateCook=isUserAllowedAgeGate();
+    if(ageGateCook=="nc"){
+        ageGateCook="n";
+    }
+    if(ageGateCook=="true"){
+        ageGateCook="m";
+    }
+    if(ageGateCook=="false"){
+        ageGateCook="u";
+    }
+    return ageGateCook;
+}
+
+function setAgeGateCookie(str) {
+    if(str=="m"){
+        createAgeGateCookie(str)
+    }
+    else{
+        createAgeGateCookie(str)        
+    }
+}
+
+function URLDecode(psEncodeString){  
+  var lsRegExp = /\+/g;
+  return unescape(String(psEncodeString).replace(lsRegExp, " "));
+}
+/*ps_FSH_AGEINFO.JS*/
+
+/* OnlineOpinion (S3tS v3.1.1) Supports passing domains in argument */
+/* This product and other products of OpinionLab, Inc. are protected by U.S. Patent No. 6606581, 6421724, 6785717 B1 and other patents pending. */
+
+var custom_var,
+_sp = '%3A\\/\\/',
+_rp = '%3A//',
+_poE = 0.0,
+_poX = 0.0,
+_sH = screen.height,
+_d = document,
+_w = window,
+_ht = escape(_w.location.href),
+_hr = _d.referrer,
+_tm = (new Date()).getTime(),
+_kp = 0,
+_sW = screen.width;
+function _fC(_u) {
+    _aT = _sp + ',\\/,\\.,-,_,' + _rp + ',%2F,%2E,%2D,%5F';
+    _aA = _aT.split(',');
+    for (i = 0; i < 5; i++) {
+        eval('_u=_u.replace(/' + _aA[i] + '/g,_aA[i+5])')
+    }
+    return _u
+};
+function O_LC(new_domain) {
+    _domain = _ht.replace('https%3A//', '').replace('http%3A//', '');
+    if (typeof new_domain == 'undefined' || new_domain == '') {
+        _sp = '%3A\\/\\/';
+        _rp = '%3A//'
+    } else {
+        _sp = '%3A\\/\\/' + _domain.substr(0, _domain.indexOf('/'));
+        _rp = '%3A//' + new_domain
+    }
+    _w.open('https://web.archive.org/web/20100826161202/https://secure.opinionlab.com/ccc01/comment_card.asp?time1=' + _tm + '&time2=' + (new Date()).getTime() + '&prev=' + _fC(escape(_hr)) + '&referer=' + _fC(_ht) + '&height=' + _sH + '&width=' + _sW + '&custom_var=' + custom_var, 'comments', 'width=535,height=192,screenX=' + ((_sW - 535) / 2) + ',screenY=' + ((_sH - 192) / 2) + ',top=' + ((_sH - 192) / 2) + ',left=' + ((_sW - 535) / 2) + ',resizable=yes,copyhistory=yes,scrollbars=no')
+};
+function _fPe() {
+    if (Math.random() >= 1.0 - _poE) {
+        O_LC();
+        _poX = 0.0
+    }
+};
+function _fPx() {
+    if (Math.random() >= 1.0 - _poX) O_LC()
+};
+window.onunload = _fPx;
+function O_GoT(_p) {
+    _d.write('<a href=\'javascript:O_LC()\'>' + _p + '</a>');
+    _fPe()
+}
+
+
+/*plugins.js*/
+
+var ucmRootDir=ucmroot;
+
+function getGameLinks(todayDate, gameDate){
+        if(todayDate - gameDate > 0){
+            document.getElementById("addgamediv").style.display="block";
+        }else{
+            document.getElementById("addgamediv").style.display="none";
+        }
+}
+
+function getStoreResponse(skuid){
+
+
+    xmlstorehttp=GetStoreXmlHttpObject();
+    if (xmlstorehttp==null)
+    {
+        alert ("Your browser does not support AJAX!");
+        return;
+    }
+    var storeurl="/uwps/UsplaystationChannelIntelligence";
+    storeurl=storeurl+"?skuid="+skuid;
+    storeurl=storeurl+"&sid="+Math.random();
+    
+   
+
+    xmlstorehttp.onreadystatechange=getStoreUrl;
+    xmlstorehttp.open("GET",storeurl,true); 
+   
+    xmlstorehttp.send(null);
+}
+var xmlHttp;
+function getStoreResponse_New(skuid){
+
+	gameSKUId =skuid;
+    xmlHttp=GetStoreXmlHttpObject();
+    if (xmlHttp==null)
+    {
+        alert ("Your browser does not support AJAX!");
+        return;
+    }
+    var storeurl="/uwps/UsplaystationChannelIntelligence";
+    storeurl=storeurl+"?skuid="+skuid;
+    storeurl=storeurl+"&sid="+Math.random();
+   
+   
+
+    xmlHttp.onreadystatechange=getStoreUrl_New;
+    xmlHttp.open("GET",storeurl,true); 
+   
+    xmlHttp.send(null);
+   
+}
+
+function trim(str){ 
+    if(!str || typeof str != 'string')
+        return null;
+
+    return str.replace(/^[\s]+/,'').replace(/[\s]+$/,'').replace(/[\s]{2,}/,' ');
+}
+
+
+function getStoreUrl(){
+
+		
+	    if (xmlstorehttp.readyState == 4){
+     
+    
+        var returnStoreStr = xmlstorehttp.responseText;
+        
+
+        	if(trim(returnStoreStr)=="true"){
+        		     	
+            	document.getElementById("buynowbutton").style.display="block";
+            	
+        	}else{
+            	document.getElementById("buynowbutton").style.display="none";
+       		 	}
+   		 }
+		
+}
+
+
+function getStoreUrl_New(){
+	
+    if (xmlHttp.readyState == 4){
+    
+        var returnStoreStr = xmlHttp.responseText;
+        
+        	if(trim(returnStoreStr)=="true"){
+        	       	 	
+            	document.getElementById("buynowbutton").style.display="block";
+            	openGameBuyNowOverlay(); 
+        	}else{
+         	
+            	document.getElementById("buynowbutton").style.display="none";
+       		 	}
+   		 }
+	
+	
+		
+}
+
+
+function GetStoreXmlHttpObject(){
+    if (window.XMLHttpRequest) {
+    
+        // code for IE7+, Firefox, Chrome, Opera, Safari
+        return new XMLHttpRequest();
+    }
+    if (window.ActiveXObject){
+        // code for IE6, IE5
+        return new ActiveXObject("Microsoft.XMLHTTP");
+    }
+return null;
+}
+
+
+function openOverlay(sku){
+    document.getElementById("overlayLogin").style.display="block";
+    document.getElementById("signin-iframe").src="https://web.archive.org/web/20100826161202/http://sony.links.channelintelligence.com/pages/prices.asp?sSKU="+sku+"&nRGID=2732";
+}
+function disableAnchor(obj, disable){ 
+	if(disable){ 
+	var href = obj.getAttribute("href"); 
+	var onclick = obj.getAttribute("onclick"); 
+	var styleV=obj.getAttribute("style");
+	//alert(onclick); 
+	if(href && href != "" && href != null){ 
+	obj.setAttribute('href_bak', href); 
+	}
+	if(styleV && styleV != "" && styleV != null){ 
+	obj.setAttribute('style_bak', styleV); 
+	}
+	if(onclick != null){ 
+	obj.setAttribute('onclick_bak', onclick); 
+	obj.setAttribute('onclick', "void(0);"); 
+	} 
+	obj.removeAttribute('href'); 
+
+	obj.style.color="gray"; 
+	} 
+	else{ 
+	if(obj.attributes['onclick_bak']!=null) 
+	obj.setAttribute('onclick', obj.attributes['onclick_bak'].nodeValue); 
+	if(obj.attributes['href_bak']!=null) 
+	obj.setAttribute('href', obj.attributes['href_bak'].nodeValue); 
+	obj.removeAttribute('style');
+	} 
+
+} 
+function getChildAnchor(p_sID) {
+var children = document.getElementById(p_sID).childNodes;
+	for (var i=0; i < children.length; i++) {
+		if (children[i].tagName == "A") {
+			return children[i];
+			break;
+		}
+	}
+}
+function addToList(skuid){
+disableAnchor(getChildAnchor('addgamediv'),true);
+if(!isUserLoggedIn()){
+    document.getElementById("black_overlay1").style.display="block";
+    document.getElementById("overlayLogin").style.display="block";
+    document.getElementById("signin-iframe").src="https://web.archive.org/web/20100826161202/https://store.playstation.com/external/index.vm?returnURL=http://"+location.host+"/uwps/PSNTicketRetrievalGenericServlet";
+    disableAnchor(getChildAnchor('addgamediv'),false);
+}
+else
+{
+	
+    xmlstorehttp=GetStoreXmlHttpObject();
+    if (xmlstorehttp==null){
+        alert ("Your browser does not support AJAX!");
+        return;
+    }
+    var wishspantxt=document.getElementById("wishlistspan").innerHTML;
+    var gamespantxt=document.getElementById("gamelistspan").innerHTML;
+    var action="";
+    
+    if(wishspantxt=="Add to Wish List"){
+        action="upsert";
+    }
+    else{
+        action="delete";
+    }
+    
+        var storeurl="/uwps/UpdateList?gameCollectionType=Wish_List&actionType=";
+        storeurl=storeurl+action;
+        storeurl=storeurl+"&gameId="+skuid;
+        //storeurl=storeurl+skuid;
+        xmlstorehttp.open("POST",storeurl,true);
+        document.getElementById("wishlistspan").innerHTML="<img src='"+getAssetPath()+"ajax-loaderbrowse.gif'/>";
+        xmlstorehttp.onreadystatechange=function handleServerResponse()
+                {  
+                    if(xmlstorehttp.readyState==4)
+                     {
+                                
+                            var response = xmlstorehttp.responseText;
+                            var xmlobject = (new DOMParser()).parseFromString(response, "text/xml");
+                            var type = xmlobject.getElementsByTagName('Action')[0].firstChild.nodeValue;
+                                        
+                            if(type=="upsert")
+                            {
+                                if(gamespantxt=="Remove from My Games")
+                                {
+                                document.getElementById("wishlistspan").innerHTML="Remove from Wish List";
+                                document.getElementById("gamelistspan").innerHTML="Add to My Games";
+                                }
+                                else
+                                {
+                                document.getElementById("wishlistspan").innerHTML="Remove from Wish List";
+
+                                }
+                            }
+                            if(type=="delete")
+                            {
+                                document.getElementById("wishlistspan").innerHTML="Add to Wish List";   
+                            }
+                            disableAnchor(getChildAnchor('addgamediv'),false);
+                    }}
+                xmlstorehttp.send(null);
+        
+}
+
+}
+
+
+function addToGames(skuid)
+{
+ disableAnchor(getChildAnchor('wishlistGame'),true);
+    if(!isUserLoggedIn())
+    {
+    
+        document.getElementById("black_overlay1").style.display="block";
+        document.getElementById("overlayLogin").style.display="block";
+        document.getElementById("signin-iframe").src="https://web.archive.org/web/20100826161202/https://store.playstation.com/external/index.vm?returnURL=http://"+location.host+"/uwps/PSNTicketRetrievalGenericServlet";
+     disableAnchor(getChildAnchor('wishlistGame'),false);
+    }
+    else{
+   
+        xmlstorehttp=GetStoreXmlHttpObject();
+        if (xmlstorehttp==null)
+        {
+            alert ("Your browser does not support AJAX!");
+            return;
+        }
+        var wishspantxt=document.getElementById("wishlistspan").innerHTML;
+        var gamespantxt=document.getElementById("gamelistspan").innerHTML;
+        var action="";
+        
+        if(gamespantxt=="Add to My Games"){       
+            action="upsert";
+        }
+        else {       
+            action="delete";
+        }
+        
+            var storeurl="/uwps/UpdateList?gameCollectionType=My_Games&actionType=";
+            storeurl=storeurl+action;
+            storeurl=storeurl+"&gameId="+skuid;
+            //storeurl=storeurl+skuid;
+            xmlstorehttp.open("POST",storeurl,true);
+            
+            document.getElementById("gamelistspan").innerHTML="<img src='"+getAssetPath()+"ajax-loaderbrowse.gif'/>";
+            xmlstorehttp.onreadystatechange=function handleServerResponse()
+                    {  
+                        if(xmlstorehttp.readyState==4)
+                        {
+                                    
+                                var response = xmlstorehttp.responseText;
+                                var xmlobject = (new DOMParser()).parseFromString(response, "text/xml");
+                                var type = xmlobject.getElementsByTagName('Action')[0].firstChild.nodeValue;
+                                
+                                if(type=="upsert")
+                                {
+                                    if(wishspantxt=="Remove from Wish List")
+                                    {
+                                    document.getElementById("wishlistspan").innerHTML="Add to Wish List";
+                                    document.getElementById("gamelistspan").innerHTML="Remove from My Games";
+                                    }
+                                    else
+                                    {
+                                    document.getElementById("gamelistspan").innerHTML="Remove from My Games";
+                                    }
+                                }
+                                if(type=="delete")
+                                {
+                                    document.getElementById("gamelistspan").innerHTML="Add to My Games";    
+                                }
+                                disableAnchor(getChildAnchor('wishlistGame'),false);
+                        }}
+                    xmlstorehttp.send(null);
+    }
+
+}
+
+
+function checkgame(skuid)
+{
+
+xmlstorehttp=GetStoreXmlHttpObject();
+    if (xmlstorehttp==null)
+    {
+        alert ("Your browser does not support AJAX!");
+        return;
+    }
+    var storeurl="/uwps/UpdateList?gameCollectionType=Wish_List&actionType=checkgame";
+        storeurl=storeurl+"&gameId="+skuid;
+        
+        xmlstorehttp.open("POST",storeurl,true);
+        document.getElementById("wishlistspan").innerHTML="<img src='"+getAssetPath()+"ajax-loaderbrowse.gif'/>";
+        if(document.getElementById("gamelistspan").innerHTML!="")
+        {
+        document.getElementById("gamelistspan").innerHTML="<img src='"+getAssetPath()+"ajax-loaderbrowse.gif'/>";
+        }
+        xmlstorehttp.onreadystatechange=function handleServerResponse()
+                {  
+                    if(xmlstorehttp.readyState==4)
+                     {
+                            
+                            var response = xmlstorehttp.responseText;
+                            var xmlobject = (new DOMParser()).parseFromString(response, "text/xml");
+                            
+                            var wishlist = xmlobject.getElementsByTagName('GameExist')[0].firstChild.nodeValue;
+                            var gamelist = xmlobject.getElementsByTagName('GameList')[0].firstChild.nodeValue;
+                            var released = xmlobject.getElementsByTagName('IsReleased')[0].firstChild.nodeValue;
+                            if(wishlist=="success")
+                            {
+                            document.getElementById("wishlistspan").innerHTML="Remove from Wish List";
+                            }
+                            if(wishlist=="failure")
+                            {
+                            document.getElementById("wishlistspan").innerHTML="Add to Wish List";   
+                            }
+                            if(released=="success")
+                            {
+                            if(gamelist=="success")
+                                {
+                                document.getElementById("gamelistspan").innerHTML="Remove from My Games";
+                                }
+                                else
+                                {
+                                document.getElementById("gamelistspan").innerHTML="Add to My Games";
+                                }
+                            }
+                            else
+                            {
+                            document.getElementById("addgamediv").style.display="none";
+                            }
+                    }}
+                xmlstorehttp.send(null);
+}
+
+function callOnload(skuid)
+{
+	var xmlstorehttp1=GetStoreXmlHttpObject();
+    if (xmlstorehttp1==null)
+    {
+        alert ("Your browser does not support AJAX!");
+        return;
+    }
+    	var storeurl="/uwps/UpdateList?gameCollectionType=Wish_List&actionType=checkgame";
+        storeurl=storeurl+"&gameId="+skuid;
+        //storeurl=storeurl+skuid';
+        
+        xmlstorehttp1.open("POST",storeurl,true);
+        document.getElementById("wishlistspan").innerHTML="<img src='"+getAssetPath()+"ajax-loaderbrowse.gif'/>";
+        if(document.getElementById("gamelistspan"))
+        {
+        	if(document.getElementById("gamelistspan").innerHTML!="")
+        	{
+       			 document.getElementById("gamelistspan").innerHTML="<img src='"+getAssetPath()+"ajax-loaderbrowse.gif'/>";
+        	}
+        }
+        xmlstorehttp1.onreadystatechange=function handleServerResponse()
+        {  
+                    if(xmlstorehttp1.readyState==4)
+                     {
+                            
+                            var response = xmlstorehttp1.responseText;
+                            var xmlobject = (new DOMParser()).parseFromString(response, "text/xml");
+                            var wishlist = xmlobject.getElementsByTagName('GameExist')[0].firstChild.nodeValue;
+                            var gamelist = xmlobject.getElementsByTagName('GameList')[0].firstChild.nodeValue;
+                            var released = xmlobject.getElementsByTagName('IsReleased')[0].firstChild.nodeValue;
+                            
+                            
+                            if(wishlist=="success")
+                            {
+                            	document.getElementById("wishlistspan").innerHTML="Remove from Wish List";
+                            }
+                            if(wishlist=="failure")
+                            {
+                            	document.getElementById("wishlistspan").innerHTML="Add to Wish List";   
+                            }
+                            if(released=="success")
+                            {
+                            	if(gamelist=="success")
+                                {
+                               		 document.getElementById("gamelistspan").innerHTML="Remove from My Games";
+                                }
+                                else
+                                {
+                                
+                                document.getElementById("gamelistspan").innerHTML="Add to My Games";
+                                }
+                            }
+                            else
+                            {
+                            	document.getElementById("gamelistspan").style.display="none";
+                            }
+                    }
+                }
+                xmlstorehttp1.send(null);
+
+}
+
+function isUserLoggedIn(){
+
+var uagent = navigator.userAgent.toLowerCase();
+if ((uagent.search('playstation 3') > -1)){
+	return false;
+}
+
+var s2sticket = readCookie("PSNS2STICKET");
+var ticket = readCookie("TICKET");
+var userinfo = readCookie("userinfo");
+var psqasi=readCookie("ps-qa.si");	
+	if(psqasi && userinfo && s2sticket && ticket){
+		return true;
+	}
+	else{
+		return false;
+	}
+}
+/*Omniture Code Function*/
+function ClickWTB(obj,eventVal)
+
+   {
+
+      s.events=eventVal;
+
+      s.linkTrackEvents=eventVal;
+      
+      s.linkTrackVars='events';
+      
+      
+
+      s.tl(obj,'o','WTB');
+
+   }
+   
+   		var szURLHeader = document.URL;
+		var indHeader = szURLHeader.indexOf("=");            
+        var splitPartHeader = "";		 
+		var indexOfQuesHeader = szURLHeader.indexOf("?"); 		 
+	    if(indHeader != -1){
+            var indPlus1 = indHeader + 1;
+            var indPlus3 = indHeader + 4;           
+            splitPartHeader = szURLHeader.substring(indPlus1,indPlus3);
+            
+            }  
+		 
+		 
+		 if(indexOfQuesHeader != -1){
+		 var toBReplaced = szURLHeader.substring(indexOfQuesHeader,szURLHeader.length);
+		 szURLHeader = szURLHeader.replace(toBReplaced, "");		 
+		 }
+		 
+		componentListHeader = szURLHeader.split('/');	
+		var reqStringHeader = "";
+		for(var j=componentListHeader.length-3; j>0; j--) {
+		if(reqStringHeader =="") {
+		reqStringHeader = componentListHeader[componentListHeader.length-j];
+		}
+		else {
+		reqStringHeader = reqStringHeader+"/"+componentListHeader[componentListHeader.length-j];
+		}		
+		}		
+		var newListHeader = reqStringHeader.split("/");		
+		for(var i=newListHeader.length; i>0; i--) {		
+		}		
+		var sectionNameHeader = "";
+		var sectionProp6Header = "";
+		var sectionProp7Header = "";
+		var sectionProp8Header = "";
+		var sectionProp9Header = "";
+		var pageNameValHeader = "";
+		var pageTypeHeader = "";
+		var sectionProp21Header = "";		
+		if(newListHeader.length !=null && newListHeader.length >0 ){
+			sectionNameHeader = newListHeader[0];	
+			sectionNameHeader=sectionNameHeader.toUpperCase();			
+			if(newListHeader[1] !=null){			
+				sectionProp7Header = newListHeader[1];
+				sectionProp7Header=sectionProp7Header.toUpperCase();
+				pageNameValHeader = sectionNameHeader+"/"+sectionProp7Header ;				
+			}
+				if(newListHeader[2] !=null){
+					sectionProp8Header = newListHeader[2];
+					sectionProp8Header=sectionProp8Header.toUpperCase();
+					pageNameValHeader = pageNameValHeader+"/"+sectionProp8Header ;					
+				}
+					if(newListHeader[3] !=null){
+						sectionProp9Header = newListHeader[3];
+						sectionProp9Header=sectionProp9Header.toUpperCase(); 
+						pageNameValHeader = pageNameValHeader+"/"+sectionProp9Header ;	 		
+					}			
+		}	
+			if(pageNameValHeader !=null || pageNameValHeader !=""){
+			pageNameValHeader = "PS/"+pageNameValHeader;
+			}
+			else {
+			pageNameValHeader = "PS";
+			}			
+			if(sectionProp7Header=="pagenotfound" || sectionNameHeader=="pagenotfound" || sectionProp8Header=="pagenotfound" || 			
+			sectionProp9Header=="pagenotfound" || sectionProp6Header=="pagenotfound" ){
+			pageTypeHeader = "ERROR_PAGE";
+			}			
+			if(sectionProp7Header=="INDEX.HTM" || sectionNameHeader=="INDEX.HTML"){
+				sectionNameHeader="PS";				
+			}		
+			
+			pageNameValHeader=pageNameValHeader.replace("/INDEX.HTM", "");
+            pageNameValHeader=pageNameValHeader.replace("#", ""); 	
+		
+   var prop18Val = "";
+   function ClickOmniTrack(obj,eventVal,secName)
+
+   {	
+   try
+   {
+   		if(prop18Val !=""){
+   		prop18Val = "/"+prop18Val;
+   		}
+      secName = secName+"/"+pageNameValHeader ;
+      s.events=eventVal;
+
+      s.linkTrackEvents=eventVal;
+      
+      eventValProp17 = eventVal;    
+      
+      s.linkTrackVars='events'; 
+      
+      s.pageName= secName;
+      s.tl(obj,'o',secName); 
+       }catch(error)
+       {
+      
+       
+       }
+      
+     
+   }
+
+   var pageNotFound = "";
+   var titleName = "";
+   var genreNameis = "";
+   
+function echeck(str,emailbox){	
+	var strObject=document.forms["emailForm"];
+	var at="@";
+	var dot=".";
+	var under="_";
+	var hyphen="-";
+	var count=0;
+	var El=str.length;
+	var firstelement=str.charAt(0);	
+	var lastelement=str.charAt(El-1);
+	var fat=str.indexOf(at);			
+	var fdot=str.indexOf(dot);	
+	var funder=str.indexOf(under);		
+	var fhyphen=str.indexOf(hyphen);
+	var lat=str.lastIndexOf(at);	
+	var ldot=str.lastIndexOf(dot);	
+	var lunder=str.lastIndexOf(under);		
+	var lhyphen=str.lastIndexOf(hyphen);
+	
+	if (!isNaN(firstelement)||firstelement=="@"||firstelement=="."||firstelement=="_"||firstelement=="-"){
+		return false;
+	}
+	else if (!isNaN(lastelement)||lastelement=="@"||lastelement=="."||lastelement=="_"||lastelement=="-"){		
+		strObject.value = "";
+		return false;
+	}
+	else if (fat== -1 || fdot== -1){		
+		strObject.value = "";
+		return false;
+	}
+	else if (fat!==lat|| str.charAt(fdot+1)=="." || str.charAt(fhyphen+1)=="-" || str.charAt(funder+1)=="_"){
+		strObject.value = "";
+		return false;
+	}
+	else if (str.charAt(fat-1)=="."||str.charAt(fat-1)=="_"||str.charAt(fat-1)=="-" || str.charAt(fat+1)=="."||str.charAt(fat+1)=="_"||str.charAt(fat+1)=="-"){		
+		strObject.value = "";
+		return false;
+	}
+	else if (str.charAt(fat+2)=="."||str.charAt(fat+2)=="_"||str.charAt(fat+2)=="-"){		
+		strObject.value = "";		
+		return false;
+	}
+	else if (ldot ==El || ldot==El-1 || ldot<El-4){		
+		strObject.value = "";
+		return false;
+	}
+	else if (str.lastIndexOf(dot)+3 > str.length){
+		strObject.value = "";		
+		return false;
+	}
+	else if (str.lastIndexOf(dot)+3 > str.length){
+		strObject.value = "";
+		return false;
+	}
+	else{		
+		for (i=lat+1; i<El; i++){
+			if(!isNaN(str.charAt(i))||str.charAt(i)=="-"||str.charAt(i)=="_" ||str.charAt(i)=="." && str.charAt(i+1)=="."){
+				strObject.value = "";
+				return false;
+			}
+			else{
+				if(str.charAt(i)=="."){
+					count++;
+					if(count==3){
+						strObject.value = "";
+						return false;
+					}
+				}
+			}
+		}
+		for(i=0; i<lat; i++){
+			if(str.charAt(i)=="." && str.charAt(i+1)=="-"||str.charAt(i)=="." && str.charAt(i+1)=="_"||str.charAt(i)=="." && str.charAt(i+1)=="."){
+				strObject.value = "";
+				return false;
+			}
+			else if(str.charAt(i)=="-" && str.charAt(i+1)=="."||str.charAt(i)=="-" && str.charAt(i+1)=="_"||str.charAt(i)=="-" && str.charAt(i+1)=="-"){
+				strObject.value = "";				
+				return false;
+			}
+			else if(str.charAt(i)=="_" && str.charAt(i+1)=="."||str.charAt(i)=="_" && str.charAt(i+1)=="-"||str.charAt(i)=="_" && str.charAt(i+1)=="_"){
+				strObject.value = "";				
+				return false;
+			}
+			
+		}
+	return true;					
+	}
+}
+
+/* function setTitle(){
+var title=document.title;
+//document.write(title);
+document.getElementById('title1').value = title;
+
+}*/
+
+
+	function checkMultipleEmail(c_s_list,seperator){
+	var p=/[ !#~`$^%&*()+=?;{}":-]/;
+	//var p1=/[ !#~`$^%&*()+=?,{}":-;]/;
+    if(c_s_list.lastIndexOf(",")+1==c_s_list.length)
+        c_s_list=c_s_list.substring(0,c_s_list.length-1);
+    var arr = c_s_list.split(seperator); 
+
+    for (var i = 0, l = arr.length; i < l; i++){ 
+        var str = trimString(arr[i]); 
+    if(!emailIdCheckOne(str))
+	return false;                  
+    }
+	if(p.test(document.getElementById('frd').value)) {
+		return false;
+	}
+	/*else if(p1.test(document.getElementById('Uremail').value)) {
+		return false;
+	}*/
+    return true;
+	}
+	function isValidEmailAddress(emailAddress) {
+var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
+return pattern.test(emailAddress);
+}
+
+function setURL(){
+	var url=window.location;	
+	document.getElementById('url').value = url;
+}
+function sform(){	
+	setTitle();	
+	setURL();	
+	if(checkFrndEmail() == true && checkUrEmail() == true && checkName() == true){	
+		var str3=document.getElementById("sname").value;
+		var str1=document.getElementById("Uremail").value;
+		var fr = document.getElementById("frd").value;	
+		var ti = document.getElementById("title1").value;
+		var ur = document.getElementById("url").value;
+		var param = "frd="+fr+"&Uremail="+str1+"&sname="+str3+"&title1="+ti+"&url="+ur;
+	
+	
+			$.ajax({
+                type: "POST",
+                url: "/uwps/em",
+                data: param,
+                cache: true,
+                success: function(data){            
+					document.getElementById("shareDetails_msg").style.display = "block";
+					document.getElementById("emailMsg").innerHTML = data;
+					document.getElementById("shareDetails").style.display = "none";
+					document.getElementById("loadingsharethis").style.display = "none";
+				}
+                });
+				document.getElementById("frd").value="";
+				document.getElementById("Uremail").value="";
+				document.getElementById("sname").value="";
+				document.getElementById("loadingsharethis").style.display = "block";
+				document.getElementById("divCont1").style.display = "none";
+				document.getElementById("divCont2").style.display = "block";
+	}
+	}	
+
+
+$(document).ready(function(){
+  $("#backtoshare").click(function(){
+  $("#shareDetails_msg").hide();
+  $("#shareDetails").show();
+  $("#divCont1").show();
+  $("#divCont2").hide();
+  });
+
+  $("#overlayShare").click(function(){
+  $("#black_overlay").show();
+              $("#shareDetails").show();
+               $("#shareDetails_msg").hide();
+          $("#divCont1").show();
+                
+  });
+});
+
+	
+function checkFrndEmail(){
+	var str=document.getElementById("frd").value;
+	
+	var b = checkInputField(str);
+	var b0=checkMultipleEmail(str,",");
+	if(str.lastIndexOf(",")+1==str.length)
+        str=str.substring(0,str.length-1);
+    var arr = str.split(","); 
+    if(arr.length>5) {
+         document.getElementById('bdiv1').style.display="block";
+         document.getElementById('bdiv1').innerHTML="Please check the number of email addresses(only 5 allowed at a time)";
+         document.frm.frd.focus();
+         return false;
+    }
+	
+		document.getElementById('bdiv1').style.display="block";
+		if(b0==false){
+		     document.getElementById('bdiv1').innerHTML="Please check your Friend's Email";
+		     document.frm.frd.focus();
+		     return false;
+		}else if(b==false){
+		    document.getElementById('bdiv1').innerHTML="Please check your Friend's Email Special Characters are not allowed";
+		    document.frm.frd.focus();
+		    return false;
+		}else{
+		    document.getElementById('bdiv1').style.display="none";
+		    return true;
+	}
+	 
+}
+function checkUrEmail(){
+	var str1=document.getElementById("Uremail").value;
+	var b1 = checkInputField(str1);
+	
+	var b00=isValidEmailAddress(str1);
+	
+	if(b00!=true || b1!=true){
+		if(b00==false){
+		document.getElementById('bdiv2').innerHTML="Please check Your Email";
+		document.frm.Uremail.focus();}
+		else if(b1==false){		
+		document.getElementById('bdiv2').innerHTML="Please check Your Email Special Characters are not allowed";
+		document.frm.Uremail.focus();}
+		document.getElementById('bdiv2').style.display="block";
+	}
+	
+	else{
+		document.getElementById('bdiv2').style.display="none";
+		return true;
+
+	}
+	
+}
+function checkName(){
+	
+	var str3=document.getElementById("sname").value;
+	return checkForProfanity(str3);
+	
+}
+
+function checkInputField(str){
+	if(str.indexOf('<')!=-1){
+		//alert("Special characters are not allowed");
+		return false;
+	}
+	else if(str.indexOf('>')!=-1){
+		//alert("Special characters are not allowed");
+		return false;
+	}
+	else{
+	//document.getElementById('bdiv1').style.display = "none";
+	return true;
+	}
+}
+
+function nValidate(){
+
+	var regexNum = /\d/;
+	var p=/[@!#~`$^%&*()+=?.,{}":;_-]/;
+var regexLetter = /^[a-zA-z]/;
+//var punct= /\! ' # S % & ' ( ) * + , - . / : ; < = > ? @ [ / ] ^ _ { | } ~/;
+
+if(regexNum.test(document.getElementById('sname').value) || !regexLetter.test(document.getElementById('sname').value) || p.test(document.getElementById('sname').value)) {
+
+return false;
+}
+return true;
+}
+
+
+function checkForProfanity(temp) {
+var k = 20;
+var isProfane = new makeArray(k);
+var word = new makeArray(k);
+temp = temp.toLowerCase();
+word[1] = "shit";
+word[2] = "nerd";
+word[3] = "stupid";
+word[4] = "ass";
+word[5] = "cunt";
+word[6] = "suck";
+word[7] = "pussy";
+word[8] = "cock";
+word[9] = "cum";
+word[10] = "penis";
+word[11] = "nuts";
+word[12] = "dick";
+word[13] = "fuck";
+word[14] = "ass";
+word[15] = "fag";
+word[16] = "idiot";
+word[17] = "asshole";
+word[18] = "bitch";
+word[19] = "gimp";
+word[20] = "freak";
+for (var j = 1; j <= k; j++) {
+isProfane[j] = temp.indexOf(word[j]);
+}
+for (var j = 1; j <= k; j++) {
+   if (isProfane[j] != -1) {  
+      document.getElementById('bdiv3').innerHTML="Please refrain from using the word \'"+word[j]+"\'.";
+       alert(document.getElementById('bdiv3').innerHTML);
+	  document.getElementById("sname").value = "";
+      j = k + 1;
+      document.getElementById("sname").focus();
+      return false;
+       }
+  
+}
+return true;
+}
+function makeArray(n) {
+   this.length = n
+   for (var i = 1; i<=n; i++) {
+       this[i] = new String();
+   }
+   return this
+}
+
+function redirectDeeplinkingUrl(urllink){
+	var deeplinkname=urllink.substr(urllink.indexOf('#'),urllink.length);
+	var changeUrl=urllink.substr(0,urllink.indexOf('#'));
+	if(window.location.href.indexOf("usplaystation")==-1){
+		if(changeUrl.indexOf("index.htm") != -1)
+		{
+			changeUrl= changeUrl.replace("index.htm" , "");
+		}
+	}
+	var newurl='';
+	if(deeplinkname!=''){
+		var checkUrl=window.location.href;	
+		newurl=changeUrl+"?feature="+deeplinkname;			
+ 		if(checkUrl.indexOf('/usplaystation/')!=-1){  
+ 			newurl="/usplaystation"+newurl;	  	 																			
+			window.location=location.protocol+"//"+window.location.host+newurl;
+		}
+		else{
+			window.location=location.protocol+"//"+window.location.host+newurl;
+		}			
+	}	
+}
+function forwardLink(linkForward){
+	window.location = getBaseURL()+linkForward;
+}	
+
+	
+function restoreDownloadCookie(productType,storeProductId){
+	var cookieValue=readCookie('DownloadToSystem');
+	if(cookieValue)
+	{
+		if(cookieValue == 'Yes')
+		{
+			document.getElementById("mediaclass").style.display="none";
+			document.getElementById("black_overlay1").style.display="none";
+		}
+		else if(cookieValue == 'No')
+		{
+			document.getElementById("mediaclass").style.display="block";
+			document.getElementById("black_overlay1").style.display="block";
+		}
+	}
+	else
+	{
+		showMediaGo();
+		
+	}
+}
+function cookieDownSystemValue(valueSystem,productStoreId,productType){
+
+    if(valueSystem=="Yes"){  
+        document.getElementById("mediaclass").style.display="none";
+		document.getElementById("black_overlay1").style.display="none";		  
+		var cookieDownload=readCookie('DownloadToSystem');	
+		if(cookieDownload){
+			overwriteCookie('DownloadToSystem',valueSystem);
+		}
+		else{	
+			createCookie('DownloadToSystem',valueSystem);
+			window.location='psns:browse?'+productType+'='+productStoreId;					
+		}
+	}	
+}
+function checkCookiesDownload(storeProductId,productType){
+    var cokiesCheck=readCookie("DownloadToSystem");   
+    if(cokiesCheck=="Yes"){            
+            document.getElementById("mediaclass").style.display="none";
+			document.getElementById("black_overlay1").style.display="none"; 
+			window.location ='\psns:browse?'+productType+'='+storeProductId; 									
+    }else{
+     showMediaGo();
+     }
+}
+
+function openSystemBuyNowOverlay(skuId)
+{
+		
+
+               var url=document.location.href;
+                if(url.indexOf('?')!= -1)
+                {
+                    if(url.indexOf('=')!= -1)
+                    {
+                        var urlParam=url.split('?')[1].split('=')[0];
+                        var urlValues=url.split('?')[1].split('=')[1].replace('#',''); 
+                        if(urlValues=="ci" && urlParam == "retailerOverlay")
+                        {
+                       		floodLightShow = "FloodLightShow2";
+                        	
+                            openCIOverlay(skuId, '2732');
+                            
+                           
+                        }
+                    }
+                }
+ }
+ 
+  function openGameBuyNowOverlay()
+		 {
+					 
+					var ctaCheck = document.getElementById("buyNowText").innerHTML;
+					if(ctaCheck != "")
+					{
+   							var url=document.location.href;
+   							if(url.indexOf('?')!= -1)
+   							{
+   	  							if(url.indexOf('=')!= -1)
+   	  							{
+   	  								var urlParam=url.split('?')[1].split('=')[0];
+   	  							
+        							var urlValues=url.split('?')[1].split('=')[1].replace('#',''); 
+           							if(urlValues=="ci" && urlParam == "retailerOverlay")
+           							{
+           								openCIOverlay(gameSKUId, '2732');
+           								
+  	       							}
+  	      						}
+  	    					}
+  	    			}
+  	    	
+		 }
+
+
+
+
+
+/*this function use in flash*/
+function openShareOverlay(){
+	document.getElementById("shareDetails").style.display="block";
+	document.getElementById("shareDetails_msg").style.display="none";
+	document.getElementById("divCont1").style.display="block";
+	$('.share-this').toggle();
+}
+
+/* Code for Age Gate Redirection from Game Detail Page */
+function redirectAgeGate(currentGameESRB,isAgeGated)
+{
+var check=isUserAllowedAgeGate(); 
+
+if(isAgeGateRated(currentGameESRB ,isAgeGated) && check=="false")
+{
+
+	window.location=location.protocol + "//"+ window.location.host + globalSiteName+"agegate/index.htm";
+}
+else if(isAgeGateRated(currentGameESRB,isAgeGated) && check=="nc")
+{
+
+	overwriteCookie("ageGateReturnURL",window.location.toString());
+	window.location=location.protocol + "//"+ window.location.host + globalSiteName+"agegate/index.htm";
+}
+}
+
+function getUserRegistered(val){ 
+	var value = val;	
+	var serverName=window.location.host;
+	
+    var servletURL=window.location.protocol+"//"+serverName+"/uwps/UserRegisterJoinNow"; 		
+    var status=false;
+    $.ajax({
+    type: "POST",
+    url: servletURL,   
+    async:   true,
+    success: function(result){        
+    }
+    });     
+}
+
+function getTitleValidate(objectValue){
+if(objectValue.indexOf("<sup>&reg;")!=-1){
+ objectValue=objectValue.replace("<sup>&reg;", "<sup>&reg;</sup>");
+ return objectValue;
+ }else{
+ return objectValue; 
+ }
+}
+
+}
+/*
+     FILE ARCHIVED ON 16:12:02 Aug 26, 2010 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 14:38:57 Aug 05, 2021.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 899.115
+  exclusion.robots: 0.166
+  exclusion.robots.policy: 0.152
+  RedisCDXSource: 25.35
+  esindex: 0.009
+  LoadShardBlock: 838.28 (3)
+  PetaboxLoader3.datanode: 1049.394 (4)
+  CDXLines.iter: 29.542 (3)
+  load_resource: 757.83
+  PetaboxLoader3.resolve: 166.595
+*/

@@ -1,0 +1,78 @@
+#blackHeader_bar {border-top:38px solid #000;width: 1400px;}
+#blackHeader_bar .toplogo img {position:absolute;top:0;right:0;}
+.moduleSpace{height:10px !important;width:859px;cursor:default;}
+#marqueeWrap,#background,#header,#navigation {display:none !important;}
+#blackHeader_bar {border-top:38px solid #000;width:100%;}
+#blackHeader_bar .toplogo img {position:absolute;top:0;right:0;}
+.moduleSpace,#slideObject {height: 0px !important;overflow: hidden;}
+#marqueeWrap,#background,#header,#navigation {display:none !important;height:0 !important;}
+#console.psn #main .future #news.browser{display:none;}
+#console.psp.well_connected #main .store_skype,#console.ps2.complete_system #main .system_dvd,#console.psn.gaming #main .Future_sec .future {page-break-after: always;}
+#console.ps3.scea_contact #main .address_section,#console.ps3 #main #fully_loaded,#console.ps3.psnstore #main #bg_console .console.psn_mediago,#console.ps3.scea_section #main #module_a.scea_office,#console.psp #main .console.two_col.clearfix,#main div.browser.games.nobackground{page-break-before:always;page-break-before:left;}
+#wrap {margin:0 auto !important;padding:0 !important;width: 900px !important;}
+#home #hardware {background:none;margin:0 auto;border-top: 10px solid #2D2D2D;}
+/*Reduce Home Hardware Height*/
+#home #hardware .ps3 a.linkblock, #home #hardware .games_media a.linkblock, #home #hardware .ps3 a.linkblock, #home #hardware .games_media a.linkblock:hover {display:block;height: 25px;width:245px;background:none;}
+#home #hardware .psp a.linkblock {display:block;height: 25px;width:250px;background:none;}
+#footer {background: none;margin:0 auto;padding:0;}
+#home #main h3,#main #psnPromo {clear: both;}
+#console.ps3 #main #module_c.console {padding-top:40px;}
+#console.ps3 #main #module_b h3{margin-top: 100px;}
+#console.ps3 #main #module_b ul {margin-top: -90px;}
+#footer {clear: both !important;display:block !important;}
+#main #head #peer{display:none  !important;}
+/*PSN Pages*/
+.network_exclusive {clear: both !important;}
+#console.ps3.psnstore #main #bg_console .console.anywhere {margin-bottom: 30px;}
+#console.psn.network #main .future .playstation_tv,#console.psn.network #main .future .left_image {padding-top: 5px !important;}
+#console.psn.network #main .future .layer_picture_abs {top: 7px !important;}
+#console.psn.network #main .future .cartoon_picture {clear: both;position: none !important;width: 0px !important;}
+#console.psn.network #main .future .cartoon_picture_abs {position: relative !important; top: 0 !important; left: -24px !important;}
+#console.psn.network #main .future .future_left.contentbox {margin-left: 200px !important;}
+img.blog-png {display: none;}
+/*Corporate*/
+#main .psnStorebg img,#carouselContainer{display: none !important;}
+#main ul.features_nav .open,#main ul.features_nav .closed {display: block !important;}
+#console.ps3.systems.store #main .store_intro h3,#main .browser.dynamicCollection,#console.systems #main #head .psn_store_nav li a {margin: 0 !important;}
+#console.ps3.systems.store #main .store_intro, #console.ps3.systems.store #main .store_intro_sub{float: none !important;clear:both !important;}
+#console.ps3.systems #main .systems_section .section_header,#console.ps3.systems #main .systems_section .section_content {float: none !important;}
+.alt #content, .search #content,.systemFaqps3 #sidebar, #playstation3 #sidebar, .alt #sidebar,#playstation3 #wrap .boxshadow #main #content.corporate,#playstation3 #wrap .boxshadow #main #sidebar.narrow {float: inherit;display: table-cell;vertical-align: top;padding-bottom: 30px;}
+/*PS2*/
+#console.psn #main #news {height: 400px !important;min-height: 400px !important;}
+#main .browser ul.tabs {display: none !important;height: 0 !important;}
+#console.ps2 #main #accsys.games  {margin-top: 0px !important;display: block;float: none;clear: both;}
+#console.overview .sys_accessories {padding-top:  120px;display: block;float: none;clear: both;}
+#console.ps2 #main .endless_entertainment {height: 300px !important;}
+#console.ps2 #main div.colored ul {margin-top: -100px !important;}
+#console.ps2 #main .endless_entertainment h3 {padding-top: 70px !important;}
+#console.ps2 #main .endless_entertainment img {display: none !important;}
+#console #main .console,#console.psn.original_programming #main .feature_programming h3 {padding-top:2px !important;}
+.feature.psnHomeAvatarop,#console.psn.original_programming #main .feature_programming {padding-bottom: 5px !important;}
+#console.psn.original_programming #main .feature_promo .feature_description {margin: 20px 0 0 0 !important;}
+.closed{display: block !important;visibility: visible !important;}
+#console.psp #main #module_c img.left {top: 220px;!important;}
+#console.psp #main #module_b ul li,#console.psp #main #module_c {margin-top: -100px !important;}
+#console.psp.well_connected #main #head .psp_entertainment {height: 370px !important;}
+img.left{border:1px solid #FF0000;}
+
+/*
+     FILE ARCHIVED ON 16:12:02 Aug 26, 2010 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 14:40:24 Aug 05, 2021.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  PetaboxLoader3.datanode: 613.451 (4)
+  captures_list: 1038.065
+  load_resource: 266.04
+  exclusion.robots.policy: 0.138
+  exclusion.robots: 0.147
+  CDXLines.iter: 21.107 (3)
+  esindex: 0.012
+  LoadShardBlock: 888.203 (3)
+  RedisCDXSource: 123.133
+  PetaboxLoader3.resolve: 513.478 (4)
+*/

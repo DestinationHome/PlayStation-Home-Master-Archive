@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/">
+	<channel>
+		<title>RSS Feed</title>
+		<description>Offline RSS feed</description>
+		<item>
+			<media:content url="http://scej-home.playstation.net/j.home/event/for090108/contents/ev_sq_p_menupad1_081219.dds" medium="image" height="912" width="512" duration="86400" />
+			<media:title type="html">menupad_1</media:title>
+			<media:description>for events.</media:description>
+			<media:thumbnail url="http://scej-home.playstation.net/j.home/event/for090108/contents/ev_sq_p_menupad1_081219.dds" width="512" height="912" />
+			<media:category type="html">Advert</media:category>
+		</item>
+
+	</channel>
+</rss>

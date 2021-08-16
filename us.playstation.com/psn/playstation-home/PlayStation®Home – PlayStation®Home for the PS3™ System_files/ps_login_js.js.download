@@ -1,0 +1,417 @@
+var _____WB$wombat$assign$function_____ = function(name) {return (self._wb_wombat && self._wb_wombat.local_init && self._wb_wombat.local_init(name)) || self[name]; };
+if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; return this; } }
+{
+  let window = _____WB$wombat$assign$function_____("window");
+  let self = _____WB$wombat$assign$function_____("self");
+  let document = _____WB$wombat$assign$function_____("document");
+  let location = _____WB$wombat$assign$function_____("location");
+  let top = _____WB$wombat$assign$function_____("top");
+  let parent = _____WB$wombat$assign$function_____("parent");
+  let frames = _____WB$wombat$assign$function_____("frames");
+  let opener = _____WB$wombat$assign$function_____("opener");
+
+var user='';
+   var selectItem1 = "";
+   var selectItem2 = "";
+   var selectItem3 = "";
+   var portableId = "";
+   var friendscallcount="0";
+function returnLoginFragment(){
+	var psnLoginURL = "https://web.archive.org/web/20100826163117/https://store.playstation.com/external/index.vm?returnURL="+location.protocol +"//"  +  location.host + "/uwps/PSNTicketRetrievalGenericServlet";
+	var onclick = '$(\".logIn\").toggle();$(\"iframe#signin-iframe\").attr(\"src\",\"'+psnLoginURL+'\")';
+	var loginString = "";
+	loginString = loginString + "<div id='profileOut'><ul class='clearfix'><li id='psnlogo' class='logo_active'></li><li class='login'>";
+	loginString = loginString + "<a href='#' onclick='"+onclick+"' id='overlayExampleAddGame'><strong>LOG IN</strong></a></li>";
+	loginString = loginString + "<li class='joinnow' style='position:relative;'><a href='https://web.archive.org/web/20100826163117/https://store.playstation.com/accounts/register/beginNewAccountRegistrationFlow.action' target='_blank'>JOIN NOW</a></li></ul><div class='right'></div></div><div id='profile_dialog' class='clearfix' style='display: none;'></div>";
+	return loginString;
+}
+function getGapMembers(){
+	var gap=readCookie("gap");
+	var gapCookie='f';
+	if(gap!='""' && gap!= ''){
+     	gapCookie='t';
+    }    
+	return gapCookie;
+}
+function getHostName(){return window.location.protocol+"//"+window.location.host+"/";}
+function getProtocolName(){	return window.location.protocol;}
+function getUserInfoKeyValue(userInfo,key){	
+	var userInfoValues=userInfo.split(",");
+	for(i = 0; i < userInfoValues.length; i++){
+    	var pair=userInfoValues[i].split("=");
+        if(pair[0]==key){
+            	return pair[1];
+        }
+    }
+}
+function profileSignIn(){
+	var returnURL=queryString('returnURL');
+
+	if(bIsPS3.toString()=="true"){
+		window.location.href = window.location.protocol+"//"+"us.playstation.com/psn/signin/index.htm?returnURL="+window.location.href;
+	}else{
+		
+		if(returnURL){
+			
+ 			var url =location.protocol+"//" + location.host + "/psn/signin/index.htm?returnURL="+returnURL;
+ 			parent.location = url;
+ 		}
+		else{
+
+	if(bIsPS3.toString()=="true"){
+		window.location.href = window.location.protocol+"//"+"us.playstation.com/psn/signin/index.htm?returnURL="+window.location.href;
+	}else{
+			if(isHome!="true"){		
+ 				document.getElementById("black_overlay").style.display="none";
+				document.getElementById("overlay").style.display="none";
+			}	
+				
+ 			document.getElementById("black_overlay1").style.display="block";
+ 			document.getElementById("overlayLogin").style.display="block";
+ 			//document.getElementById("signin-iframe").src="https://web.archive.org/web/20100826163117/https://store.playstation.com/external/index.vm?returnURL="+location.protocol +"//"  + location.host + "/uwps/PSNTicketRetrievalGenericServlet";  
+ 			document.getElementById("signin-iframe").src="/uwps/psnlogin.jsp";
+ 		}
+ 		
+ 	}
+ 	
+ 	
+ 	}
+}
+function closeOverlay1(){document.getElementById("black_overlay1").style.display="none";}
+
+var network='false';
+function getXmlHttpRequestObject() {
+	if (window.XMLHttpRequest) {
+		return new XMLHttpRequest(); //Not IE
+	} else if(window.ActiveXObject) {
+		return new ActiveXObject("Microsoft.XMLHTTP"); //IE
+	} 
+	else {}
+}
+function supportNetworkIndicator() {	
+	if (receiveReq.readyState == 4) {//Check to see if the XmlHttpRequests state is finished.
+		//Set the contents of our span element to the result of the asyncronous call.
+		var response=receiveReq.responseText;		
+		if (typeof DOMParser == "undefined") {
+			DOMParser = function () {}
+			DOMParser.prototype.parseFromString = function (str, contentType) {
+				if (typeof ActiveXObject != "undefined") {
+					var d = new ActiveXObject("MSXML.DomDocument");
+					d.loadXML(str);
+					return d;
+				} else if (typeof XMLHttpRequest != "undefined") {
+					var req = new XMLHttpRequest;
+					req.open("GET", "data:" + (contentType || "application/xml") +
+									";charset=utf-8," + encodeURIComponent(str), false);
+					if (req.overrideMimeType) {
+						req.overrideMimeType(contentType);
+					}
+					req.send(null);
+					return req.responseXML;
+				}
+		}
+	}
+	var xmlobject = (new DOMParser()).parseFromString(response, "text/xml");
+	root = xmlobject.getElementsByTagName('result')[0].firstChild.nodeValue;
+	if(root=='true'){		
+       	network=true;
+    }
+ }
+}
+  
+var receiveReq = getXmlHttpRequestObject();
+var url=location.protocol +   "//" + location.host+"/uwps/NewtorkIndicatorInformation";
+//If our XmlHttpRequest object is not in the middle of a request, start the new asyncronous call.
+//if (receiveReq.readyState == 4 || receiveReq.readyState == 0) {
+	//receiveReq.open("GET", url, true);
+	//receiveReq.onreadystatechange = supportNetworkIndicator; 
+	//receiveReq.send(null);
+
+//}
+function createRequiredSSOCookies(){ 
+	var serverName=window.location.host; 
+	var servletURL=location.protocol +"//"  +serverName+"/uwps/RlsToPsSSO"; 
+ 	var status=false;
+ 	$.ajax({type: "POST",url: servletURL, async:false, error:function(){},success: function(result){ if(result!="success")status=true;}});  
+    return status;
+}
+
+if(readCookie("ps-qa.si")){	
+	var friendsXMLCookieText=readCookie("friends");
+
+	if(friendsXMLCookieText=="Or9aQdDtQJ0"){
+  		fetchFriendsList();
+	}
+}
+function checkFriendsXmlCookieStatus(){  
+
+	var serverName=window.location.host;  
+	var servletURL=window.location.protocol+"//"+serverName+"/uwps/FetchFriendsList?id="+Math.random();  
+   	$.ajax({type: "POST",async:false,url: servletURL,success: function(result){if(result=="CookieCreated"){getMovieName("profile_login").updateProfile();}}});     
+}
+function startFriendsXmlCookieSearch(){
+friendscallcount=parseInt(friendscallcount)+1;
+	if(readCookie("ps-qa.si")){
+		var friendsXMLCookieText=readCookie("friends");
+    	if(friendsXMLCookieText=="Or9aQdDtQJ0="){
+    	if(parseInt(friendscallcount)<2)
+			{
+    		checkFriendsXmlCookieStatus();
+    		setTimeout("startFriendsXmlCookieSearch()",15000);
+    		}
+    	} 
+	}
+}
+function getCookieValueFromServer(cookieName){  
+	var cookieValue="";
+	var serverName=window.location.host;
+	var servletURL=window.location.protocol+"//"+serverName+"/uwps/CookieHandler";
+	cookieValue = $.ajax({type: "POST",url: servletURL,async: false}).responseText;
+	return cookieValue;
+}
+
+function checkFriends(){
+
+ var serverName=window.location.host;
+ var servletURL=window.location.protocol+"//"+serverName+"/uwps/ReadFriendsDetails?id="+Math.random();
+	$.ajax({
+	 type: "POST",
+	 url: servletURL,
+	 async: true,
+	 cache: false,
+	 success:function(html){
+	 getMovieName("profile_login").updateProfile();
+	}});
+}
+	
+function del_cookie(name) {
+	document.cookie = name +
+	'=; expires=Thu, 01-Jan-70 00:00:01 GMT;';
+}
+
+function callFriendsXmlCookie(){
+ checkFriends();
+ //setTimeout("callFriendsXmlCookie()",5*60*1000);  
+ setTimeout("callFriendsXmlCookie()",20*60*1000);            
+}
+
+function getProfileXML(){
+	var psqasi=readCookie("ps-qa.si");	
+	if(psqasi){						
+		var noFriends=readCookie("noOfFriends");		
+		callFriendsXmlCookie();	
+		var sceaUserInfo ="";
+		var RLSEnrole ="";
+		var betaIdx ="";
+		var betaUrl = "";	
+		var user ="";
+		var avatar ="";
+		/*if(bIsPS3.toString()=="true"){
+			sceaUserInfo = readCookie("SCEAuserinfo");
+			RLSEnrole = getSceaUserInfoKeyValue(sceaUserInfo,"psRLS");
+			user = getSceaUserInfoKeyValue(sceaUserInfo,"psHandle");
+			avatar = getSceaUserInfoKeyValue(sceaUserInfo,"psAvatar");
+			betaIdx = getSceaUserInfoKeyValue(sceaUserInfo,"psBeta"); 
+			betaUrl = "https://web.archive.org/web/20100826163117/http://stage-psnbeta.us.playstation.com";
+		} else {*/	
+			sceaUserInfo=getCookieValueFromServer("userinfo");
+			RLSEnrole=getUserInfoKeyValue(sceaUserInfo,"isRetailRoyalityMember");
+			user = getUserInfoKeyValue(sceaUserInfo,"handle");
+			avatar=getUserInfoKeyValue(sceaUserInfo,"avatar");
+			betaIdx=getUserInfoKeyValue(sceaUserInfo,"isBetaMember"); 
+			betaUrl = getUserInfoKeyValue(sceaUserInfo,"BetaSiteURL");			
+		//}	   
+	 			
+       	var newHostName=window.location.host;      	
+		var friendsXML = readCookie("friends");		
+		friendsXML=unescape(friendsXML);
+		friendsXML=friendsXML.replace(/\+/gi," ");
+		var beta="";
+	    if(betaIdx!='""' && betaIdx=="true" ){beta='t';}
+	    var gapMember=getGapMembers();
+	    if(!noFriends)noFriends=0;	
+	    if(friendsXML && friendsXML!="undefined"){
+	    	if(friendsXML.charAt(0)=="\"")
+				friendsXML=friendsXML.substr(1);
+			if(friendsXML.charAt(friendsXML.length-1)=="\"")
+				 friendsXML=friendsXML.substr(0,friendsXML.length-1);
+  			}
+		    
+        }
+       
+       	//if(avatar=="" || avatar.indexOf("DefaultAvatar")!=-1 || avatar.indexOf("defaultavatar")!=-1)
+    	
+    		if(avatar=="" && avatar){
+    			avatar=ucmroot+"groups/public/documents/webasset/defaultavatar.png";
+    		}
+    		else{
+    			avatar=location.protocol +"//" +location.host+"/uwps/GetAvtarImage?avtar="+avatar;
+    			//avatar="groups/public/documents/webasset/defaultavatar.png";
+       		}
+    	var siteName="/usplaystation";
+    	var urlString = "";
+    	urlString = window.location.toString();
+		if(urlString.indexOf(siteName)==-1){siteName="";}
+		 var profileXML="";
+		  var ticket = readCookie("TICKET");
+		// if(psqasi)
+		// var s2sticket = readCookie("S2STICKET");
+		
+		// Changed cookie name -- Subodh Singh Mar-10-2010
+		var s2sticket = readCookie("PSNS2STICKET");
+		if(psqasi && user && sceaUserInfo && s2sticket && ticket)
+			profileXML=profileXML+"<signedIn on='true'></signedIn>";
+		else
+			profileXML=profileXML+"<signedIn on='false'></signedIn>";
+
+			profileXML=profileXML+"<learnMoreLink newWindow='true'><![CDATA[https://store.playstation.com/accounts/register/beginNewAccountRegistrationFlow.action]]></learnMoreLink>"+
+			"<signInLink>"+siteName+"/psn/signin/index.htm</signInLink>";
+
+			if(gapMember=="t")
+	    		profileXML=profileXML+"<gap id='true'>http://gap.us.playstation.com</gap>";
+			else
+				profileXML=profileXML+"<gap id='false'>#</gap>";
+				
+			if(RLSEnrole=="true")
+				profileXML=profileXML+"<rls id='true'>http://rls.us.playstation.com/</rls>";
+			else
+				profileXML=profileXML+"<rls id='false'>#</rls>";
+				
+			  if(beta=="t"){
+   				 profileXML=profileXML+"<beta id='true'>"+unescape(betaUrl)+"</beta>";   
+  			 }else{
+  			 	profileXML=profileXML+"<beta id='false'>http://www.us.playstation.com</beta>";
+			}
+			profileXML=profileXML+"<hname>"+newHostName+"</hname>";
+			profileXML=profileXML+"</settings><user>";
+			var psnLink = "<psnlink><![CDATA["+location.protocol +"//" +window.location.host+""+siteName+"/psn/index.htm]]></psnlink>";
+			var signupLink="<signup newWindow='false'><![CDATA["+location.protocol +"//"+window.location.host+""+siteName+"/psn/signup/index.htm]]></signup>"
+			
+			if(user){
+			
+				logeventRequest("103","300","PS.com%20user%20was%20logged%20in%20automatically");		
+				profileXML=profileXML+"<userID>"+user+"</userID><userIcon>"+avatar+"</userIcon>";
+			}
+			else	
+				profileXML=profileXML+"<userID></userID><userIcon></userIcon>";
+				profileXML=profileXML+"<links><profile>"+siteName+"/accountsettings/index.htm</profile>"+
+				"<trophies>"+siteName+"/mytrophies/index.htm</trophies>"+
+				"<friends>"+siteName+"/myfriends/index.htm</friends>"+
+				"<lists>"+siteName+"/mylists/index.htm</lists>"+
+				"<portableID>"+siteName+"/portableid/index.htm</portableID>"+
+				"<signOut>"+"/playstation/psn/logout</signOut><seeAll>"+siteName+"/myfriends/index.htm</seeAll><findOut>"+siteName+"/psn/Trophies/index.htm</findOut></links><networkDown>&lt;![CDATA[Appologies...&lt;br /&gt; The PlayStation&#65533; Network is Down.]]&gt;</networkDown><noneOnline>None of your friends are currently online.</noneOnline><noFriends>None of your friends are currently online.</noFriends></user><friends>";
+				
+       			if(friendsXML && friendsXML!="undefined")
+					profileXML=profileXML;//+friendsXML;
+					profileXML=profileXML+"</friends></profileWidget>";
+				profileXML="<profileWidget><settings><network on='true'></network>"+psnLink+signupLink+profileXML;	
+				return profileXML;
+		}		
+		var ucmWebRoot=ucmroot;	
+
+
+//to be added for PS3
+		var params = {	scale:'noscale',salign:'l',	menu:'false',allowscriptaccess: "always",wmode:"transparent",swLiveConnect:"true",allowNetworking:"all"	};
+		var flashvars = {};				
+		var attributes = {id: "profile_login",	name: "profile_login"};		
+		var shellPath=getAssetPath();
+		shellPath=shellPath+"shell.swf";	
+		swfobject.embedSWF(shellPath, "profile_login", "370", "50", "9.0.47", ucmWebRoot+"groups/public/documents/webasset/ps_expressinstall.swf", flashvars, params, attributes);
+
+		
+var facebookReq = getXmlHttpRequestObject();				
+function faceBookFanCount(){
+	var url=location.protocol+'//'+ location.host+ '/uwps/Facebooktest';
+	facebookReq.open("GET", url, true);
+	facebookReq.onreadystatechange = facebookHandler; 
+	facebookReq.send(null);
+}
+function facebookHandler(){
+	if (facebookReq.readyState == 4) {
+		//Set the contents of our span element to the result of the asyncronous call.
+		var response=facebookReq.responseText;
+		if (typeof DOMParser == "undefined") {
+			DOMParser = function () {}
+			DOMParser.prototype.parseFromString = function (str, contentType) {
+				if (typeof ActiveXObject != "undefined") {
+					var d = new ActiveXObject("MSXML.DomDocument");
+					d.loadXML(str);
+					return d;
+				} else if (typeof XMLHttpRequest != "undefined") {
+					var req = new XMLHttpRequest;
+					req.open("GET", "data:" + (contentType || "application/xml") +
+									";charset=utf-8," + encodeURIComponent(str), false);
+					if (req.overrideMimeType) {
+						req.overrideMimeType(contentType);
+					}
+					req.send(null);
+					return req.responseXML;
+				}
+		}
+	}
+	var xmlobject = (new DOMParser()).parseFromString(response, "text/xml");
+	var fanCount1 = "0";
+	try{
+		fanCount1=xmlobject.getElementsByTagName('fanCount')[0].firstChild.nodeValue;
+	}
+	catch(err){}
+	
+	if(fanCount1)
+		document.getElementById('fancountDiv').innerHTML=fanCount1;
+ }
+}
+
+var logeventReq = getXmlHttpRequestObject();				
+function logeventRequest(eventId,sourceId,desc){
+	var url="/uwps/LogEventController?eventId="+eventId+"&sourceId="+sourceId+"&eventDesc="+desc;
+	logeventReq.open("GET", url, true);
+	logeventReq.onreadystatechange = logeventHandler; 
+	logeventReq.send(null);
+}
+function logeventHandler(){
+	if (logeventReq.readyState == 4) {
+		var response=logeventReq.responseText;
+	}
+}
+function closeOverlayLogin(){
+	var siteOutUrl =unescape(readCookie("APPLICATION_SIGNOUT_URL"));
+
+	var siteUrl =unescape(readCookie("APPLICATION_SITE_URL"));
+	
+	if(siteOutUrl != siteUrl){
+		window.location=siteOutUrl;
+	}	
+}
+function getSceaUserInfoKeyValue(userInfo,key){	
+	var userInfoValues=userInfo.split("&");
+	for(i = 0; i < userInfoValues.length; i++){
+    	var pair=userInfoValues[i].split("=");
+        if(pair[0]==key){
+            	return pair[1];
+        }
+    }
+}
+
+
+}
+/*
+     FILE ARCHIVED ON 16:31:17 Aug 26, 2010 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 14:38:59 Aug 05, 2021.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 476.907
+  exclusion.robots: 0.162
+  exclusion.robots.policy: 0.15
+  RedisCDXSource: 13.963
+  esindex: 0.013
+  LoadShardBlock: 428.095 (3)
+  PetaboxLoader3.datanode: 272.65 (4)
+  CDXLines.iter: 30.315 (3)
+  load_resource: 112.053
+  PetaboxLoader3.resolve: 63.089
+*/
