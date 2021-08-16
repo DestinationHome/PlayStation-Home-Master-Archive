@@ -1,0 +1,263 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-jp" />
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="content-script-type" content="text/javascript" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta http-equiv="pragma" content="no-cache" />
+<meta http-equiv="expires" content="" />
+<meta name="robots" content="" />
+<meta name="author" content="" />
+<meta name="keywords" content="PlayStation Home, PLAYSTATION 3 ,PS3 , HOME, 仮想世界, メタバース, アバター"/>
+<meta name="description" content="PlayStation&reg;Homeで楽しむ仮想世界。3Dのリアルなアバターを使って、テキストチャット、ボイスチャット、ジェスチャーなど様々なコミュニケーションが可能。" />
+<meta name="title" content="PlayStation&reg;Home オフィシャルサイト" />
+<title>PlayStation&reg;Home オフィシャルサイト</title>
+
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="/css/import.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="PlayStation&reg;Home ニュース" href="/rss/pshome_news.xml" />
+
+<script type="text/javascript" src="/js/init.js"></script>
+<script type="text/javascript" src="/js/swfobject.js"></script>
+<script type="text/javascript" src="/js/rollover2.js"></script>
+<script type="text/javascript" src="/js/imageload.js"></script>
+<script type="text/javascript" src="/js/pop.js"></script>
+<script type="text/javascript" src="/js/csschanger.js"></script>
+<script type="text/javascript" src="/js/prototype.js"></script>
+<script type="text/javascript" src="/js/scriptaculous.js?load=effects"></script>
+<script type="text/javascript" src="/js/loginLayer.js"></script>
+<script type="text/javascript" src="/js/headerImgLoad.js"></script>
+<script type="text/javascript" src="/js/json2.js"></script>
+<script type="text/javascript" src="/js/headerArea.js"></script>
+<script type="text/javascript" src="/js/tabbed.js"></script>
+
+<!-- For renewal -->
+<script type="text/javascript" src="/js_renewal/jquery.js"></script>
+<script type="text/javascript" src="/js_renewal/jquery.easing.js"></script>
+<script type="text/javascript" src="/js_renewal/header_login.js"></script>
+<script type="text/javascript" src="/js_renewal/footer.js"></script>
+<script type="text/javascript">
+	jQuery.noConflict();
+	renewal.header_login();
+	renewal.footer();
+</script>
+<!-- For renewal -->
+
+<script type="text/javascript" src="/js/highslide/highslide.js"></script>
+<link rel="stylesheet" href="/css/highslide.css" type="text/css" />
+<script type="text/javascript">
+hs.graphicsDir = '/js/highslide/graphics/';
+hs.outlineType = 'rounded-white';
+window.onload = function() {
+hs.preloadImages();
+}
+</script>
+
+<!--[if IE 6]>
+	<script src="/js/DD_belatedPNG.js"></script>
+	<script>
+		DD_belatedPNG.fix('.alphaPNG');
+	</script>
+<![endif]-->
+<!-- other -->
+
+
+
+<!--
+<script type="text/javascript" src="/js/prototype1.5.1.js"></script>
+<script type="text/javascript" src="/js/effects1.7.0_beta2.js"></script>
+<script type="text/javascript" src="/js/auto-scrolling.js"></script>
+-->
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-5750483-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://web.archive.org/web/20121102141610/https://ssl' : 'https://web.archive.org/web/20121102141610/http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script type="text/javascript" src="/js_renewal/add_event.js"></script>
+
+
+
+<!-- facebook -->
+<meta property="og:title" content="PlayStation&reg;Home オフィシャルサイト" />
+<meta property="og:type" content="article" />
+<meta property="og:image" content="https://web.archive.org/web/20121102141610/http://playstationhome.jp/images/pshome_icon.png" />
+<meta property="og:site_name" content="PlayStation&reg;Home オフィシャルサイト" />
+<meta property="fb:admins" content=""/>
+<!-- /facebook -->
+
+
+
+</head>
+
+<body id="renewal-2011">
+<!-- header -->
+<div id="banner_sony">
+	<div id="banner_sony_mb">
+		<a href="https://web.archive.org/web/20121102141610/http://www.sony.co.jp/united/makedotbelieve/" target="_blank"><img src="/images/banner_sony_mb.gif" alt="SONY make dot believe" width="69" height="24" /></a>
+	</div>
+</div>
+<!-- //header -->
+<!-- wrapper -->
+<div id="wrapper">
+<!-- boxMain -->
+<div id="boxMain">
+  <!-- #boxHeader -->
+  <div id="boxHeader" class="clearfix">
+    <h1><a href="/"><img src="/images/renewal2011/boxheader/site_id.jpg" alt="PlayStation&reg;Home" name="titleHead" width="117" height="47" id="titleHead" /></a></h1>
+    <!-- //#headerLoginArea -->
+    <div id="headerLoginArea">
+    </div>
+    <!-- //#headerLoginArea -->
+  </div>
+  <!-- //#boxHeader -->
+  <!-- menu -->
+  <div id="menu">
+    <ul id="mainMenu">
+            <li id="menu01"><a href="/world/"><img src="/images/renewal2011/gnavi/gnavi0_off.jpg" width="153" height="28" alt="ラウンジ" /></a></li>
+            
+            <li id="menu02"><a href="/market/"><img src="/images/renewal2011/gnavi/gnavi1_off.jpg" width="154" height="28" alt="アイテム" /></a></li>
+            
+            <li id="menu03"><a href="/entertainment/"><img src="/images/renewal2011/gnavi/gnavi2_off.jpg" width="154" height="28" alt="イベント／キャンペーン" /></a></li>
+            
+      <li id="menu04"><a href="/community/"><img src="/images/renewal2011/gnavi/gnavi3_off.jpg" width="154" height="28" alt="コミュニティ" /></a></li>
+
+            <li id="menu05"><a href="/support/"><img src="/images/renewal2011/gnavi/gnavi4_off.jpg" width="151" height="28" alt="サポート" /></a></li>
+          </ul>
+  </div>
+  <!-- //#menu -->
+
+
+<div id="container" class="clearfix">
+
+<!--
+<div id="aside" class="isBlank">
+</div>
+-->
+<!-- contents -->
+<div id="contents" class="renew-cnt">
+        <!-- topic path -->
+        <ul id="topicPath">
+          <li><a href="/">HOME</a></li>
+          <li>&gt;</li>
+        </ul>
+        <!-- //topic path -->
+        <div class="alignC mgnB100">
+        	<p class="mgnB10"><img src="/images/renewal2011/error/ttl_404.gif" alt="お探しのページが見つかりませんでした" width="277" height="16" /></p>
+          <p class="mgnB15">※該当ページは、削除されたか、名前が変更されたか、または一時的に利用できない可能性があります。<br />
+※ブラウザのアドレス バーに表示された URLが正しいことを確認してください。</p>
+	<p><a href="/"><img src="/images/renewal2011/error/btn_top_off.gif" width="144" height="25" alt="トップページへ戻る" /></a></p>
+        </div>
+      </div><!-- /contents -->
+
+
+</div>
+<!-- /#container -->
+
+      <!-- footer -->
+      <div id="boxFooter">
+        <div id="footer">
+          <div id="footer-inner">
+            <p id="ttl-footer"><a href="/"><img src="/images/renewal2011/footer/logo_footer.gif" alt="PlayStation&reg;Home" /></a></p>
+            <ul id="ft_menu">
+              <li id="ftm_0">
+                <dl>
+                  <dt><a href="/world/"><img src="/images/renewal2011/footer/ttl_ft0_off.png" alt="ラウンジ" width="56" height="12" /></a></dt>
+                  <dd><a href="/world/special/special.html">ラウンジリスト</a></dd>
+                </dl>
+                <dl class="mgnT15">
+                  <dt><a href="/guide/"><img src="/images/renewal2011/footer/ttl_ft5_off.png" alt="はじめよう！PS Home" width="131" height="12" /></a></dt>
+                  <dd><a href="/intro/">PS HOMEの紹介</a></dd>
+                  <dd><a href="/guide/playguide/ready.html">PS Homeの遊び方</a></dd>
+                  <dd><a href="/guide/tutorial/">チュートリアル</a></dd>
+                </dl>
+              </li>
+              <li id="ftm_1">
+                <dl>
+                  <dt><a href="/market/"><img src="/images/renewal2011/footer/ttl_ft1_off.png" alt="アイテム" width="56" height="11" /></a></dt>
+                  <dd><a href="/market/threads/threads.html">Threads（ファッション）</a></dd>
+                  <dd><a href="/market/estates/estates.html">Estate（パーソナルスペース）</a></dd>
+                  <dd><a href="/market/deco/deco.html">Deco（家具・小物）</a></dd>
+                  <dd><a href="/market/stuff/stuff.html">Stuff（ポータブルアイテム）</a></dd>
+                  <dd><a href="/market/collabo/collabo.html">コラボアイテム</a></dd>
+                </dl>
+              </li>
+              <li id="ftm_2">
+                <dl>
+                  <dt><a href="/entertainment/"><img src="/images/renewal2011/footer/ttl_ft2_off.png" alt="イベント／キャンペーン" width="129" height="11" /></a></dt>
+                  <dd><a href="/entertainment/special/">キャンペーン</a></dd>
+                  <dd><a href="/entertainment/backnumber/event_back.html">バックナンバー</a></dd>
+                </dl>
+              </li>
+              <li id="ftm_3">
+                <dl>
+                  <dt><a href="/community/"><img src="/images/renewal2011/footer/ttl_ft3_off.png" alt="コミュニティ" width="76" height="11" /></a></dt>
+                  <dd><a href="/community/mypage.php?ActionCD=Index2">マイページ</a></dd>
+                  <dd><a href="/community/bbs.php">オフィシャルBBS</a></dd>
+                  <dd><a href="/community/photo.php">PS Home フォト</a></dd>
+                  <dd><a href="/community/club.php">クラブスペース</a></dd>
+                  <dd><a href="/community/search.php">プレイヤー検索</a></dd>
+                </dl>
+              </li>
+              <li id="ftm_4">
+                <dl>
+                  <dt><a href="/support/"><img src="/images/renewal2011/footer/ttl_ft4_off.png" alt="サポート" width="55" height="12" /></a></dt>
+                  <dd><a href="/support/update/">最新アップデート</a></dd>
+                  <dd><a href="https://web.archive.org/web/20121102141610/http://www.jp.playstation.com/psn/state.html" target="_blank">PSN障害・メンテナンス情報<img src="/images/renewal2011/icon/icon_blank.gif" alt="" width="9" height="9" /></a></dd>
+                  <dd><a href="/support/mn.html">障害・メンテナンス情報</a></dd>
+                  <dd><a href="https://web.archive.org/web/20121102141610/https://jp-playstation.custhelp.com/app/ask/" target="_blank">お問い合わせ<img src="/images/renewal2011/icon/icon_blank.gif" alt="" width="9" height="9" /></a></dd>
+                  <dd><a href="https://web.archive.org/web/20121102141610/https://playstationhome.jp/support/troublereport/form.cgi">不具合報告</a></dd>
+		<dd><a href="/support/troublereport/knowntrouble.html">既知の不具合</a></dd>
+                  <dd><a href="/support/faq.html">よくあるご質問</a></dd>
+                </dl>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <ul id="footer-link">
+          <li><a href="/contract/">利用規約</a></li>
+          <li><a href="https://web.archive.org/web/20121102141610/http://www.jp.playstation.com/about/">サイトポリシー</a></li>
+          <li class="last"><a href="https://web.archive.org/web/20121102141610/http://www.jp.playstation.com/scej/" target="_blank">SCEJソフトウェア公式サイト</a></li>
+        </ul>
+        <p class="copyright clear">&copy; Sony Computer Entertainment Inc. All Rights Reserved. </p>
+      </div>
+      <!-- //#footer -->
+
+</div>
+<!-- //boxMain -->
+</div>
+<!-- //wrapper -->
+</body>
+
+</html>
+<!--
+     FILE ARCHIVED ON 14:16:10 Nov 02, 2012 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 22:55:49 Aug 15, 2021.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  exclusion.robots.policy: 0.272
+  exclusion.robots: 0.295
+  PetaboxLoader3.resolve: 285.097 (4)
+  RedisCDXSource: 6.0
+  LoadShardBlock: 372.166 (3)
+  esindex: 0.054
+  load_resource: 513.153
+  CDXLines.iter: 30.411 (3)
+  captures_list: 463.48
+  PetaboxLoader3.datanode: 429.097 (4)
+-->
