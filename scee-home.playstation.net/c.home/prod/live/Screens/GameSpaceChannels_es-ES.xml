@@ -1,0 +1,22 @@
+<XML>
+  <SCREEN ID="GSVideoScreen01">
+    <TYPE>VIDEO</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/14_04_2011/201008_ISB_AIRONS_HD_1.mp4</SOURCE>
+  </SCREEN>
+  <SCREEN ID="GSVideoScreen02">
+    <TYPE>VIDEO</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/14_04_2011/201102_SHW_IRB_CALLAN_HD.mp4</SOURCE>
+  </SCREEN>
+  <SCREEN ID="GSImageAdvert01">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/23_06_2011/MusicUnlimited_INT_HomeBillboard_SPA.jpg</SOURCE>
+  </SCREEN>
+  <SCREEN ID="GSImageAdvert02">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/23_06_2011/MusicUnlimited_INT_HomeBillboard_SPA.jpg</SOURCE>
+  </SCREEN>
+  <SCREEN ID="GSImageAdvert03">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/23_06_2011/MusicUnlimited_INT_HomeBillboard_SPA.jpg</SOURCE>
+  </SCREEN>
+</XML>
