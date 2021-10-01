@@ -1,0 +1,204 @@
+<XML>
+  <SCREEN ID="MPExtVideoScreen">
+    <TYPE>VIDEO</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/09_06_2011/BaselineBattle_Promo.m4v</SOURCE>
+  </SCREEN>
+  <SCREEN ID="MPVideoScreen01">
+    <TYPE>VIDEO</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/09_06_2011/BaselineBattle_Promo.m4v</SOURCE>
+  </SCREEN>
+  <SCREEN ID="MPImagePoster01">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/2010_20_05/MINIS_POSTER_SPA_AW.dds</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/2010_27_05/locogoods1.png</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/2010_27_05/locogoods2.png</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/2010_27_05/locogoods3.png</SOURCE>
+  </SCREEN>
+  <SCREEN ID="MPImagePoster02">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/2010_06_05/monkey.jpg</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/2010_11_05/LBP_Poster_AvailNow_SP.dds</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/2010_03_06/HomePoster_ModNationRacersMiniGame_ES.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="MPImagePoster03">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/2010_29_04/MN_Chal_Billboard_Poster_UK.dds</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/2010_06_05/monkey.jpg</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/2010_11_05/LBP_Poster_AvailNow_SP.dds</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/2010_20_05/MINIS_POSTER_SPA_AW.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="MPImagePoster04">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/2010_03_06/bs2_home_256x368_helmet_shirt.jpg</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/2010_03_06/bs2_home_256x368_furniture.jpg</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/2010_03_06/bs2_home_256x368_bouncer.jpg</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/2010_03_06/bs2_home_256x368_apt.jpg</SOURCE>
+  </SCREEN>
+  <SCREEN ID="MPVideoScreen02">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/2009_06/PS_Home_PAIN_BD_launch_billboard_ENGLISH.jpg</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/2009_06/PS_Home_PAIN_BD_launch_billboard_FRENCH.jpg</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/2009_06/PS_Home_PAIN_BD_launch_billboard_GERMAN.jpg</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/2009_06/PS_Home_PAIN_BD_launch_billboard_ITALIAN.jpg</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/2009_06/PS_Home_PAIN_BD_launch_billboard_SPANISH.jpg</SOURCE>
+  </SCREEN>
+  <SCREEN ID="MP_Alter_Ego">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/23_06_2011/DL2_DirkAndDaphneCostumes.dds</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/07_07_2011/BLoons_256x368_posters_outfits.jpg</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/07_07_2011/BLoons_256x368_posters_weapons.jpg</SOURCE>
+  </SCREEN>
+  <SCREEN ID="MP_Estates_1">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/2010_07_10/SFRGT2_ApartmentPoster.jpg</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/AndysRoom_LiveLikeAToyV1_062410_256x368.jpg</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/26_05_2011/BlastersParadise_TabletopShot2_041511_SCEE256x368.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="MP_Estates_2">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/2010_17_06/NeptuneSuite3.dds</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/2010_17_06/NeptuneSuite2.dds</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/2010_17_06/NeptuneSuite1.dds</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/26_05_2011/BlastersParadise_BeachShot2_041811_SCEE256x368.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="MP_Threads">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/17_03_2011/AABStandardPosters.dds</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/14_04_2011/FuturLab_Batch1_Poster_3.jpg</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/14_04_2011/HeavyInk_poster_pinups01.jpg</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/14_04_2011/HeavyInk_poster_pinups02.jpg</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/14_04_2011/HeavyInk_poster_tribal01.jpg</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/07_07_2011/PinkButterfly_256x368.png</SOURCE>
+  </SCREEN>
+  <SCREEN ID="MP_Stuff">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/2010_28_10/Posters_Generic.jpg</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/2010_11_11/Posters_Cannon_01.jpg</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/07_04_2011/chess_stuff_poster.jpg</SOURCE>
+  </SCREEN>
+  <SCREEN ID="MP_Deco">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/30_06_2011/armchair_256x368.jpg</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/30_06_2011/lipSeat4_684x384.jpg</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/30_06_2011/lipSeat_256x368.jpg</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/30_06_2011/sofa_684x384.jpg</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/30_06_2011/table_684x384.jpg</SOURCE>
+  </SCREEN>
+  <SCREEN ID="MP_threads2">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/2010_17_06/bs2_home_256x368_bouncer.jpg</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/2010_17_06/locogoods1.png</SOURCE>
+  </SCREEN>
+  <SCREEN ID="MP_V_Store">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/10_03_2011/60sTV_Pink_outNow_TOVSstore.dds</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/10_03_2011/Fridge_Skull_outNow_TOVSstore.dds</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/10_03_2011/Toaster_Yellow_outNow_TOVSstore.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="MPNearEntrance">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/07_07_2011/Lockwood_Abyss_Trooper_female_30062011_256x368.dds</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/07_07_2011/Lockwood_Abyss_Trooper_Male_30062011_256x368.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="MPNearScreen">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/23_06_2011/DL2_DirkAndDaphneCostumes.dds</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/23_06_2011/DL2_TimeMachine.dds</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/23_06_2011/DL2_CasketOfDoom.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="MPNearHarbour">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/23_06_2011/Lockwood_Stitchkins_Humbug_256x368.dds</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/23_06_2011/Lockwood_Stitchkins_Peanut_256x368.dds</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/23_06_2011/Lockwood_Stitchkins_Raisin_256x368.dds</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/23_06_2011/Lockwood_Stitchkins_Jellybean_256x368.dds</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/23_06_2011/Lockwood_Stitchkins_Blueberry_256x368.dds</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/23_06_2011/Lockwood_Stitchkins_Brownie_256x368.dds</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/23_06_2011/Lockwood_Stitchkins_Caramel_256x368.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="HSMarketplaceEntrance1">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/2010_17_06/Pool_poster_coming_soon_EN.jpg</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/2010_17_06/darts_poster_coming_soon_EN.jpg</SOURCE>
+  </SCREEN>
+  <SCREEN ID="HSMarketplaceEntrance2">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/2010_17_06/bs2_home_256x368_apt.jpg</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/2010_17_06/AlterEgo-WorldCup.jpg</SOURCE>
+  </SCREEN>
+  <SCREEN ID="MP_EX_1">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/23_06_2011/Male_Monkey_384x684.jpg</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/23_06_2011/Female_Crab_384x684.jpg</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/07_07_2011/Octopoot_256x368_M_Poster.png</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/07_07_2011/Planets_BasicApt_256x368_Poster.png</SOURCE>
+  </SCREEN>
+  <SCREEN ID="MP_EX_2">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/07_07_2011/armchair_256x368.jpg</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/07_07_2011/lipSeat4_684x384.jpg</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/07_07_2011/lipSeat_256x368.jpg</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/07_07_2011/sofa_684x384.jpg</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/07_07_2011/table_684x384.jpg</SOURCE>
+  </SCREEN>
+  <SCREEN ID="MP_EX_3">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/23_06_2011/Female_Monkey_384x684.jpg</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/23_06_2011/Male_Crab_384x684.jpg</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/07_07_2011/Octopoot_256x368_F_Poster.png</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/07_07_2011/Planets_256x368_Poster_RB.png</SOURCE>
+  </SCREEN>
+  <SCREEN ID="MP_Billabong">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/23_06_2011/Billabong_CostaCharcoal_StorePosters.jpg</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/23_06_2011/Billabong_CostaSilverFox_StorePosters.jpg</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/23_06_2011/Billabong_CostaSlate_StorePosters.jpg</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/23_06_2011/Billabong_GetMeTankBlack_StorePosters.jpg</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/23_06_2011/Billabong_GetMeTankBlue_StorePosters.jpg</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/23_06_2011/Billabong_NavigatorBlack_StorePosters.jpg</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/23_06_2011/Billabong_NavigatorBlue_StorePosters.jpg</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/23_06_2011/Billabong_NavigatorGreen_StorePosters.jpg</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/23_06_2011/Billabong_OrchardTank_StorePosters.jpg</SOURCE>
+  </SCREEN>
+  <SCREEN ID="MP_Empty1">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/30_06_2011/Female_Business_Suit.dds</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/30_06_2011/GlitterDress.dds</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/30_06_2011/LittleDress.dds</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/30_06_2011/PuppyKitten.dds</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/30_06_2011/Salsa.dds</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/30_06_2011/Stylish_Heels.dds</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/30_06_2011/Tuxedo.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="MP_Empty2">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/07_07_2011/armchair_256x368.jpg</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/07_07_2011/lipSeat4_684x384.jpg</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/07_07_2011/lipSeat_256x368.jpg</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/07_07_2011/sofa_684x384.jpg</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/07_07_2011/table_684x384.jpg</SOURCE>
+  </SCREEN>
+  <SCREEN ID="MP_Empty3">
+    <TYPE>IMAGES</TYPE>
+  </SCREEN>
+  <SCREEN ID="MP_Lockwood">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/23_06_2011/Lockwood_Stitchkins_684x384.dds</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/07_07_2011/Lockwood_Abyss_Troopers_01072011_684x384.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="MP_NDreams">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/10_02_2011/ThingInABox_poster.dds</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/17_02_2011/monsters.dds</SOURCE>
+  </SCREEN>
+  <SCREEN ID="MP_NovusPrime">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/23_06_2011/storefront_256x368.jpg</SOURCE>
+  </SCREEN>
+  <SCREEN ID="MPVideoScreen">
+    <TYPE>IMAGES</TYPE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/07_07_2011/Planets_BasicApt_684x384_Banner.png</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/07_07_2011/Planets_684x384_Banner_RB.png</SOURCE>
+    <SOURCE>http://scee-home.playstation.net/e.home/mfe/content/07_07_2011/_COLL_EUSummerSalePt1_ES_HomeBillboard.dds</SOURCE>
+  </SCREEN>
+</XML>

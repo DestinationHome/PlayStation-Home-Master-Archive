@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<commerce_point>
+  <node type="objects">
+      <header>
+  <background  lang="en-GB" default="true">http://scee-home.playstation.net/e.home/hosted/CommercePoints/Thumbnails/Store_BG_more_EN.jpg</background>
+<background  lang="fr-FR" >http://scee-home.playstation.net/e.home/hosted/CommercePoints/Thumbnails/Store_BG_more_FR.jpg</background>
+<background  lang="de-DE" >http://scee-home.playstation.net/e.home/hosted/CommercePoints/Thumbnails/Store_BG_more_DE.jpg</background>
+<background  lang="it-IT" >http://scee-home.playstation.net/e.home/hosted/CommercePoints/Thumbnails/Store_BG_more_IT.jpg</background>
+<background  lang="es-ES" >http://scee-home.playstation.net/e.home/hosted/CommercePoints/Thumbnails/Store_BG_more_ES.jpg</background>
+    </header>
+          <!-- Granzella -->
+          <object>3659CE5D-F469411C-AB6949EB-D6ED5420</object>
+          <object>0F57CC32-ACFF4B5D-A30C4AF0-6DA78FA8</object>
+          <object>63B0ADA0-2D964BD6-8C2BBAA7-421C8196</object>
+          <object>BACFF470-2A8E4CE4-89D804ED-202F545C</object>
+          <object>C565D5E3-BE5643E3-B9797CA9-73ACC9F6</object>
+		            <!--Headband Headphones-->
+          <object>00000000-00000000-00000000-00060003</object>
+          <!--7thMay-->
+          <object>00000000-00000000-00000000-00060005</object>
+                    <!-- Pixeljunk -->
+                    <object>BF3E19D0-1BAD436D-A380BE9D-EBB5E060</object>
+                                       <!-- MGS --> 
+                    				<object>93F8FF6C-DD234F4A-ADB4643A-5E653BAF</object>
+				<object>70BBCD5F-74B246A5-80777026-19B8307E</object>
+				          		<!-- Angel Halos -->
+      			<object>7E26F8EB-C0C6419B-8DB1077F-F0E58B20</object>
+      			<object>0296CAF8-EE944391-88F42518-F58CFA87</object>
+                <!-- Perilward headset  -->
+				<object>024F88BE-B8FB4E6F-AB6E0AE5-993B5081</object>
+				<!--Animated Emoticon "Love" Bundle-->
+				<object>F18BDA2A-80F347EF-A5010EA4-FDB221DC</object>
+								<!-- Angry emoticon M -->	
+					<object>36305334-EF5243F6-941E8A77-D7CB89F4</object>
+				<!-- Raincloud emoticon M -->	
+					<object>A1600DC5-0B254973-A7141DB0-70E6FAA0</object>
+    </node>
+</commerce_point>

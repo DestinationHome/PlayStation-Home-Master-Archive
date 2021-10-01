@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--This file was automatically generated on 7/22/13 6:46:51 PM-->
+<commerce_point>
+  <node>
+    <header>
+      <background>http://scea-home.playstation.net/a.home/hosted/CommercePoints/Thumbnails/1280x720_dw1_stars.png</background>
+      <palette type="black" />
+    </header>
+      <node>        <!-- Dr Who -->
+    <header>
+       <name lang="en-US" default="true">Doctor Who Wave Two</name>
+       <thumbnail lang="en-GB" default="true" useOsdColour="false">http://scea-home.playstation.net/a.home/hosted/CommercePoints/Thumbnails/DoctorWho_CP_Thumb_WaveTwo_128x128.png</thumbnail>	
+	  <background>http://scea-home.playstation.net/a.home/hosted/CommercePoints/Thumbnails/1280x720_dw1_stars.png</background>
+	  <palette type="black" />
+    </header>
+		<node type="objects"> <!-- Bundles -->
+		  <header>
+			<name lang="en-US" default="true">Value Packs</name>
+			<thumbnail lang="en-GB" default="true" useOsdColour="true">http://scea-home.playstation.net/a.home/hosted/CommercePoints/Thumbnails/value_packs.dds</thumbnail>
+			<background>http://scea-home.playstation.net/a.home/hosted/CommercePoints/Thumbnails/1280x720_dw1_stars.png</background> 	  
+          </header>
+		<object>53EF71DC-BEF94474-97973B3D-731B35D4</object> <!-- 8/21/13 -->		
+		  </node>	
+	    <node type="objects"> <!-- Companions -->
+	    	<header>
+	    	  <name lang="en-GB" default="true">Companions</name>
+	    	  <name lang="fr-FR" >Compagne</name>
+	    	  <thumbnail lang="en-GB" default="true" useOsdColour="true">http://scea-home.playstation.net/a.home/hosted/CommercePoints/Thumbnails/companions.dds</thumbnail>
+	          <background lang="en-GB" default="true">http://scea-home.playstation.net/a.home/hosted/CommercePoints/Thumbnails/1280x720_dw1_stars.png</background>
+	    	</header>
+		<object>572E434A-D45247B8-AAF9043F-948DCFB4</object> <!-- 8/21/13 -->
+		<object>E5CAB2F6-81E84FA8-B9102111-5CCBD87A</object> <!-- 8/21/13 -->
+		<object>5468594E-F8674013-9A4ECFC2-D8872FBC</object> <!-- 8/21/13 -->
+		<object>981D2159-8F7240C1-8457D8FC-DEDCD632</object> <!-- 8/21/13 -->
+		<object>237DAEF9-849C4942-A02D28C7-F4AC89B7</object> <!-- 8/21/13 -->
+		<object>1DEBD65D-4D3C4145-86D2373B-FF3043C6</object> <!-- 8/21/13 -->
+		<object>B42CB1A8-43C34FB3-8583E4F7-ADD1A4B9</object> <!-- 8/21/13 -->
+		<object>13E177FE-E3EB482C-857C2A4E-34119A1C</object> <!-- 8/21/13 -->
+	    </node>		
+	<node type="objects"> <!-- Furniture -->
+	  <header>
+        <name lang="en-US" default="true">Furniture</name>
+		<name lang="fr-FR">Meubles</name>
+        <thumbnail lang="en-GB" default="true" useOsdColour="true"> http://scea-home.playstation.net/a.home/hosted/CommercePoints/Thumbnails/furniture_scea.dds</thumbnail>
+		<background>http://scea-home.playstation.net/a.home/hosted/CommercePoints/Thumbnails/1280x720_dw1_stars.png</background>  
+      </header>	
+    <object>CF13A920-84A24C0A-9CE7B33F-AA1D3DC7</object><!--Doctor Who  Dalek Furniture Bundle-->	  
+	<object>89A7B400-3048492A-9FF9DCB2-BD0185A5</object><!--Doctor Who  Dalek Emperor-->
+	<object>03379C94-8BB84280-85934FA2-CA78FB97</object><!--Doctor Who  Scientist Dalek (Orange)-->
+	<object>36B8DD09-A59C425D-917744C8-3B88AC8A</object><!--Doctor Who  Eternal Dalek (Yellow)-->
+	<object>49A18105-FAAF47C0-85963A95-1FBDAC44</object><!--Doctor Who  Supreme Dalek (White)-->
+	<object>500778F0-579C439C-BB561657-7A5CA198</object><!--Doctor Who  Drone Dalek (Red)-->
+	<object>30D13DA1-BEE24F99-AD613D02-87C00654</object><!--Doctor Who  Strategist Dalek (Blue)-->
+	<object>8C34B7A5-B98B4729-B22C1954-B47F94BB</object><!--Doctor Who  Cyberman-->
+	<object>F8FFB8DC-8A414D7A-8471F33F-E83D241E</object><!--Doctor Who  K9-->
+		</node>	
+      <node type="objects"> <!-- Personal Space -->
+        <header>
+          <name lang="en-US" default="true">Personal Space</name>
+          <name lang="fr-FR" >Espace personnel</name>
+          <thumbnail lang="en-US" default="true" useOsdColour="true">http://scea-home.playstation.net/a.home/hosted/CommercePoints/Thumbnails/estates_scea.dds</thumbnail>
+		  <background>http://scea-home.playstation.net/a.home/hosted/CommercePoints/Thumbnails/1280x720_dw2_stars_waveTwo.png</background> 
+        </header>
+		<object>2184D212-54FF4735-81E3EA0D-3CBC4644</object> <!-- 8/28/13 -->
+	  </node>		  		  
+	  <node type="objects"> <!--Clubhouses-->
+	    <header>
+	      <name lang="en-US" default="true">Clubhouses</name>
+		  <name lang="fr-FR">Clubhouses</name>
+          <thumbnail lang="en-US" default="true" useOsdColour="false">http://scea-home.playstation.net/a.home/hosted/CommercePoints/Thumbnails/clubhouses_scea.png</thumbnail>
+		  <thumbnail lang="fr-FR" default="false" useOsdColour="false">http://scea-home.playstation.net/a.home/hosted/CommercePoints/Thumbnails/clubhouses_scea.png</thumbnail>
+		  <background>http://scea-home.playstation.net/a.home/hosted/CommercePoints/Thumbnails/1280x720_dw2_stars_waveTwo.png</background>
+	    </header>
+		<object>E49D5955-BA314E87-A0E65243-B5D08DFE</object> <!-- 8/28/13 -->
+		  </node>		
+  </node>
+   <node type="objects">        <!-- Dr Who -->
+    <header>
+       <name lang="en-US" default="true">Doctor Who Wave One</name>
+       <thumbnail lang="en-GB" default="true" useOsdColour="false">http://scea-home.playstation.net/a.home/hosted/CommercePoints/Thumbnails/drwho_scea_tile_update.png</thumbnail>	
+	  <background>http://scea-home.playstation.net/a.home/hosted/CommercePoints/Thumbnails/1280x720_dw1_stars.png</background>
+	  <palette type="black" />
+    </header>
+	<object>3F1FCE31-4DA04AE9-9A2533B4-CF7AC1A6</object><!--Doctor Who - Wave One Bundle-->
+	<object>D6F5543E-17FD42D7-840D5F06-61FAEDA3</object><!--Doctor Who TARDIS - Private Space and Clubhouse Bundle-->
+	<object>19680F44-862C45FD-B89D1EC1-D38EFF15</object><!--Doctor Who - The Eleventh Doctor Costume-->
+	<object>8864DBE4-E39247BC-BAFE27DE-FBB72077</object><!--Doctor Who - River Song Costume-->
+	<object>A7E217D4-CDE54873-8A4EAD92-A5E4EE24</object><!--Doctor Who - Silent Costume-->
+	<object>B1B1F6F2-0C3742DE-A569E77B-2F09CA43</object><!--Doctor Who - Silurian Costume with mask-->
+	<object>6BB6D122-1ED8401A-A1DDCBDE-F52ED94B</object><!--Doctor Who - Cybermat companion-->
+	<object>61D0D7DA-2A4F4FA3-9A9C1ABE-57D0D842</object><!--Doctor Who - The Eleventh Doctor's Sonic Screwdriver-->
+	<object>C64FBC16-79E4474F-B1D5DBAE-340A6ACC</object><!--Doctor Who - River Song's PDA-->
+  </node> 
+
+  </node>
+</commerce_point>

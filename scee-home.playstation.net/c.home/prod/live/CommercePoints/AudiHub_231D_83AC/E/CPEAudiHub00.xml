@@ -1,0 +1,101 @@
+<commerce_point>
+  <node>
+    <header>
+      <background lang="en-GB" default="true">[CONTENT_SERVER_ROOT]CommercePoints/AudiHub_231D_83AC/E/audiCommerceBackground.dds</background>
+      <palette lang="en-GB" type="black" default="true" />
+    </header>
+      <node type="objects">
+      <header>
+        <name lang="en-GB" default="true">Male</name>
+        <thumbnail lang="en-GB" default="true" useOsdColour="true"> [CONTENT_SERVER_ROOT]CommercePoints/Thumbnails/male.dds</thumbnail>
+      <background lang="en-GB" default="true">[CONTENT_SERVER_ROOT]CommercePoints/AudiHub_231D_83AC/E/audiCommerceBackground.dds</background>
+      <palette lang="en-GB" type="black" default="true" />
+        <name lang="en-US" >Male</name>
+        <name lang="fr-FR" >Homme</name>
+        <name lang="it-IT" >Maschio</name>
+        <name lang="de-DE" >Männlich</name>
+        <name lang="es-ES" >Hombre</name>
+        <name lang="ja-JP" >??</name>
+        <name lang="ko-KR" >??</name>
+        <name lang="zh-HK" >??</name>
+        <name lang="zh-TW" >??</name>
+        <name lang="en-SG" >Male</name>
+      </header>
+        <!--Le Mans Team baseball cap: male-->
+        <object>466AD4D6-B862479B-85570039-493D91F0</object>
+        <!--Le Mans baseball cap: male-->
+        <object>748FAE0B-B7A449AA-A2D54505-A692D7FF</object>
+        <!--Audi Baseball Cap-->
+        <object>7DFCEF36-6309493F-98164C83-6727F46B</object>
+        <!--Le Mans Team t-shirt: male-->
+        <object>BB0CB3F1-44C74FA9-9923B8AF-8C87097D</object>
+        <!--Le Mans t-shirt: male-->
+        <object>604F7E59-39554E75-82C71B6F-3299EEE2</object>
+        <!--Audi Vest S Line-->
+        <object>6A133007-9E614C2F-8D4110A9-1FDE43FC</object>
+        <!--Audi Jacket S Line-->
+        <object>474577CB-3FDC4291-8BCB71BB-68A2B6BA</object>
+        <!--Audi Tshirt-->
+        <object>D94B58E1-F35E4794-9B1ED69F-5CF3BBDB</object>
+      </node>
+      <node type="objects">
+      <header>
+        <name lang="en-GB" default="true">Female</name>
+        <thumbnail lang="en-GB" default="true" useOsdColour="true"> [CONTENT_SERVER_ROOT]CommercePoints/Thumbnails/female.dds</thumbnail>
+      <background lang="en-GB" default="true">[CONTENT_SERVER_ROOT]CommercePoints/AudiHub_231D_83AC/E/audiCommerceBackground.dds</background>
+      <palette lang="en-GB" type="black" default="true" />
+        <name lang="en-US" >Female</name>
+        <name lang="fr-FR" >Femme</name>
+        <name lang="it-IT" >Femmina</name>
+        <name lang="de-DE" >Weiblich</name>
+        <name lang="es-ES" >Mujer</name>
+        <name lang="ja-JP" >??</name>
+        <name lang="ko-KR" >??</name>
+        <name lang="zh-HK" >??</name>
+        <name lang="zh-TW" >??</name>
+        <name lang="en-SG" >Female</name>
+      </header>
+        <!--Le Mans Team baseball cap: female-->
+        <object>90D1CD7B-76854F06-A4803C95-3894E319</object>
+        <!--Le Mans baseball cap: female-->
+        <object>F73F158D-D81F4ACF-8DDCE212-7B911951</object>
+        <!--Audi Baseball Cap-->
+        <object>2BB5B413-3171467D-B855977D-00E5464E</object>
+        <!--Le Mans Team t-shirt: female-->
+        <object>3F9A0092-0098443E-B6D2EE8A-691573FE</object>
+        <!--Le Mans t-shirt: female-->
+        <object>9059EE39-E167497F-9E096FF9-48DAF19C</object>
+        <!--Le Mans sweat jacket: female-->
+        <object>02EBC11B-391940DD-BB150D3D-F7BA7C7A</object>
+        <!--Audi Fleece-->
+        <object>2C1A4AB8-87CC4317-95187F20-488AD579</object>
+        <!--Audi Tshirt-->
+        <object>D5CFEF5D-D586491B-A198011E-4F0201CC</object>
+      </node>
+    <node type="objects">
+        <header>
+          <name lang="en-GB" default="true">Furniture</name>
+      <background lang="en-GB" default="true">[CONTENT_SERVER_ROOT]CommercePoints/AudiHub_231D_83AC/E/audiCommerceBackground.dds</background>
+      <palette lang="en-GB" type="black" default="true" />
+          <name lang="en-GB" default="true">Furniture</name>
+        <name lang="fr-FR">Furniture</name>
+        <name lang="de-DE">Möbel</name>
+        <name lang="it-IT">Mobili</name>
+        <name lang="es-ES">Furniture</name>
+          <thumbnail lang="en-GB" default="true" useOsdColour="true"> [CONTENT_SERVER_ROOT]CommercePoints/Thumbnails/Categoryvases.dds</thumbnail>
+        </header>
+        <!--Audi Design Soccer Table-->
+        <object>36D05AF7-08CC48F2-BE01216E-4F3318CF</object>
+        <!--Audi cafeteria chair-->
+        <object>3D87231A-D48E452A-955914E1-71CDBBAF</object>
+        <!--Audi cafeteria table-->
+        <object>D386C9D8-BBBE4F86-843BF7A3-47457A2E</object>
+        <!--Audi pot plant-->
+        <object>C431DA4D-59444049-BFE27FA0-2CA01B4C</object>
+        <!--Audi floor lamp-->
+        <object>11306488-8C3648FE-824359EF-38D67468</object>
+        <!--Audi coffee table-->
+        <object>0D48F287-D4C240A3-8F4C490A-875E1684</object>
+</node>
+</node>
+</commerce_point>

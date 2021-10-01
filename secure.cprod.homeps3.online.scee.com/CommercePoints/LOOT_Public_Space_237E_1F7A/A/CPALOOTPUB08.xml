@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<commerce_point>
+  <node type="objects">
+    <header>
+	  <background>http://scea-home.playstation.net/a.home/hosted/CommercePoints/Thumbnails/lootstore_background.png</background>
+	  <palette type="black" />
+    </header>
+	  <object>F5D1419E-65284A4F-964E56BD-C6C7A2BE</object>
+	  <object>12E2C165-9797430F-81AF63ED-C434F507</object>
+  </node>
+</commerce_point>

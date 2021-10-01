@@ -1,0 +1,5 @@
+﻿Open the Menu Screen and select "Personal > My Rewards".
+
+<IMAGE>https://secure.$(env).homeps3.online.scee.com/HelpText/$(RegionCode)/$(HomeLocale)/Placeholder.png
+
+This section contains a list of all items you have unlocked or won.
